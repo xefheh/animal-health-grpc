@@ -1,8 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{EE3C8740-00C5-480E-AD41-46097D65F2FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastracture", "Infrastracture", "{5A64E7FF-B438-465A-8623-8A0FC63E33DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{65845A9F-E3ED-49C4-BE19-E3BBA1003E47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalHealth.Domain", "AnimalHealth.Domain\AnimalHealth.Domain.csproj", "{4039649F-DE8E-483F-8CC5-04B7DA436F21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4039649F-DE8E-483F-8CC5-04B7DA436F21} = {EE3C8740-00C5-480E-AD41-46097D65F2FC}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4039649F-DE8E-483F-8CC5-04B7DA436F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4039649F-DE8E-483F-8CC5-04B7DA436F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4039649F-DE8E-483F-8CC5-04B7DA436F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4039649F-DE8E-483F-8CC5-04B7DA436F21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
