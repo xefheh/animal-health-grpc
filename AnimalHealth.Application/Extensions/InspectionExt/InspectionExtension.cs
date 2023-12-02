@@ -21,7 +21,7 @@ public static class InspectionExtension
         oldInspection.Manipulations = updatedInspection.Manipulations;
         oldInspection.Treatment = updatedInspection.Treatment;
         oldInspection.Date = updatedInspection.Date;
-        oldInspection.Doctor = updatedInspection.Doctor;
+        oldInspection.User = updatedInspection.User;
         oldInspection.InspectedAnimal = updatedInspection.InspectedAnimal;
         oldInspection.Contract = updatedInspection.Contract;
         oldInspection.Disease = updatedInspection.Disease;

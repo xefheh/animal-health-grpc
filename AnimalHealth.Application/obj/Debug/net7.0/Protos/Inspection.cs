@@ -29,40 +29,41 @@ namespace AnimalHealth.Application.Models {
             "cm90b3MvY29udHJhY3QucHJvdG8aEVByb3Rvcy91c2VyLnByb3RvGhNQcm90",
             "b3MvYW5pbWFsLnByb3RvGhtQcm90b3MvaW5mcmFzdHJ1Y3R1cmUucHJvdG8i",
             "PAoTSW5zcGVjdGlvbk1vZGVsTGlzdBIlCgtpbnNwZWN0aW9ucxgBIAMoCzIQ",
-            "Lkluc3BlY3Rpb25Nb2RlbCLtAgoSSW5zcGVjdGlvbkFkZE1vZGVsEhgKEGZl",
-            "YXR1cmVCZWhhdmlvdXIYAiABKAkSFwoPYW5pbWFsQ29uZGl0aW9uGAMgASgJ",
-            "EhMKC3RlbXBlcmF0dXJlGAQgASgCEhEKCXNraW5Db3ZlchgFIAEoCRIUCgxm",
-            "dXJDb25kaXRpb24YBiABKAkSGAoQaXNOZWVkT3BlcmF0aW9ucxgHIAEoCBIV",
-            "Cg1tYW5pcHVsYXRpb25zGAggASgJEhEKCXRyZWF0bWVudBgJIAEoCRIoCgRk",
-            "YXRlGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIYCgR1c2Vy",
-            "GAsgASgLMgouVXNlck1vZGVsEhwKBmFuaW1hbBgMIAEoCzIMLkFuaW1hbE1v",
-            "ZGVsEiAKCGNvbnRyYWN0GA0gASgLMg4uQ29udHJhY3RNb2RlbBIeCgdkaXNl",
-            "YXNlGA4gASgLMg0uRGlzZWFzZU1vZGVsIh4KEEluc3BlY3Rpb25Mb29rdXAS",
-            "CgoCaWQYASABKAUi9gIKD0luc3BlY3Rpb25Nb2RlbBIKCgJpZBgBIAEoBRIY",
-            "ChBmZWF0dXJlQmVoYXZpb3VyGAIgASgJEhcKD2FuaW1hbENvbmRpdGlvbhgD",
-            "IAEoCRITCgt0ZW1wZXJhdHVyZRgEIAEoAhIRCglza2luQ292ZXIYBSABKAkS",
-            "FAoMZnVyQ29uZGl0aW9uGAYgASgJEhgKEGlzTmVlZE9wZXJhdGlvbnMYByAB",
-            "KAgSFQoNbWFuaXB1bGF0aW9ucxgIIAEoCRIRCgl0cmVhdG1lbnQYCSABKAkS",
-            "KAoEZGF0ZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASGAoE",
-            "dXNlchgLIAEoCzIKLlVzZXJNb2RlbBIcCgZhbmltYWwYDCABKAsyDC5Bbmlt",
-            "YWxNb2RlbBIgCghjb250cmFjdBgNIAEoCzIOLkNvbnRyYWN0TW9kZWwSHgoH",
-            "ZGlzZWFzZRgOIAEoCzINLkRpc2Vhc2VNb2RlbCIoCgxEaXNlYXNlTW9kZWwS",
-            "CgoCaWQYASABKAUSDAoEbmFtZRgCIAEoCTKxAgoPSW5zcGVjdGlvblByb3Rv",
-            "EjcKDUFkZEluc3BlY3Rpb24SEy5JbnNwZWN0aW9uQWRkTW9kZWwaES5JbnNw",
-            "ZWN0aW9uTG9va3VwEjYKEFVwZGF0ZUluc3BlY3Rpb24SEC5JbnNwZWN0aW9u",
-            "TW9kZWwaEC5EYlNhdmVDb25kaXRpb24SNwoQRGVsZXRlSW5zcGVjdGlvbhIR",
-            "Lkluc3BlY3Rpb25Mb29rdXAaEC5EYlNhdmVDb25kaXRpb24SNAoNR2V0SW5z",
-            "cGVjdGlvbhIRLkluc3BlY3Rpb25Mb29rdXAaEC5JbnNwZWN0aW9uTW9kZWwS",
-            "PgoOR2V0SW5zcGVjdGlvbnMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaFC5J",
-            "bnNwZWN0aW9uTW9kZWxMaXN0QiKqAh9BbmltYWxIZWFsdGguQXBwbGljYXRp",
-            "b24uTW9kZWxzYgZwcm90bzM="));
+            "Lkluc3BlY3Rpb25Nb2RlbCL+AgoSSW5zcGVjdGlvbkFkZE1vZGVsEhgKEGZl",
+            "YXR1cmVCZWhhdmlvdXIYASABKAkSFwoPYW5pbWFsQ29uZGl0aW9uGAIgASgJ",
+            "EhMKC3RlbXBlcmF0dXJlGAMgASgCEhEKCXNraW5Db3ZlchgEIAEoCRIUCgxm",
+            "dXJDb25kaXRpb24YBSABKAkSGAoQaXNOZWVkT3BlcmF0aW9ucxgGIAEoCBIV",
+            "Cg1tYW5pcHVsYXRpb25zGAcgASgJEhEKCXRyZWF0bWVudBgIIAEoCRIoCgRk",
+            "YXRlGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIYCgR1c2Vy",
+            "GAogASgLMgouVXNlck1vZGVsEhwKBmFuaW1hbBgLIAEoCzIMLkFuaW1hbE1v",
+            "ZGVsEiAKCGNvbnRyYWN0GAwgASgLMg4uQ29udHJhY3RNb2RlbBIeCgdkaXNl",
+            "YXNlGA0gASgLMg0uRGlzZWFzZU1vZGVsEg8KB2luanVyZXMYDiABKAkiHgoQ",
+            "SW5zcGVjdGlvbkxvb2t1cBIKCgJpZBgBIAEoBSKHAwoPSW5zcGVjdGlvbk1v",
+            "ZGVsEgoKAmlkGAEgASgFEhgKEGZlYXR1cmVCZWhhdmlvdXIYAiABKAkSFwoP",
+            "YW5pbWFsQ29uZGl0aW9uGAMgASgJEhMKC3RlbXBlcmF0dXJlGAQgASgCEhEK",
+            "CXNraW5Db3ZlchgFIAEoCRIUCgxmdXJDb25kaXRpb24YBiABKAkSGAoQaXNO",
+            "ZWVkT3BlcmF0aW9ucxgHIAEoCBIVCg1tYW5pcHVsYXRpb25zGAggASgJEhEK",
+            "CXRyZWF0bWVudBgJIAEoCRIoCgRkYXRlGAogASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBIYCgR1c2VyGAsgASgLMgouVXNlck1vZGVsEhwKBmFu",
+            "aW1hbBgMIAEoCzIMLkFuaW1hbE1vZGVsEiAKCGNvbnRyYWN0GA0gASgLMg4u",
+            "Q29udHJhY3RNb2RlbBIeCgdkaXNlYXNlGA4gASgLMg0uRGlzZWFzZU1vZGVs",
+            "Eg8KB2luanVyZXMYDyABKAkiKAoMRGlzZWFzZU1vZGVsEgoKAmlkGAEgASgF",
+            "EgwKBG5hbWUYAiABKAkysQIKD0luc3BlY3Rpb25Qcm90bxI3Cg1BZGRJbnNw",
+            "ZWN0aW9uEhMuSW5zcGVjdGlvbkFkZE1vZGVsGhEuSW5zcGVjdGlvbkxvb2t1",
+            "cBI2ChBVcGRhdGVJbnNwZWN0aW9uEhAuSW5zcGVjdGlvbk1vZGVsGhAuRGJT",
+            "YXZlQ29uZGl0aW9uEjcKEERlbGV0ZUluc3BlY3Rpb24SES5JbnNwZWN0aW9u",
+            "TG9va3VwGhAuRGJTYXZlQ29uZGl0aW9uEjQKDUdldEluc3BlY3Rpb24SES5J",
+            "bnNwZWN0aW9uTG9va3VwGhAuSW5zcGVjdGlvbk1vZGVsEj4KDkdldEluc3Bl",
+            "Y3Rpb25zEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5GhQuSW5zcGVjdGlvbk1v",
+            "ZGVsTGlzdEIiqgIfQW5pbWFsSGVhbHRoLkFwcGxpY2F0aW9uLk1vZGVsc2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::AnimalHealth.Application.Models.ContractReflection.Descriptor, global::AnimalHealth.Application.Models.UserReflection.Descriptor, global::AnimalHealth.Application.Models.AnimalReflection.Descriptor, global::AnimalHealth.Application.Models.InfrastructureReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.InspectionModelList), global::AnimalHealth.Application.Models.InspectionModelList.Parser, new[]{ "Inspections" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.InspectionAddModel), global::AnimalHealth.Application.Models.InspectionAddModel.Parser, new[]{ "FeatureBehaviour", "AnimalCondition", "Temperature", "SkinCover", "FurCondition", "IsNeedOperations", "Manipulations", "Treatment", "Date", "User", "Animal", "Contract", "Disease" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.InspectionAddModel), global::AnimalHealth.Application.Models.InspectionAddModel.Parser, new[]{ "FeatureBehaviour", "AnimalCondition", "Temperature", "SkinCover", "FurCondition", "IsNeedOperations", "Manipulations", "Treatment", "Date", "User", "Animal", "Contract", "Disease", "Injures" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.InspectionLookup), global::AnimalHealth.Application.Models.InspectionLookup.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.InspectionModel), global::AnimalHealth.Application.Models.InspectionModel.Parser, new[]{ "Id", "FeatureBehaviour", "AnimalCondition", "Temperature", "SkinCover", "FurCondition", "IsNeedOperations", "Manipulations", "Treatment", "Date", "User", "Animal", "Contract", "Disease" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.InspectionModel), global::AnimalHealth.Application.Models.InspectionModel.Parser, new[]{ "Id", "FeatureBehaviour", "AnimalCondition", "Temperature", "SkinCover", "FurCondition", "IsNeedOperations", "Manipulations", "Treatment", "Date", "User", "Animal", "Contract", "Disease", "Injures" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.DiseaseModel), global::AnimalHealth.Application.Models.DiseaseModel.Parser, new[]{ "Id", "Name" }, null, null, null, null)
           }));
     }
@@ -297,6 +298,7 @@ namespace AnimalHealth.Application.Models {
       animal_ = other.animal_ != null ? other.animal_.Clone() : null;
       contract_ = other.contract_ != null ? other.contract_.Clone() : null;
       disease_ = other.disease_ != null ? other.disease_.Clone() : null;
+      injures_ = other.injures_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -307,7 +309,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "featureBehaviour" field.</summary>
-    public const int FeatureBehaviourFieldNumber = 2;
+    public const int FeatureBehaviourFieldNumber = 1;
     private string featureBehaviour_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -319,7 +321,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "animalCondition" field.</summary>
-    public const int AnimalConditionFieldNumber = 3;
+    public const int AnimalConditionFieldNumber = 2;
     private string animalCondition_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -331,7 +333,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "temperature" field.</summary>
-    public const int TemperatureFieldNumber = 4;
+    public const int TemperatureFieldNumber = 3;
     private float temperature_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -343,7 +345,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "skinCover" field.</summary>
-    public const int SkinCoverFieldNumber = 5;
+    public const int SkinCoverFieldNumber = 4;
     private string skinCover_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -355,7 +357,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "furCondition" field.</summary>
-    public const int FurConditionFieldNumber = 6;
+    public const int FurConditionFieldNumber = 5;
     private string furCondition_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -367,7 +369,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "isNeedOperations" field.</summary>
-    public const int IsNeedOperationsFieldNumber = 7;
+    public const int IsNeedOperationsFieldNumber = 6;
     private bool isNeedOperations_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -379,7 +381,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "manipulations" field.</summary>
-    public const int ManipulationsFieldNumber = 8;
+    public const int ManipulationsFieldNumber = 7;
     private string manipulations_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -391,7 +393,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "treatment" field.</summary>
-    public const int TreatmentFieldNumber = 9;
+    public const int TreatmentFieldNumber = 8;
     private string treatment_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -403,7 +405,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "date" field.</summary>
-    public const int DateFieldNumber = 10;
+    public const int DateFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Timestamp date_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -415,7 +417,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "user" field.</summary>
-    public const int UserFieldNumber = 11;
+    public const int UserFieldNumber = 10;
     private global::AnimalHealth.Application.Models.UserModel user_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -427,7 +429,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "animal" field.</summary>
-    public const int AnimalFieldNumber = 12;
+    public const int AnimalFieldNumber = 11;
     private global::AnimalHealth.Application.Models.AnimalModel animal_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -439,7 +441,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "contract" field.</summary>
-    public const int ContractFieldNumber = 13;
+    public const int ContractFieldNumber = 12;
     private global::AnimalHealth.Application.Models.ContractModel contract_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -451,7 +453,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "disease" field.</summary>
-    public const int DiseaseFieldNumber = 14;
+    public const int DiseaseFieldNumber = 13;
     private global::AnimalHealth.Application.Models.DiseaseModel disease_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -459,6 +461,18 @@ namespace AnimalHealth.Application.Models {
       get { return disease_; }
       set {
         disease_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "injures" field.</summary>
+    public const int InjuresFieldNumber = 14;
+    private string injures_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Injures {
+      get { return injures_; }
+      set {
+        injures_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -490,6 +504,7 @@ namespace AnimalHealth.Application.Models {
       if (!object.Equals(Animal, other.Animal)) return false;
       if (!object.Equals(Contract, other.Contract)) return false;
       if (!object.Equals(Disease, other.Disease)) return false;
+      if (Injures != other.Injures) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -510,6 +525,7 @@ namespace AnimalHealth.Application.Models {
       if (animal_ != null) hash ^= Animal.GetHashCode();
       if (contract_ != null) hash ^= Contract.GetHashCode();
       if (disease_ != null) hash ^= Disease.GetHashCode();
+      if (Injures.Length != 0) hash ^= Injures.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -529,56 +545,60 @@ namespace AnimalHealth.Application.Models {
       output.WriteRawMessage(this);
     #else
       if (FeatureBehaviour.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(FeatureBehaviour);
       }
       if (AnimalCondition.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteString(AnimalCondition);
       }
       if (Temperature != 0F) {
-        output.WriteRawTag(37);
+        output.WriteRawTag(29);
         output.WriteFloat(Temperature);
       }
       if (SkinCover.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteString(SkinCover);
       }
       if (FurCondition.Length != 0) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteString(FurCondition);
       }
       if (IsNeedOperations != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteBool(IsNeedOperations);
       }
       if (Manipulations.Length != 0) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(58);
         output.WriteString(Manipulations);
       }
       if (Treatment.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(66);
         output.WriteString(Treatment);
       }
       if (date_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(74);
         output.WriteMessage(Date);
       }
       if (user_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(82);
         output.WriteMessage(User);
       }
       if (animal_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(90);
         output.WriteMessage(Animal);
       }
       if (contract_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(98);
         output.WriteMessage(Contract);
       }
       if (disease_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(106);
         output.WriteMessage(Disease);
+      }
+      if (Injures.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Injures);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -591,56 +611,60 @@ namespace AnimalHealth.Application.Models {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FeatureBehaviour.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(FeatureBehaviour);
       }
       if (AnimalCondition.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteString(AnimalCondition);
       }
       if (Temperature != 0F) {
-        output.WriteRawTag(37);
+        output.WriteRawTag(29);
         output.WriteFloat(Temperature);
       }
       if (SkinCover.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteString(SkinCover);
       }
       if (FurCondition.Length != 0) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteString(FurCondition);
       }
       if (IsNeedOperations != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteBool(IsNeedOperations);
       }
       if (Manipulations.Length != 0) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(58);
         output.WriteString(Manipulations);
       }
       if (Treatment.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(66);
         output.WriteString(Treatment);
       }
       if (date_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(74);
         output.WriteMessage(Date);
       }
       if (user_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(82);
         output.WriteMessage(User);
       }
       if (animal_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(90);
         output.WriteMessage(Animal);
       }
       if (contract_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(98);
         output.WriteMessage(Contract);
       }
       if (disease_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(106);
         output.WriteMessage(Disease);
+      }
+      if (Injures.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Injures);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -690,6 +714,9 @@ namespace AnimalHealth.Application.Models {
       }
       if (disease_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Disease);
+      }
+      if (Injures.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Injures);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -757,6 +784,9 @@ namespace AnimalHealth.Application.Models {
         }
         Disease.MergeFrom(other.Disease);
       }
+      if (other.Injures.Length != 0) {
+        Injures = other.Injures;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -772,71 +802,75 @@ namespace AnimalHealth.Application.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 10: {
             FeatureBehaviour = input.ReadString();
             break;
           }
-          case 26: {
+          case 18: {
             AnimalCondition = input.ReadString();
             break;
           }
-          case 37: {
+          case 29: {
             Temperature = input.ReadFloat();
             break;
           }
-          case 42: {
+          case 34: {
             SkinCover = input.ReadString();
             break;
           }
-          case 50: {
+          case 42: {
             FurCondition = input.ReadString();
             break;
           }
-          case 56: {
+          case 48: {
             IsNeedOperations = input.ReadBool();
             break;
           }
-          case 66: {
+          case 58: {
             Manipulations = input.ReadString();
             break;
           }
-          case 74: {
+          case 66: {
             Treatment = input.ReadString();
             break;
           }
-          case 82: {
+          case 74: {
             if (date_ == null) {
               Date = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(Date);
             break;
           }
-          case 90: {
+          case 82: {
             if (user_ == null) {
               User = new global::AnimalHealth.Application.Models.UserModel();
             }
             input.ReadMessage(User);
             break;
           }
-          case 98: {
+          case 90: {
             if (animal_ == null) {
               Animal = new global::AnimalHealth.Application.Models.AnimalModel();
             }
             input.ReadMessage(Animal);
             break;
           }
-          case 106: {
+          case 98: {
             if (contract_ == null) {
               Contract = new global::AnimalHealth.Application.Models.ContractModel();
             }
             input.ReadMessage(Contract);
             break;
           }
-          case 114: {
+          case 106: {
             if (disease_ == null) {
               Disease = new global::AnimalHealth.Application.Models.DiseaseModel();
             }
             input.ReadMessage(Disease);
+            break;
+          }
+          case 114: {
+            Injures = input.ReadString();
             break;
           }
         }
@@ -854,71 +888,75 @@ namespace AnimalHealth.Application.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 10: {
             FeatureBehaviour = input.ReadString();
             break;
           }
-          case 26: {
+          case 18: {
             AnimalCondition = input.ReadString();
             break;
           }
-          case 37: {
+          case 29: {
             Temperature = input.ReadFloat();
             break;
           }
-          case 42: {
+          case 34: {
             SkinCover = input.ReadString();
             break;
           }
-          case 50: {
+          case 42: {
             FurCondition = input.ReadString();
             break;
           }
-          case 56: {
+          case 48: {
             IsNeedOperations = input.ReadBool();
             break;
           }
-          case 66: {
+          case 58: {
             Manipulations = input.ReadString();
             break;
           }
-          case 74: {
+          case 66: {
             Treatment = input.ReadString();
             break;
           }
-          case 82: {
+          case 74: {
             if (date_ == null) {
               Date = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(Date);
             break;
           }
-          case 90: {
+          case 82: {
             if (user_ == null) {
               User = new global::AnimalHealth.Application.Models.UserModel();
             }
             input.ReadMessage(User);
             break;
           }
-          case 98: {
+          case 90: {
             if (animal_ == null) {
               Animal = new global::AnimalHealth.Application.Models.AnimalModel();
             }
             input.ReadMessage(Animal);
             break;
           }
-          case 106: {
+          case 98: {
             if (contract_ == null) {
               Contract = new global::AnimalHealth.Application.Models.ContractModel();
             }
             input.ReadMessage(Contract);
             break;
           }
-          case 114: {
+          case 106: {
             if (disease_ == null) {
               Disease = new global::AnimalHealth.Application.Models.DiseaseModel();
             }
             input.ReadMessage(Disease);
+            break;
+          }
+          case 114: {
+            Injures = input.ReadString();
             break;
           }
         }
@@ -1167,6 +1205,7 @@ namespace AnimalHealth.Application.Models {
       animal_ = other.animal_ != null ? other.animal_.Clone() : null;
       contract_ = other.contract_ != null ? other.contract_.Clone() : null;
       disease_ = other.disease_ != null ? other.disease_.Clone() : null;
+      injures_ = other.injures_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1344,6 +1383,18 @@ namespace AnimalHealth.Application.Models {
       }
     }
 
+    /// <summary>Field number for the "injures" field.</summary>
+    public const int InjuresFieldNumber = 15;
+    private string injures_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Injures {
+      get { return injures_; }
+      set {
+        injures_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1373,6 +1424,7 @@ namespace AnimalHealth.Application.Models {
       if (!object.Equals(Animal, other.Animal)) return false;
       if (!object.Equals(Contract, other.Contract)) return false;
       if (!object.Equals(Disease, other.Disease)) return false;
+      if (Injures != other.Injures) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1394,6 +1446,7 @@ namespace AnimalHealth.Application.Models {
       if (animal_ != null) hash ^= Animal.GetHashCode();
       if (contract_ != null) hash ^= Contract.GetHashCode();
       if (disease_ != null) hash ^= Disease.GetHashCode();
+      if (Injures.Length != 0) hash ^= Injures.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1468,6 +1521,10 @@ namespace AnimalHealth.Application.Models {
         output.WriteRawTag(114);
         output.WriteMessage(Disease);
       }
+      if (Injures.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Injures);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1534,6 +1591,10 @@ namespace AnimalHealth.Application.Models {
         output.WriteRawTag(114);
         output.WriteMessage(Disease);
       }
+      if (Injures.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Injures);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1585,6 +1646,9 @@ namespace AnimalHealth.Application.Models {
       }
       if (disease_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Disease);
+      }
+      if (Injures.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Injures);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1654,6 +1718,9 @@ namespace AnimalHealth.Application.Models {
           Disease = new global::AnimalHealth.Application.Models.DiseaseModel();
         }
         Disease.MergeFrom(other.Disease);
+      }
+      if (other.Injures.Length != 0) {
+        Injures = other.Injures;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1741,6 +1808,10 @@ namespace AnimalHealth.Application.Models {
             input.ReadMessage(Disease);
             break;
           }
+          case 122: {
+            Injures = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1825,6 +1896,10 @@ namespace AnimalHealth.Application.Models {
               Disease = new global::AnimalHealth.Application.Models.DiseaseModel();
             }
             input.ReadMessage(Disease);
+            break;
+          }
+          case 122: {
+            Injures = input.ReadString();
             break;
           }
         }

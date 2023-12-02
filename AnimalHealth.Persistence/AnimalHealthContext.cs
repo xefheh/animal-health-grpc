@@ -7,7 +7,10 @@ namespace AnimalHealth.Persistence;
 
 public class AnimalHealthContext : DbContext
 {
-    public AnimalHealthContext(DbContextOptions opt) : base(opt) { }
+    public AnimalHealthContext(DbContextOptions opt) : base(opt)
+    {
+        Database.EnsureCreated();
+    }
     
     public DbSet<Animal> Animals { get; set; }
     public DbSet<Organization> Organizations { get; set; }

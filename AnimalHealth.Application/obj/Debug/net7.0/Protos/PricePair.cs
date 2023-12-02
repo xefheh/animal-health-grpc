@@ -25,14 +25,15 @@ namespace AnimalHealth.Application.Models {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZQcm90b3MvcHJpY2VQYWlyLnByb3RvGhVQcm90b3MvbG9jYWxpdHkucHJv",
-            "dG8aFVByb3Rvcy9jb250cmFjdC5wcm90byJgCg5QcmljZVBhaXJNb2RlbBIK",
+            "dG8aFVByb3Rvcy9jb250cmFjdC5wcm90byJvCg5QcmljZVBhaXJNb2RlbBIK",
             "CgJpZBgBIAEoBRIgCghsb2NhbGl0eRgCIAEoCzIOLkxvY2FsaXR5TW9kZWwS",
-            "IAoIY29udHJhY3QYAyABKAsyDi5Db250cmFjdE1vZGVsQiKqAh9BbmltYWxI",
-            "ZWFsdGguQXBwbGljYXRpb24uTW9kZWxzYgZwcm90bzM="));
+            "IAoIY29udHJhY3QYAyABKAsyDi5Db250cmFjdE1vZGVsEg0KBXByaWNlGAQg",
+            "ASgCQiKqAh9BbmltYWxIZWFsdGguQXBwbGljYXRpb24uTW9kZWxzYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::AnimalHealth.Application.Models.LocalityReflection.Descriptor, global::AnimalHealth.Application.Models.ContractReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.PricePairModel), global::AnimalHealth.Application.Models.PricePairModel.Parser, new[]{ "Id", "Locality", "Contract" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.PricePairModel), global::AnimalHealth.Application.Models.PricePairModel.Parser, new[]{ "Id", "Locality", "Contract", "Price" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,6 +78,7 @@ namespace AnimalHealth.Application.Models {
       id_ = other.id_;
       locality_ = other.locality_ != null ? other.locality_.Clone() : null;
       contract_ = other.contract_ != null ? other.contract_.Clone() : null;
+      price_ = other.price_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -122,6 +124,18 @@ namespace AnimalHealth.Application.Models {
       }
     }
 
+    /// <summary>Field number for the "price" field.</summary>
+    public const int PriceFieldNumber = 4;
+    private float price_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Price {
+      get { return price_; }
+      set {
+        price_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -140,6 +154,7 @@ namespace AnimalHealth.Application.Models {
       if (Id != other.Id) return false;
       if (!object.Equals(Locality, other.Locality)) return false;
       if (!object.Equals(Contract, other.Contract)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Price, other.Price)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -150,6 +165,7 @@ namespace AnimalHealth.Application.Models {
       if (Id != 0) hash ^= Id.GetHashCode();
       if (locality_ != null) hash ^= Locality.GetHashCode();
       if (contract_ != null) hash ^= Contract.GetHashCode();
+      if (Price != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Price);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -180,6 +196,10 @@ namespace AnimalHealth.Application.Models {
         output.WriteRawTag(26);
         output.WriteMessage(Contract);
       }
+      if (Price != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Price);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -202,6 +222,10 @@ namespace AnimalHealth.Application.Models {
         output.WriteRawTag(26);
         output.WriteMessage(Contract);
       }
+      if (Price != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Price);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -220,6 +244,9 @@ namespace AnimalHealth.Application.Models {
       }
       if (contract_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Contract);
+      }
+      if (Price != 0F) {
+        size += 1 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -247,6 +274,9 @@ namespace AnimalHealth.Application.Models {
           Contract = new global::AnimalHealth.Application.Models.ContractModel();
         }
         Contract.MergeFrom(other.Contract);
+      }
+      if (other.Price != 0F) {
+        Price = other.Price;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -281,6 +311,10 @@ namespace AnimalHealth.Application.Models {
             input.ReadMessage(Contract);
             break;
           }
+          case 37: {
+            Price = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -312,6 +346,10 @@ namespace AnimalHealth.Application.Models {
               Contract = new global::AnimalHealth.Application.Models.ContractModel();
             }
             input.ReadMessage(Contract);
+            break;
+          }
+          case 37: {
+            Price = input.ReadFloat();
             break;
           }
         }

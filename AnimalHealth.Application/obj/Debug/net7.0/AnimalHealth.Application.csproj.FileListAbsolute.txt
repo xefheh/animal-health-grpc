@@ -10,3 +10,8 @@ C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Application\obj\Debug\ne
 C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Application\obj\Debug\net7.0\refint\AnimalHealth.Application.dll
 C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Application\obj\Debug\net7.0\AnimalHealth.Application.pdb
 C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Application\obj\Debug\net7.0\ref\AnimalHealth.Application.dll
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Application\bin\Debug\net7.0\AnimalHealth.Domain.dll
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Application\bin\Debug\net7.0\AnimalHealth.Persistence.dll
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Application\bin\Debug\net7.0\AnimalHealth.Persistence.pdb
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Application\bin\Debug\net7.0\AnimalHealth.Domain.pdb
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Application\obj\Debug\net7.0\AnimalHealth.Application.csproj.CopyComplete

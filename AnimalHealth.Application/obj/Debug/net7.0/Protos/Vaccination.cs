@@ -29,35 +29,35 @@ namespace AnimalHealth.Application.Models {
             "UHJvdG9zL2NvbnRyYWN0LnByb3RvGhFQcm90b3MvdXNlci5wcm90bxoTUHJv",
             "dG9zL2FuaW1hbC5wcm90bxobUHJvdG9zL2luZnJhc3RydWN0dXJlLnByb3Rv",
             "Ij8KFFZhY2NpbmF0aW9uTW9kZWxMaXN0EicKDHZhY2NpbmF0aW9ucxgBIAMo",
-            "CzIRLlZhY2NpbmF0aW9uTW9kZWwi+QEKE1ZhY2NpbmF0aW9uQWRkTW9kZWwS",
+            "CzIRLlZhY2NpbmF0aW9uTW9kZWwi7QEKE1ZhY2NpbmF0aW9uQWRkTW9kZWwS",
+            "KAoEZGF0ZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMgoO",
+            "ZXhwaXJhdGlvbkRhdGUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEhgKBHVzZXIYAyABKAsyCi5Vc2VyTW9kZWwSHAoGYW5pbWFsGAQgASgL",
+            "MgwuQW5pbWFsTW9kZWwSIAoIY29udHJhY3QYBSABKAsyDi5Db250cmFjdE1v",
+            "ZGVsEh4KB3ZhY2NpbmUYBiABKAsyDS5WYWNjaW5lTW9kZWwiHwoRVmFjY2lu",
+            "YXRpb25Mb29rdXASCgoCaWQYASABKAUi9gEKEFZhY2NpbmF0aW9uTW9kZWwS",
             "CgoCaWQYASABKAUSKAoEZGF0ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
             "aW1lc3RhbXASMgoOZXhwaXJhdGlvbkRhdGUYAyABKAsyGi5nb29nbGUucHJv",
             "dG9idWYuVGltZXN0YW1wEhgKBHVzZXIYBCABKAsyCi5Vc2VyTW9kZWwSHAoG",
             "YW5pbWFsGAUgASgLMgwuQW5pbWFsTW9kZWwSIAoIY29udHJhY3QYBiABKAsy",
-            "Di5Db250cmFjdE1vZGVsEh4KB2Rpc2Vhc2UYByABKAsyDS5WYWNjaW5lTW9k",
-            "ZWwiHwoRVmFjY2luYXRpb25Mb29rdXASCgoCaWQYASABKAUi9gEKEFZhY2Np",
-            "bmF0aW9uTW9kZWwSCgoCaWQYASABKAUSKAoEZGF0ZRgCIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASMgoOZXhwaXJhdGlvbkRhdGUYAyABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhgKBHVzZXIYBCABKAsyCi5V",
-            "c2VyTW9kZWwSHAoGYW5pbWFsGAUgASgLMgwuQW5pbWFsTW9kZWwSIAoIY29u",
-            "dHJhY3QYBiABKAsyDi5Db250cmFjdE1vZGVsEh4KB2Rpc2Vhc2UYByABKAsy",
-            "DS5WYWNjaW5lTW9kZWwiOwoMVmFjY2luZU1vZGVsEg4KBnNlcmlhbBgBIAEo",
-            "BRIMCgRuYW1lGAIgASgJEg0KBXByaWNlGAMgASgCMrYCChBWYWNjaW5hdGlv",
-            "blByb3RvEjoKDkFkZFZhY2NpbmF0aW9uEhQuVmFjY2luYXRpb25BZGRNb2Rl",
-            "bBoSLlZhY2NpbmF0aW9uTG9va3VwEjQKEVVwZGF0ZVZhY2NpbmF0aW9uEg0u",
-            "VmFjY2luZU1vZGVsGhAuRGJTYXZlQ29uZGl0aW9uEjkKEURlbGV0ZVZhY2Np",
-            "bmF0aW9uEhIuVmFjY2luYXRpb25Mb29rdXAaEC5EYlNhdmVDb25kaXRpb24S",
-            "MwoOR2V0VmFjY2luYXRpb24SEi5WYWNjaW5hdGlvbkxvb2t1cBoNLlZhY2Np",
-            "bmVNb2RlbBJACg9HZXRWYWNjaW5hdGlvbnMSFi5nb29nbGUucHJvdG9idWYu",
-            "RW1wdHkaFS5WYWNjaW5hdGlvbk1vZGVsTGlzdEIiqgIfQW5pbWFsSGVhbHRo",
-            "LkFwcGxpY2F0aW9uLk1vZGVsc2IGcHJvdG8z"));
+            "Di5Db250cmFjdE1vZGVsEh4KB3ZhY2NpbmUYByABKAsyDS5WYWNjaW5lTW9k",
+            "ZWwiOwoMVmFjY2luZU1vZGVsEg4KBnNlcmlhbBgBIAEoBRIMCgRuYW1lGAIg",
+            "ASgJEg0KBXByaWNlGAMgASgCMr4CChBWYWNjaW5hdGlvblByb3RvEjoKDkFk",
+            "ZFZhY2NpbmF0aW9uEhQuVmFjY2luYXRpb25BZGRNb2RlbBoSLlZhY2NpbmF0",
+            "aW9uTG9va3VwEjgKEVVwZGF0ZVZhY2NpbmF0aW9uEhEuVmFjY2luYXRpb25N",
+            "b2RlbBoQLkRiU2F2ZUNvbmRpdGlvbhI5ChFEZWxldGVWYWNjaW5hdGlvbhIS",
+            "LlZhY2NpbmF0aW9uTG9va3VwGhAuRGJTYXZlQ29uZGl0aW9uEjcKDkdldFZh",
+            "Y2NpbmF0aW9uEhIuVmFjY2luYXRpb25Mb29rdXAaES5WYWNjaW5hdGlvbk1v",
+            "ZGVsEkAKD0dldFZhY2NpbmF0aW9ucxIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eRoVLlZhY2NpbmF0aW9uTW9kZWxMaXN0QiKqAh9BbmltYWxIZWFsdGguQXBw",
+            "bGljYXRpb24uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::AnimalHealth.Application.Models.ContractReflection.Descriptor, global::AnimalHealth.Application.Models.UserReflection.Descriptor, global::AnimalHealth.Application.Models.AnimalReflection.Descriptor, global::AnimalHealth.Application.Models.InfrastructureReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.VaccinationModelList), global::AnimalHealth.Application.Models.VaccinationModelList.Parser, new[]{ "Vaccinations" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.VaccinationAddModel), global::AnimalHealth.Application.Models.VaccinationAddModel.Parser, new[]{ "Id", "Date", "ExpirationDate", "User", "Animal", "Contract", "Disease" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.VaccinationAddModel), global::AnimalHealth.Application.Models.VaccinationAddModel.Parser, new[]{ "Date", "ExpirationDate", "User", "Animal", "Contract", "Vaccine" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.VaccinationLookup), global::AnimalHealth.Application.Models.VaccinationLookup.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.VaccinationModel), global::AnimalHealth.Application.Models.VaccinationModel.Parser, new[]{ "Id", "Date", "ExpirationDate", "User", "Animal", "Contract", "Disease" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.VaccinationModel), global::AnimalHealth.Application.Models.VaccinationModel.Parser, new[]{ "Id", "Date", "ExpirationDate", "User", "Animal", "Contract", "Vaccine" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.VaccineModel), global::AnimalHealth.Application.Models.VaccineModel.Parser, new[]{ "Serial", "Name", "Price" }, null, null, null, null)
           }));
     }
@@ -279,13 +279,12 @@ namespace AnimalHealth.Application.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VaccinationAddModel(VaccinationAddModel other) : this() {
-      id_ = other.id_;
       date_ = other.date_ != null ? other.date_.Clone() : null;
       expirationDate_ = other.expirationDate_ != null ? other.expirationDate_.Clone() : null;
       user_ = other.user_ != null ? other.user_.Clone() : null;
       animal_ = other.animal_ != null ? other.animal_.Clone() : null;
       contract_ = other.contract_ != null ? other.contract_.Clone() : null;
-      disease_ = other.disease_ != null ? other.disease_.Clone() : null;
+      vaccine_ = other.vaccine_ != null ? other.vaccine_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -295,20 +294,8 @@ namespace AnimalHealth.Application.Models {
       return new VaccinationAddModel(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private int id_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
     /// <summary>Field number for the "date" field.</summary>
-    public const int DateFieldNumber = 2;
+    public const int DateFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp date_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -320,7 +307,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "expirationDate" field.</summary>
-    public const int ExpirationDateFieldNumber = 3;
+    public const int ExpirationDateFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp expirationDate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -332,7 +319,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "user" field.</summary>
-    public const int UserFieldNumber = 4;
+    public const int UserFieldNumber = 3;
     private global::AnimalHealth.Application.Models.UserModel user_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -344,7 +331,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "animal" field.</summary>
-    public const int AnimalFieldNumber = 5;
+    public const int AnimalFieldNumber = 4;
     private global::AnimalHealth.Application.Models.AnimalModel animal_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -356,7 +343,7 @@ namespace AnimalHealth.Application.Models {
     }
 
     /// <summary>Field number for the "contract" field.</summary>
-    public const int ContractFieldNumber = 6;
+    public const int ContractFieldNumber = 5;
     private global::AnimalHealth.Application.Models.ContractModel contract_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -367,15 +354,15 @@ namespace AnimalHealth.Application.Models {
       }
     }
 
-    /// <summary>Field number for the "disease" field.</summary>
-    public const int DiseaseFieldNumber = 7;
-    private global::AnimalHealth.Application.Models.VaccineModel disease_;
+    /// <summary>Field number for the "vaccine" field.</summary>
+    public const int VaccineFieldNumber = 6;
+    private global::AnimalHealth.Application.Models.VaccineModel vaccine_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::AnimalHealth.Application.Models.VaccineModel Disease {
-      get { return disease_; }
+    public global::AnimalHealth.Application.Models.VaccineModel Vaccine {
+      get { return vaccine_; }
       set {
-        disease_ = value;
+        vaccine_ = value;
       }
     }
 
@@ -394,13 +381,12 @@ namespace AnimalHealth.Application.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
       if (!object.Equals(Date, other.Date)) return false;
       if (!object.Equals(ExpirationDate, other.ExpirationDate)) return false;
       if (!object.Equals(User, other.User)) return false;
       if (!object.Equals(Animal, other.Animal)) return false;
       if (!object.Equals(Contract, other.Contract)) return false;
-      if (!object.Equals(Disease, other.Disease)) return false;
+      if (!object.Equals(Vaccine, other.Vaccine)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -408,13 +394,12 @@ namespace AnimalHealth.Application.Models {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
       if (date_ != null) hash ^= Date.GetHashCode();
       if (expirationDate_ != null) hash ^= ExpirationDate.GetHashCode();
       if (user_ != null) hash ^= User.GetHashCode();
       if (animal_ != null) hash ^= Animal.GetHashCode();
       if (contract_ != null) hash ^= Contract.GetHashCode();
-      if (disease_ != null) hash ^= Disease.GetHashCode();
+      if (vaccine_ != null) hash ^= Vaccine.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -433,33 +418,29 @@ namespace AnimalHealth.Application.Models {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
       if (date_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Date);
       }
       if (expirationDate_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(ExpirationDate);
       }
       if (user_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(User);
       }
       if (animal_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteMessage(Animal);
       }
       if (contract_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteMessage(Contract);
       }
-      if (disease_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(Disease);
+      if (vaccine_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Vaccine);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -471,33 +452,29 @@ namespace AnimalHealth.Application.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
       if (date_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Date);
       }
       if (expirationDate_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(ExpirationDate);
       }
       if (user_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(User);
       }
       if (animal_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteMessage(Animal);
       }
       if (contract_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteMessage(Contract);
       }
-      if (disease_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(Disease);
+      if (vaccine_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Vaccine);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -509,9 +486,6 @@ namespace AnimalHealth.Application.Models {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
-      }
       if (date_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Date);
       }
@@ -527,8 +501,8 @@ namespace AnimalHealth.Application.Models {
       if (contract_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Contract);
       }
-      if (disease_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Disease);
+      if (vaccine_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Vaccine);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -541,9 +515,6 @@ namespace AnimalHealth.Application.Models {
     public void MergeFrom(VaccinationAddModel other) {
       if (other == null) {
         return;
-      }
-      if (other.Id != 0) {
-        Id = other.Id;
       }
       if (other.date_ != null) {
         if (date_ == null) {
@@ -575,11 +546,11 @@ namespace AnimalHealth.Application.Models {
         }
         Contract.MergeFrom(other.Contract);
       }
-      if (other.disease_ != null) {
-        if (disease_ == null) {
-          Disease = new global::AnimalHealth.Application.Models.VaccineModel();
+      if (other.vaccine_ != null) {
+        if (vaccine_ == null) {
+          Vaccine = new global::AnimalHealth.Application.Models.VaccineModel();
         }
-        Disease.MergeFrom(other.Disease);
+        Vaccine.MergeFrom(other.Vaccine);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -596,50 +567,46 @@ namespace AnimalHealth.Application.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadInt32();
-            break;
-          }
-          case 18: {
+          case 10: {
             if (date_ == null) {
               Date = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(Date);
             break;
           }
-          case 26: {
+          case 18: {
             if (expirationDate_ == null) {
               ExpirationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(ExpirationDate);
             break;
           }
-          case 34: {
+          case 26: {
             if (user_ == null) {
               User = new global::AnimalHealth.Application.Models.UserModel();
             }
             input.ReadMessage(User);
             break;
           }
-          case 42: {
+          case 34: {
             if (animal_ == null) {
               Animal = new global::AnimalHealth.Application.Models.AnimalModel();
             }
             input.ReadMessage(Animal);
             break;
           }
-          case 50: {
+          case 42: {
             if (contract_ == null) {
               Contract = new global::AnimalHealth.Application.Models.ContractModel();
             }
             input.ReadMessage(Contract);
             break;
           }
-          case 58: {
-            if (disease_ == null) {
-              Disease = new global::AnimalHealth.Application.Models.VaccineModel();
+          case 50: {
+            if (vaccine_ == null) {
+              Vaccine = new global::AnimalHealth.Application.Models.VaccineModel();
             }
-            input.ReadMessage(Disease);
+            input.ReadMessage(Vaccine);
             break;
           }
         }
@@ -657,50 +624,46 @@ namespace AnimalHealth.Application.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadInt32();
-            break;
-          }
-          case 18: {
+          case 10: {
             if (date_ == null) {
               Date = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(Date);
             break;
           }
-          case 26: {
+          case 18: {
             if (expirationDate_ == null) {
               ExpirationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(ExpirationDate);
             break;
           }
-          case 34: {
+          case 26: {
             if (user_ == null) {
               User = new global::AnimalHealth.Application.Models.UserModel();
             }
             input.ReadMessage(User);
             break;
           }
-          case 42: {
+          case 34: {
             if (animal_ == null) {
               Animal = new global::AnimalHealth.Application.Models.AnimalModel();
             }
             input.ReadMessage(Animal);
             break;
           }
-          case 50: {
+          case 42: {
             if (contract_ == null) {
               Contract = new global::AnimalHealth.Application.Models.ContractModel();
             }
             input.ReadMessage(Contract);
             break;
           }
-          case 58: {
-            if (disease_ == null) {
-              Disease = new global::AnimalHealth.Application.Models.VaccineModel();
+          case 50: {
+            if (vaccine_ == null) {
+              Vaccine = new global::AnimalHealth.Application.Models.VaccineModel();
             }
-            input.ReadMessage(Disease);
+            input.ReadMessage(Vaccine);
             break;
           }
         }
@@ -941,7 +904,7 @@ namespace AnimalHealth.Application.Models {
       user_ = other.user_ != null ? other.user_.Clone() : null;
       animal_ = other.animal_ != null ? other.animal_.Clone() : null;
       contract_ = other.contract_ != null ? other.contract_.Clone() : null;
-      disease_ = other.disease_ != null ? other.disease_.Clone() : null;
+      vaccine_ = other.vaccine_ != null ? other.vaccine_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1023,15 +986,15 @@ namespace AnimalHealth.Application.Models {
       }
     }
 
-    /// <summary>Field number for the "disease" field.</summary>
-    public const int DiseaseFieldNumber = 7;
-    private global::AnimalHealth.Application.Models.VaccineModel disease_;
+    /// <summary>Field number for the "vaccine" field.</summary>
+    public const int VaccineFieldNumber = 7;
+    private global::AnimalHealth.Application.Models.VaccineModel vaccine_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::AnimalHealth.Application.Models.VaccineModel Disease {
-      get { return disease_; }
+    public global::AnimalHealth.Application.Models.VaccineModel Vaccine {
+      get { return vaccine_; }
       set {
-        disease_ = value;
+        vaccine_ = value;
       }
     }
 
@@ -1056,7 +1019,7 @@ namespace AnimalHealth.Application.Models {
       if (!object.Equals(User, other.User)) return false;
       if (!object.Equals(Animal, other.Animal)) return false;
       if (!object.Equals(Contract, other.Contract)) return false;
-      if (!object.Equals(Disease, other.Disease)) return false;
+      if (!object.Equals(Vaccine, other.Vaccine)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1070,7 +1033,7 @@ namespace AnimalHealth.Application.Models {
       if (user_ != null) hash ^= User.GetHashCode();
       if (animal_ != null) hash ^= Animal.GetHashCode();
       if (contract_ != null) hash ^= Contract.GetHashCode();
-      if (disease_ != null) hash ^= Disease.GetHashCode();
+      if (vaccine_ != null) hash ^= Vaccine.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1113,9 +1076,9 @@ namespace AnimalHealth.Application.Models {
         output.WriteRawTag(50);
         output.WriteMessage(Contract);
       }
-      if (disease_ != null) {
+      if (vaccine_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(Disease);
+        output.WriteMessage(Vaccine);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1151,9 +1114,9 @@ namespace AnimalHealth.Application.Models {
         output.WriteRawTag(50);
         output.WriteMessage(Contract);
       }
-      if (disease_ != null) {
+      if (vaccine_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(Disease);
+        output.WriteMessage(Vaccine);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1183,8 +1146,8 @@ namespace AnimalHealth.Application.Models {
       if (contract_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Contract);
       }
-      if (disease_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Disease);
+      if (vaccine_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Vaccine);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1231,11 +1194,11 @@ namespace AnimalHealth.Application.Models {
         }
         Contract.MergeFrom(other.Contract);
       }
-      if (other.disease_ != null) {
-        if (disease_ == null) {
-          Disease = new global::AnimalHealth.Application.Models.VaccineModel();
+      if (other.vaccine_ != null) {
+        if (vaccine_ == null) {
+          Vaccine = new global::AnimalHealth.Application.Models.VaccineModel();
         }
-        Disease.MergeFrom(other.Disease);
+        Vaccine.MergeFrom(other.Vaccine);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1292,10 +1255,10 @@ namespace AnimalHealth.Application.Models {
             break;
           }
           case 58: {
-            if (disease_ == null) {
-              Disease = new global::AnimalHealth.Application.Models.VaccineModel();
+            if (vaccine_ == null) {
+              Vaccine = new global::AnimalHealth.Application.Models.VaccineModel();
             }
-            input.ReadMessage(Disease);
+            input.ReadMessage(Vaccine);
             break;
           }
         }
@@ -1353,10 +1316,10 @@ namespace AnimalHealth.Application.Models {
             break;
           }
           case 58: {
-            if (disease_ == null) {
-              Disease = new global::AnimalHealth.Application.Models.VaccineModel();
+            if (vaccine_ == null) {
+              Vaccine = new global::AnimalHealth.Application.Models.VaccineModel();
             }
-            input.ReadMessage(Disease);
+            input.ReadMessage(Vaccine);
             break;
           }
         }

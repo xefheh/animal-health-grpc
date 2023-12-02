@@ -9,4 +9,5 @@ message PricePairModel {
   int32 id = 1;
   LocalityModel locality = 2;
   ContractModel contract = 3;
+  float price = 4;
 }

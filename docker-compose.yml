@@ -1,0 +1,44 @@
+﻿services:
+  animalhealth.api:
+    image: animalhealth.api
+    build:
+      context: .
+      dockerfile: AnimalHealth.API/Dockerfile
+    depends_on: 
+      - postgres.db
+    environment:
+      ConnectionStrings__DefaultConnection: "Host=postgres.db;Database=animalHealth;Username=postgres;Password=123"
+    networks:
+      - network
+      
+  postgres.db:
+    restart: always
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=animalHealth
+    ports:
+      - "5432:5432"
+    networks:
+      - network
+    volumes:
+      - ./AnimalHealth.API/SqlInitialize/sql_initialize.sql:/docker-entrypoint-initdb.d/init.sql
+  
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: 123
+    ports:
+      - "5050:80"
+    depends_on: 
+      - postgres.db
+    networks:
+      - network
+
+networks:
+  network:
+    
+        

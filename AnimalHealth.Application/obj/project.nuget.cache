@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Ia6saMTAzosZiz4SPjOI1L1rSH6MijcWqJzSg5azRxb61D8YJkMn1iKCNvDSrQukbHgonq2zrk+BCZOZBjGUOA==",
+  "dgSpecHash": "ugjKCn0mIKrxlWeIwTUBCs8VwKnAIcfCty8XPcPuw4jo8p1fPukF8Lxh0+H7+0+Nf/EV6CGfeGBx9Ihe40XRuA==",
   "success": true,
   "projectFilePath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Application\\AnimalHealth.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xefheh\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\xefheh\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\xefheh\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",
     "C:\\Users\\xefheh\\.nuget\\packages\\grpc.core.api\\2.59.0\\grpc.core.api.2.59.0.nupkg.sha512",
     "C:\\Users\\xefheh\\.nuget\\packages\\grpc.net.common\\2.59.0\\grpc.net.common.2.59.0.nupkg.sha512",

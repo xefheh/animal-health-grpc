@@ -15,7 +15,7 @@ public class Inspection
     public string? Manipulations { get; set; }
     public string? Treatment { get; set; }
     public DateTime Date { get; set; }
-    public User Doctor { get; set; } = null!;
+    public User User { get; set; } = null!;
     public Animal InspectedAnimal { get; set; } = null!;
     public Contract Contract { get; set; } = null!;
     public Disease? Disease { get; set; }

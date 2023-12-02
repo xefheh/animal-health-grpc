@@ -11,9 +11,9 @@ import "Protos/infrastructure.proto";
 
 service VaccinationProto {
   rpc AddVaccination(VaccinationAddModel) returns (VaccinationLookup);
-  rpc UpdateVaccination(VaccineModel) returns (DbSaveCondition);
+  rpc UpdateVaccination(VaccinationModel) returns (DbSaveCondition);
   rpc DeleteVaccination(VaccinationLookup) returns (DbSaveCondition);
-  rpc GetVaccination(VaccinationLookup) returns (VaccineModel);
+  rpc GetVaccination(VaccinationLookup) returns (VaccinationModel);
   rpc GetVaccinations(google.protobuf.Empty) returns (VaccinationModelList);
 }
 
@@ -27,7 +27,7 @@ message VaccinationAddModel {
   UserModel user = 3;
   AnimalModel animal = 4;
   ContractModel contract = 5;
-  VaccineModel disease = 6;
+  VaccineModel vaccine = 6;
 }
 
 message VaccinationLookup {
@@ -41,7 +41,7 @@ message VaccinationModel {
   UserModel user = 4;
   AnimalModel animal = 5;
   ContractModel contract = 6;
-  VaccineModel disease = 7;
+  VaccineModel vaccine = 7;
 }
 
 message VaccineModel {
