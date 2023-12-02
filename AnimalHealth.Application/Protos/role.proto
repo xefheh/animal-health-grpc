@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "AnimalHealth.Application.Models";
+
+import "Protos/organization.proto";
+import "Protos/user.proto";
+
+message RoleModel {
+  int32 id = 1;
+  OrganizationModel organization = 2;
+  UserModel user = 3;
+}

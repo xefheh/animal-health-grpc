@@ -1,0 +1,9 @@
+[submodule "animal-health-protofiles"]
+	path = animal-health-protofiles
+	url = https://github.com/xefheh/animal-health-protofiles.git
+[submodule "AnimalHealth.Application/Protos"]
+	path = AnimalHealth.Application/Protos
+	url = https://github.com/xefheh/animal-health-protofiles.git
+[submodule "temp_submodule"]
+	path = temp_submodule
+	url = https://github.com/xefheh/animal-health-protofiles.git

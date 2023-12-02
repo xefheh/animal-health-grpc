@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "AnimalHealth.Application.Models";
+
+import "google/protobuf/timestamp.proto";
+import "Protos/organization.proto";
+
+message ContractModel {
+  int32 id = 1;
+  int32 number = 2;
+  google.protobuf.Timestamp conclusionDate = 3;
+  google.protobuf.Timestamp endDate = 4;
+  OrganizationModel executor = 5;
+  OrganizationModel customer = 6;
+}

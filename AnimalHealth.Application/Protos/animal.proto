@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "AnimalHealth.Application.Models";
+
+import "google/protobuf/timestamp.proto";
+
+message AnimalModel {
+  int32 regNumber = 1;
+  string name = 2;
+  string ownerFeatures = 3;
+  google.protobuf.Timestamp birthDate = 4;
+  string behaviourFeatures = 5;
+  string sex = 6;
+  string type = 7;
+  int32 chipNumber = 8;
+}

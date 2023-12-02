@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option csharp_namespace = "AnimalHealth.Application.Models";
+
+import "Protos/locality.proto";
+
+message OrganizationModel {
+  string tin = 1;
+  string trc = 2;
+  string name = 3;
+  string type = 4;
+  string feature = 5;
+  LocalityModel locality = 6;
+}

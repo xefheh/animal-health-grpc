@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "AnimalHealth.Application.Models";
+
+import "google/protobuf/timestamp.proto";
+
+message LocalityModel {
+  int32 id = 1;
+  string name = 2;
+}

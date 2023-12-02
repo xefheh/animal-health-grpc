@@ -1,0 +1,12 @@
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Domain\bin\Debug\net7.0\AnimalHealth.Domain.deps.json
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Domain\bin\Debug\net7.0\AnimalHealth.Domain.dll
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Domain\bin\Debug\net7.0\AnimalHealth.Domain.pdb
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Domain\obj\Debug\net7.0\AnimalHealth.Domain.csproj.AssemblyReference.cache
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Domain\obj\Debug\net7.0\AnimalHealth.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Domain\obj\Debug\net7.0\AnimalHealth.Domain.AssemblyInfoInputs.cache
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Domain\obj\Debug\net7.0\AnimalHealth.Domain.AssemblyInfo.cs
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Domain\obj\Debug\net7.0\AnimalHealth.Domain.csproj.CoreCompileInputs.cache
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Domain\obj\Debug\net7.0\AnimalHealth.Domain.dll
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Domain\obj\Debug\net7.0\refint\AnimalHealth.Domain.dll
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Domain\obj\Debug\net7.0\AnimalHealth.Domain.pdb
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Domain\obj\Debug\net7.0\ref\AnimalHealth.Domain.dll

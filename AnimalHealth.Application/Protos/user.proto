@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "AnimalHealth.Application.Models";
+
+message UserModel {
+  int32 id = 1;
+  string name = 2;
+  string login = 3;
+  string password = 4;
+}

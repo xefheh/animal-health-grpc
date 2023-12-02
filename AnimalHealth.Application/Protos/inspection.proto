@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+option csharp_namespace = "AnimalHealth.Application.Models";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "Protos/contract.proto";
+import "Protos/user.proto";
+import "Protos/animal.proto";
+import "Protos/infrastructure.proto";
+
+service InspectionProto {
+  rpc AddInspection(InspectionAddModel) returns (InspectionLookup);
+  rpc UpdateInspection(InspectionModel) returns (DbSaveCondition);
+  rpc DeleteInspection(InspectionLookup) returns (DbSaveCondition);
+  rpc GetInspection(InspectionLookup) returns (InspectionModel);
+  rpc GetInspections(google.protobuf.Empty) returns (InspectionModelList);
+}
+
+message InspectionModelList {
+  repeated InspectionModel inspections = 1;
+}
+
+message InspectionAddModel {
+  string featureBehaviour = 2;
+  string animalCondition = 3;
+  float temperature = 4;
+  string skinCover = 5;
+  string furCondition = 6;
+  bool isNeedOperations = 7;
+  string manipulations = 8;
+  string treatment = 9;
+  google.protobuf.Timestamp date = 10;
+  UserModel user = 11;
+  AnimalModel animal = 12;
+  ContractModel contract = 13;
+  DiseaseModel disease = 14;
+}
+
+message InspectionLookup {
+  int32 id = 1;
+}
+
+message InspectionModel {
+  int32 id = 1;
+  string featureBehaviour = 2;
+  string animalCondition = 3;
+  float temperature = 4;
+  string skinCover = 5;
+  string furCondition = 6;
+  bool isNeedOperations = 7;
+  string manipulations = 8;
+  string treatment = 9;
+  google.protobuf.Timestamp date = 10;
+  UserModel user = 11;
+  AnimalModel animal = 12;
+  ContractModel contract = 13;
+  DiseaseModel disease = 14;
+}
+
+message DiseaseModel {
+  int32 id = 1;
+  string name = 2;
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+option csharp_namespace = "AnimalHealth.Application.Models";
+
+message DbSaveCondition {
+  int32 code = 1;
+}

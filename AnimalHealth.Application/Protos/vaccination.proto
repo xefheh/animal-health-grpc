@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option csharp_namespace = "AnimalHealth.Application.Models";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "Protos/contract.proto";
+import "Protos/user.proto";
+import "Protos/animal.proto";
+import "Protos/infrastructure.proto";
+
+service VaccinationProto {
+  rpc AddVaccination(VaccinationAddModel) returns (VaccinationLookup);
+  rpc UpdateVaccination(VaccineModel) returns (DbSaveCondition);
+  rpc DeleteVaccination(VaccinationLookup) returns (DbSaveCondition);
+  rpc GetVaccination(VaccinationLookup) returns (VaccineModel);
+  rpc GetVaccinations(google.protobuf.Empty) returns (VaccinationModelList);
+}
+
+message VaccinationModelList {
+  repeated VaccinationModel vaccinations = 1;
+}
+
+message VaccinationAddModel {
+  google.protobuf.Timestamp date = 1;
+  google.protobuf.Timestamp expirationDate = 2;
+  UserModel user = 3;
+  AnimalModel animal = 4;
+  ContractModel contract = 5;
+  VaccineModel disease = 6;
+}
+
+message VaccinationLookup {
+  int32 id = 1;
+}
+
+message VaccinationModel {
+  int32 id = 1;
+  google.protobuf.Timestamp date = 2;
+  google.protobuf.Timestamp expirationDate = 3;
+  UserModel user = 4;
+  AnimalModel animal = 5;
+  ContractModel contract = 6;
+  VaccineModel disease = 7;
+}
+
+message VaccineModel {
+  int32 serial = 1;
+  string name = 2;
+  float price = 3;
+}
