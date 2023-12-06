@@ -2,6 +2,7 @@
 
 public class Animal
 {
+    //2
     public int RegNumber { get; set; }
     public string? Name { get; set; }
     public string? OwnerFeatures { get; set; }
