@@ -10,6 +10,7 @@ public class OrganizationMappingProfile : Profile
     {
         CreateMappingToModelFromEntity();
         CreateMappingToEntityFromModel();
+        CreateMappingToEntityFromAddModel();
     }
     
     private void CreateMappingToModelFromEntity()
@@ -19,8 +20,7 @@ public class OrganizationMappingProfile : Profile
             .ForMember(model => model.Trc, opt => opt.MapFrom(organization => organization.Trc))
             .ForMember(model => model.Name, opt => opt.MapFrom(organization => organization.Name))
             .ForMember(model => model.Type, opt => opt.MapFrom(organization => organization.Type))
-            .ForMember(model => model.Feature, opt => opt.MapFrom(organization => organization.Feature))
-            .ForMember(model => model.Locality, opt => opt.MapFrom(organization => organization.Locality));
+            .ForMember(model => model.Feature, opt => opt.MapFrom(organization => organization.Feature));
     }
 
     private void CreateMappingToEntityFromModel()
@@ -30,7 +30,16 @@ public class OrganizationMappingProfile : Profile
             .ForMember(organization => organization.Trc, opt => opt.MapFrom(model => model.Trc))
             .ForMember(organization => organization.Name, opt => opt.MapFrom(model => model.Name))
             .ForMember(organization => organization.Type, opt => opt.MapFrom(model => model.Type))
-            .ForMember(organization => organization.Feature, opt => opt.MapFrom(model => model.Feature))
-            .ForMember(organization => organization.Locality, opt => opt.MapFrom(model => model.Locality));
+            .ForMember(organization => organization.Feature, opt => opt.MapFrom(model => model.Feature));
+    }
+
+    private void CreateMappingToEntityFromAddModel()
+    {
+        CreateMap<OrganizationAddModel, Organization>()
+            .ForMember(organization => organization.Tin, opt => opt.MapFrom(model => model.Tin))
+            .ForMember(organization => organization.Trc, opt => opt.MapFrom(model => model.Trc))
+            .ForMember(organization => organization.Name, opt => opt.MapFrom(model => model.Name))
+            .ForMember(organization => organization.Type, opt => opt.MapFrom(model => model.Type))
+            .ForMember(organization => organization.Feature, opt => opt.MapFrom(model => model.Feature));
     }
 }

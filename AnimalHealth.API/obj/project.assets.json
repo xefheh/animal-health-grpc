@@ -58,10 +58,10 @@
           "lib/net7.0/_._": {}
         }
       },
-      "Grpc.AspNetCore.Server/2.49.0": {
+      "Grpc.AspNetCore.Server/2.59.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Net.Common": "2.49.0"
+          "Grpc.Net.Common": "2.59.0"
         },
         "compile": {
           "lib/net7.0/Grpc.AspNetCore.Server.dll": {
@@ -90,6 +90,27 @@
         },
         "runtime": {
           "lib/net7.0/Grpc.AspNetCore.Server.ClientFactory.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Grpc.AspNetCore.Server.Reflection/2.59.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.23.1",
+          "Grpc.AspNetCore.Server": "2.59.0",
+          "Grpc.Reflection": "2.59.0"
+        },
+        "compile": {
+          "lib/net7.0/Grpc.AspNetCore.Server.Reflection.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Grpc.AspNetCore.Server.Reflection.dll": {
             "related": ".pdb;.xml"
           }
         },
@@ -156,6 +177,23 @@
         },
         "runtime": {
           "lib/net7.0/Grpc.Net.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Grpc.Reflection/2.59.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.23.1",
+          "Grpc.Core.Api": "2.59.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Grpc.Reflection.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Grpc.Reflection.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -590,28 +628,25 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.AspNetCore.Server/2.49.0": {
-      "sha512": "it0nmQi10S/cgC1nk/nVgQiYv5sd/IWnob8SsB3JEpbIFAAKaU6ZjdTKRiATunNtDb/IYBLGeo8BMDoxfewxyw==",
+    "Grpc.AspNetCore.Server/2.59.0": {
+      "sha512": "Q4P1ZzygF67uJYdU4rbgxs2ISL+xCRT74WosFpCPpgj6OeMSLRwjLU1aOhIMmr9kHrFCMV9vNg6qx4RsXD+92g==",
       "type": "package",
-      "path": "grpc.aspnetcore.server/2.49.0",
+      "path": "grpc.aspnetcore.server/2.59.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "grpc.aspnetcore.server.2.49.0.nupkg.sha512",
+        "grpc.aspnetcore.server.2.59.0.nupkg.sha512",
         "grpc.aspnetcore.server.nuspec",
-        "lib/net5.0/Grpc.AspNetCore.Server.dll",
-        "lib/net5.0/Grpc.AspNetCore.Server.pdb",
-        "lib/net5.0/Grpc.AspNetCore.Server.xml",
         "lib/net6.0/Grpc.AspNetCore.Server.dll",
         "lib/net6.0/Grpc.AspNetCore.Server.pdb",
         "lib/net6.0/Grpc.AspNetCore.Server.xml",
         "lib/net7.0/Grpc.AspNetCore.Server.dll",
         "lib/net7.0/Grpc.AspNetCore.Server.pdb",
         "lib/net7.0/Grpc.AspNetCore.Server.xml",
-        "lib/netcoreapp3.0/Grpc.AspNetCore.Server.dll",
-        "lib/netcoreapp3.0/Grpc.AspNetCore.Server.pdb",
-        "lib/netcoreapp3.0/Grpc.AspNetCore.Server.xml",
+        "lib/net8.0/Grpc.AspNetCore.Server.dll",
+        "lib/net8.0/Grpc.AspNetCore.Server.pdb",
+        "lib/net8.0/Grpc.AspNetCore.Server.xml",
         "packageIcon.png"
       ]
     },
@@ -636,6 +671,27 @@
         "lib/netcoreapp3.0/Grpc.AspNetCore.Server.ClientFactory.dll",
         "lib/netcoreapp3.0/Grpc.AspNetCore.Server.ClientFactory.pdb",
         "lib/netcoreapp3.0/Grpc.AspNetCore.Server.ClientFactory.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.AspNetCore.Server.Reflection/2.59.0": {
+      "sha512": "ocsERarcNFIWWnk3Nkhgvz19r0Ns0Y8Bf70WUkow01QQkdpT9qJbn+TnOBsUFW0deP7XWSNrw5xASxVA8mJvSA==",
+      "type": "package",
+      "path": "grpc.aspnetcore.server.reflection/2.59.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grpc.aspnetcore.server.reflection.2.59.0.nupkg.sha512",
+        "grpc.aspnetcore.server.reflection.nuspec",
+        "lib/net6.0/Grpc.AspNetCore.Server.Reflection.dll",
+        "lib/net6.0/Grpc.AspNetCore.Server.Reflection.pdb",
+        "lib/net6.0/Grpc.AspNetCore.Server.Reflection.xml",
+        "lib/net7.0/Grpc.AspNetCore.Server.Reflection.dll",
+        "lib/net7.0/Grpc.AspNetCore.Server.Reflection.pdb",
+        "lib/net7.0/Grpc.AspNetCore.Server.Reflection.xml",
+        "lib/net8.0/Grpc.AspNetCore.Server.Reflection.dll",
+        "lib/net8.0/Grpc.AspNetCore.Server.Reflection.pdb",
+        "lib/net8.0/Grpc.AspNetCore.Server.Reflection.xml",
         "packageIcon.png"
       ]
     },
@@ -741,6 +797,25 @@
         "lib/netstandard2.1/Grpc.Net.Common.dll",
         "lib/netstandard2.1/Grpc.Net.Common.pdb",
         "lib/netstandard2.1/Grpc.Net.Common.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.Reflection/2.59.0": {
+      "sha512": "AfgIqJRbZOTTc7es2+BYMfXRdv4lqdEqOV8644ZB37nbO60RM5L2thzmUBWZ4uMa6MhDuNul/60lxyH/Mzik6A==",
+      "type": "package",
+      "path": "grpc.reflection/2.59.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.reflection.2.59.0.nupkg.sha512",
+        "grpc.reflection.nuspec",
+        "lib/net462/Grpc.Reflection.dll",
+        "lib/net462/Grpc.Reflection.pdb",
+        "lib/net462/Grpc.Reflection.xml",
+        "lib/netstandard2.0/Grpc.Reflection.dll",
+        "lib/netstandard2.0/Grpc.Reflection.pdb",
+        "lib/netstandard2.0/Grpc.Reflection.xml",
         "packageIcon.png"
       ]
     },
@@ -1305,6 +1380,8 @@
     "net7.0": [
       "AnimalHealth.Application >= 1.0.0",
       "Grpc.AspNetCore >= 2.49.0",
+      "Grpc.AspNetCore.Server.Reflection >= 2.59.0",
+      "Grpc.Reflection >= 2.59.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 7.0.14",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.11"
     ]
@@ -1354,6 +1431,14 @@
           "Grpc.AspNetCore": {
             "target": "Package",
             "version": "[2.49.0, )"
+          },
+          "Grpc.AspNetCore.Server.Reflection": {
+            "target": "Package",
+            "version": "[2.59.0, )"
+          },
+          "Grpc.Reflection": {
+            "target": "Package",
+            "version": "[2.59.0, )"
           },
           "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",

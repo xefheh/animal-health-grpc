@@ -1,4 +1,5 @@
 ﻿using AnimalHealth.Application.Exceptions;
+using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
 using AnimalHealth.Application.Extensions.VaccinationExt;
 using AnimalHealth.Application.Interfaces.Registries;
 using AnimalHealth.Application.Models;
@@ -19,15 +20,15 @@ internal class VaccinationRegistry : IVaccinationRegistry
     public async Task<VaccinationModel> GetVaccinationAsync(VaccinationLookup lookup, CancellationToken cancellationToken)
     {
         var vaccinationId = lookup.Id;
-        var vaccination = await
-            _context.Vaccinations.FindAsync(new object[] { vaccinationId }, cancellationToken);
-        if (vaccination == null) throw new NotFoundException(typeof(Vaccination), vaccinationId);
+        var vaccination = await _context.Vaccinations.LoadIncludes()
+            .FirstOrDefaultAsync(vaccination => vaccination.Id == vaccinationId, cancellationToken);
+        if (vaccination == default(Vaccination)) throw new NotFoundException(typeof(Vaccination), vaccinationId);
         return _mapper.Map<VaccinationModel>(vaccination);
     }
 
     public async Task<VaccinationModelList> GetVaccinationsAsync(CancellationToken cancellationToken)
     {
-        var vaccinations = await _context.Vaccinations.ToListAsync(cancellationToken);
+        var vaccinations = await _context.Vaccinations.LoadIncludes().ToListAsync(cancellationToken);
         var vaccinationModels = vaccinations.Select(vaccination => _mapper.Map<VaccinationModel>(vaccination));
         var vaccinationModelList = new VaccinationModelList();
         vaccinationModelList.Vaccinations.AddRange(vaccinationModels);
@@ -38,15 +39,16 @@ internal class VaccinationRegistry : IVaccinationRegistry
     {
         var vaccination = _mapper.Map<Vaccination>(addedVaccination);
         await _context.Vaccinations.AddAsync(vaccination, cancellationToken);
+        await _context.SaveChangesAsync(cancellationToken);
         return new VaccinationLookup { Id = vaccination.Id };
     }
 
     public async Task<DbSaveCondition> UpdateVaccinationAsync(VaccinationModel updatedVaccination, CancellationToken cancellationToken)
     {
         var updatedDomainVaccination = _mapper.Map<Vaccination>(updatedVaccination);
-        var vaccination =
-            await _context.Vaccinations.FindAsync(new object[] { updatedDomainVaccination.Id }, cancellationToken);
-        if (vaccination == null) throw new NotFoundException(typeof(Vaccination), updatedVaccination.Id);
+        var vaccination = await _context.Vaccinations.LoadIncludes()
+            .FirstOrDefaultAsync(vaccination => vaccination.Id == updatedVaccination.Id, cancellationToken);
+        if (vaccination == default(Vaccination)) throw new NotFoundException(typeof(Vaccination), updatedVaccination.Id);
         vaccination.UpdateFields(updatedDomainVaccination);
         var saveCode = await _context.SaveChangesAsync(cancellationToken);
         return new DbSaveCondition { Code = saveCode };

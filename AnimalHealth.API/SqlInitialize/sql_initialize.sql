@@ -391,3 +391,61 @@ CREATE INDEX IF NOT EXISTS "IX_PricePairs_LocalityId"
     ON public."PricePairs" USING btree
     ("LocalityId" ASC NULLS LAST)
     TABLESPACE pg_default;
+
+INSERT INTO "Animals" ("RegNumber", "Name", "OwnerFeatures", "BirthDate", "BehaviourFeatures", "Sex", "Type", "ChipNumber") VALUES
+                                                                                                                                (1, 'Кошка 1', 'sdsdsds', '01-02-2002', 'sdf', 'М', 'Собака', 123),
+                                                                                                                                (2, 'Собака 1', 'sdsdsds', '01-02-2002', 'sdf', 'Ж', 'Енот', 1234),
+                                                                                                                                (3, 'Собака 2', 'sdsdsds', '01-02-2002', 'sdf', 'М', 'Кошка', 228),
+                                                                                                                                (4, 'Кошка 2', 'sdsdsds', '01-02-2002', 'sdf', 'М', 'Гусь', 322),
+                                                                                                                                (5, 'Кошка 3', 'sdsdsds', '01-02-2002', 'sdf', 'М', 'Собака', 1488);
+
+INSERT INTO "Localities"("Id", "Name") VALUES
+                                           (1, 'Тюмень'),
+                                           (2, 'Москва'),
+                                           (3, 'Волгоград');
+
+INSERT INTO "Organizations"("Tin", "Trc", "Name", "Type", "Feature", "LocalityId") VALUES
+                                                                                       (1, 1, 'Лучший друг', 'Ветклиника', 'Ветклиника', 1),
+                                                                                       (2, 1, 'Семечка', 'Ветклиника', 'Ветклиника', 2),
+                                                                                       (3, 1, 'ZOOМИР', 'Ветклиника', 'Ветклиника', 3);
+
+INSERT INTO "Contracts"("Id", "Number", "ConclusionDate", "EndDate", "ExecutorTin", "CustomerTin") VALUES
+                                                                                                       (1, 1, '01-02-2002', '01-03-2002', 1, 2),
+                                                                                                       (2, 2, '01-02-2002', '01-03-2002', 3, 1),
+                                                                                                       (3, 3, '01-02-2002', '01-03-2002', 1, 2);
+
+INSERT INTO "Users"("Id", "Name", "Login", "Password") VALUES
+                                                           (1, 'Вова', 'admin', 'admin1'),
+                                                           (2, 'Пиво', 'admin', 'admin1'),
+                                                           (3, 'Юзер', '123', '123'),
+                                                           (4, 'Имя', 'asd', 'asd'),
+                                                           (5, 'Фамилия', 'asd', 'asd');
+
+INSERT INTO "Roles"("Id", "OrganizationTin", "UserId") VALUES
+                                                           (1, 1, 1),
+                                                           (2, 2, 2),
+                                                           (3, 3, 3),
+                                                           (4, 1, 2),
+                                                           (5, 2, 1);
+
+INSERT INTO "Vaccines"("Serial", "Name", "Price") VALUES
+    (1, 'Бешенство', 500);
+
+INSERT INTO "Vaccinations"("Id", "Date", "ExpirationDate", "AnimalRegNumber", "UserId", "VaccineSerial", "ContractId") VALUES
+                                                                                                                           (1, '01-02-2012', '01-03-2012', 1, 3, 1, 1),
+                                                                                                                           (2, '01-02-2012', '01-03-2012', 2, 3, 1, 1),
+                                                                                                                           (3, '01-02-2012', '01-03-2012', 3, 3, 1, 1),
+                                                                                                                           (4, '01-02-2012', '01-03-2012', 3, 3, 1, 1),
+                                                                                                                           (5, '01-02-2012', '01-03-2012', 1, 3, 1, 1),
+                                                                                                                           (6, '01-02-2012', '01-03-2012', 2, 3, 1, 1);
+
+INSERT INTO "Diseases"("Number", "Name") VALUES
+    (1, 'Бешенство');
+
+INSERT INTO "Inspections"("Id", "FeatureBehaviour", "AnimalCondition", "Temperature", "SkinCover", "FurCondition", "Injures", "IsNeedOperations",
+                          "Manipulations", "Treatment", "Date", "UserId", "InspectedAnimalRegNumber", "ContractId", "DiseaseNumber") VALUES
+                                                                                                                                         (1, 'авпва', 'ываыа', 1293, 'ывываыв', 'ываываа', 'ываываыва', '1', 'sdfs', 'sdfsdf', '01-03-2012', 1, 1, 1, 1),
+                                                                                                                                         (2, 'авпва', 'ываыа', 1293, 'ывываыв', 'ываываа', 'ываываыва', '1', 'sdfs', 'sdfsdf', '01-03-2012', 1, 1, 1, 1),
+                                                                                                                                         (3, 'авпва', 'ываыа', 1293, 'ывываыв', 'ываываа', 'ываываыва', '1', 'sdfs', 'sdfsdf', '01-03-2012', 1, 1, 2, 1),
+                                                                                                                                         (4, 'авпва', 'ываыа', 1293, 'ывываыв', 'ываываа', 'ываываыва', '1', 'sdfs', 'sdfsdf', '01-03-2012', 1, 1, 2, 1),
+                                                                                                                                         (5, 'авпва', 'ываыа', 1293, 'ывываыв', 'ываываа', 'ываываыва', '1', 'sdfs', 'sdfsdf', '01-03-2012', 1, 1, 3, 1);

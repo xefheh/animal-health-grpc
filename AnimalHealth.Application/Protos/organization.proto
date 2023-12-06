@@ -3,6 +3,33 @@ syntax = "proto3";
 option csharp_namespace = "AnimalHealth.Application.Models";
 
 import "Protos/locality.proto";
+import "google/protobuf/empty.proto";
+import "Protos/infrastructure.proto";
+
+service OrganizationProto {
+  rpc AddOrganization(OrganizationAddModel) returns (OrganizationLookup);
+  rpc UpdateOrganization(OrganizationModel) returns (DbSaveCondition);
+  rpc DeleteOrganization(OrganizationLookup) returns (DbSaveCondition);
+  rpc GetOrganization(OrganizationLookup) returns (OrganizationModel);
+  rpc GetOrganizations(google.protobuf.Empty) returns (OrganizationModelList);
+}
+
+message OrganizationModelList {
+  repeated OrganizationModel organizations = 1;
+}
+
+message OrganizationAddModel {
+  string tin = 1;
+  string trc = 2;
+  string name = 3;
+  string type = 4;
+  string feature = 5;
+  LocalityModel locality = 6;
+}
+
+message OrganizationLookup {
+  string tin = 1;
+}
 
 message OrganizationModel {
   string tin = 1;

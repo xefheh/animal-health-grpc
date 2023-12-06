@@ -1,4 +1,5 @@
 ﻿using AnimalHealth.Application.Exceptions;
+using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
 using AnimalHealth.Application.Extensions.InspectionExt;
 using AnimalHealth.Application.Interfaces.Registries;
 using AnimalHealth.Application.Models;
@@ -6,6 +7,7 @@ using AnimalHealth.Domain.Entities;
 using AnimalHealth.Persistence;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace AnimalHealth.Application.Registries.Inspections;
 
@@ -19,15 +21,16 @@ public class InspectionRegistry : IInspectionRegistry
     public async Task<InspectionModel> GetInspectionAsync(InspectionLookup lookup, CancellationToken cancellationToken)
     {
         var inspectionId = lookup.Id;
-        var inspection = await 
-            _context.Inspections.FindAsync(new object[] { inspectionId }, cancellationToken);
-        if (inspection == null) throw new NotFoundException(typeof(Inspection), inspectionId);
+        var inspection = await _context.Inspections
+            .LoadIncludes().FirstOrDefaultAsync(inspection => inspection.Id == inspectionId, cancellationToken);
+        if (inspection == default(Inspection)) throw new NotFoundException(typeof(Inspection), inspectionId);
         return _mapper.Map<InspectionModel>(inspection);
     }
 
     public async Task<InspectionModelList> GetInspectionsAsync(CancellationToken cancellationToken)
     {
-        var inspections = await _context.Inspections.ToListAsync(cancellationToken);
+        var inspections = await _context.Inspections
+            .LoadIncludes().ToListAsync(cancellationToken);
         var inspectionModels = inspections.Select(inspection => _mapper.Map<InspectionModel>(inspection));
         var inspectionModelList = new InspectionModelList();
         inspectionModelList.Inspections.AddRange(inspectionModels);
@@ -38,6 +41,7 @@ public class InspectionRegistry : IInspectionRegistry
     {
         var inspection = _mapper.Map<Inspection>(addedInspection);
         await _context.Inspections.AddAsync(inspection, cancellationToken);
+        await _context.SaveChangesAsync(cancellationToken);
         return new InspectionLookup { Id = inspection.Id };
     }
 
@@ -46,7 +50,7 @@ public class InspectionRegistry : IInspectionRegistry
         var updatedDomainInspection = _mapper.Map<Inspection>(updatedInspection);
         var inspection =
             await _context.Inspections.FindAsync(new object[] { updatedDomainInspection.Id }, cancellationToken);
-        if (inspection == null) throw new NotFoundException(typeof(Vaccination), updatedInspection.Id);
+        if (inspection == default(Inspection)) throw new NotFoundException(typeof(Vaccination), updatedInspection.Id);
         inspection.UpdateFields(updatedDomainInspection);
         var saveCode = await _context.SaveChangesAsync(cancellationToken);
         return new DbSaveCondition { Code = saveCode };

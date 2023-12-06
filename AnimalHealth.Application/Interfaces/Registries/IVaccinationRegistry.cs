@@ -30,10 +30,10 @@ public interface IVaccinationRegistry
     /// <summary>
     /// Изменить поля существующей вакцинации.
     /// </summary>
-    /// <param name="updatedInspection">gRPC модель вакцинации с обновлёнными полями.</param>
+    /// <param name="updatedVaccination">gRPC модель вакцинации с обновлёнными полями.</param>
     /// <param name="cancellationToken">Токен отмены.</param>
     /// <returns>Состояние сохранения БД.</returns>
-    public Task<DbSaveCondition> UpdateVaccinationAsync(VaccinationModel updatedInspection, CancellationToken cancellationToken);
+    public Task<DbSaveCondition> UpdateVaccinationAsync(VaccinationModel updatedVaccination, CancellationToken cancellationToken);
     
     /// <summary>
     /// Удалить вакцинацию по ключевому полю.

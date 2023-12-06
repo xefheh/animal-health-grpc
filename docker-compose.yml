@@ -4,6 +4,8 @@
     build:
       context: .
       dockerfile: AnimalHealth.API/Dockerfile
+    ports:
+      - "8080:80"
     depends_on: 
       - postgres.db
     environment:

@@ -6,6 +6,9 @@ namespace AnimalHealth.Persistence.Configurations;
 
 public class ContractConfiguration : IEntityTypeConfiguration<Contract>
 {
-    public void Configure(EntityTypeBuilder<Contract> builder) =>
+    public void Configure(EntityTypeBuilder<Contract> builder)
+    {
         builder.HasKey(contract => contract.Id);
+
+    }
 }

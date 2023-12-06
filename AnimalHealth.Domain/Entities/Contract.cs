@@ -7,5 +7,5 @@ public class Contract
     public DateTime ConclusionDate { get; set; }
     public DateTime EndDate { get; set; }
     public Organization Executor { get; set; } = null!;
-    public Organization Customer { get; set; } = null!;
+    public virtual Organization Customer { get; set; } = null!;
 }

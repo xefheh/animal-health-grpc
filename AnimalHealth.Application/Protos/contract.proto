@@ -3,7 +3,33 @@ syntax = "proto3";
 option csharp_namespace = "AnimalHealth.Application.Models";
 
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
 import "Protos/organization.proto";
+import "Protos/infrastructure.proto";
+
+service ContractProto {
+  rpc AddContract(ContractAddModel) returns (ContractLookup);
+  rpc UpdateContract(ContractModel) returns (DbSaveCondition);
+  rpc DeleteContract(ContractLookup) returns (DbSaveCondition);
+  rpc GetContract(ContractLookup) returns (ContractModel);
+  rpc GetContracts(google.protobuf.Empty) returns (ContractModelList);
+}
+
+message ContractModelList {
+  repeated ContractModel contracts = 1;
+}
+
+message ContractAddModel {
+  int32 number = 1;
+  google.protobuf.Timestamp conclusionDate = 2;
+  google.protobuf.Timestamp endDate = 3;
+  OrganizationModel executor = 4;
+  OrganizationModel customer = 5;
+}
+
+message ContractLookup {
+  int32 id = 1;
+}
 
 message ContractModel {
   int32 id = 1;

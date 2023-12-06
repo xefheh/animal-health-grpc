@@ -41,17 +41,13 @@ public class InspectionMappingProfile : Profile
             .ForMember(model => model.Date, opt => opt.MapFrom(model => model.Date.ToDateTime()))
             .ForMember(model => model.FeatureBehaviour, opt => opt.MapFrom(model => model.FeatureBehaviour))
             .ForMember(model => model.IsNeedOperations, opt => opt.MapFrom(model => model.IsNeedOperations))
-            .ForMember(model => model.Contract, opt => opt.MapFrom(model => model.Contract))
-            .ForMember(model => model.Disease, opt => opt.MapFrom(model => model.Disease))
-            .ForMember(model => model.User, opt => opt.MapFrom(model => model.User))
             .ForMember(model => model.Temperature, opt => opt.MapFrom(model => model.Temperature))
             .ForMember(model => model.AnimalCondition, opt => opt.MapFrom(model => model.AnimalCondition))
             .ForMember(model => model.SkinCover, opt => opt.MapFrom(model => model.SkinCover))
             .ForMember(model => model.Injures, opt => opt.MapFrom(model => model.Injures))
             .ForMember(model => model.Treatment, opt => opt.MapFrom(model => model.Treatment))
             .ForMember(model => model.FurCondition, opt => opt.MapFrom(model => model.FurCondition))
-            .ForMember(model => model.Manipulations, opt => opt.MapFrom(model => model.Manipulations))
-            .ForMember(model => model.InspectedAnimal, opt => opt.MapFrom(model => model.Animal));
+            .ForMember(model => model.Manipulations, opt => opt.MapFrom(model => model.Manipulations));
     }
     
     private void CreateMappingToEntityFromAddModel()
@@ -60,16 +56,12 @@ public class InspectionMappingProfile : Profile
             .ForMember(model => model.Date, opt => opt.MapFrom(model => model.Date.ToDateTime()))
             .ForMember(model => model.FeatureBehaviour, opt => opt.MapFrom(model => model.FeatureBehaviour))
             .ForMember(model => model.IsNeedOperations, opt => opt.MapFrom(model => model.IsNeedOperations))
-            .ForMember(model => model.Contract, opt => opt.MapFrom(model => model.Contract))
-            .ForMember(model => model.Disease, opt => opt.MapFrom(model => model.Disease))
-            .ForMember(model => model.User, opt => opt.MapFrom(model => model.User))
             .ForMember(model => model.Temperature, opt => opt.MapFrom(model => model.Temperature))
             .ForMember(model => model.AnimalCondition, opt => opt.MapFrom(model => model.AnimalCondition))
             .ForMember(model => model.SkinCover, opt => opt.MapFrom(model => model.SkinCover))
             .ForMember(model => model.Injures, opt => opt.MapFrom(model => model.Injures))
             .ForMember(model => model.Treatment, opt => opt.MapFrom(model => model.Treatment))
             .ForMember(model => model.FurCondition, opt => opt.MapFrom(model => model.FurCondition))
-            .ForMember(model => model.Manipulations, opt => opt.MapFrom(model => model.Manipulations))
-            .ForMember(model => model.InspectedAnimal, opt => opt.MapFrom(model => model.Animal));
+            .ForMember(model => model.Manipulations, opt => opt.MapFrom(model => model.Manipulations));
     }
 }

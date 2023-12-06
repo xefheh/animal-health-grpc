@@ -12,11 +12,16 @@ builder.Services.AddPersistenceLayer(opt => opt.UseNpgsql(connectionString));
 builder.Services.AddApplicationLayer();
 
 builder.Services.AddGrpc();
+builder.Services.AddGrpcReflection();
 
 var app = builder.Build();
 
 app.MapGrpcService<InspectionService>();
 app.MapGrpcService<VaccinationService>();
+app.MapGrpcService<OrganizationService>();
+app.MapGrpcService<ContractService>();
+
+if (app.Environment.IsDevelopment()) app.MapGrpcReflectionService();
 
 app.MapGet("/",
     () =>

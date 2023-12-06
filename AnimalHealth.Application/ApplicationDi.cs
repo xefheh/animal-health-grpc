@@ -1,6 +1,8 @@
 ﻿using System.Reflection;
 using AnimalHealth.Application.Interfaces.Registries;
+using AnimalHealth.Application.Registries.Contracts;
 using AnimalHealth.Application.Registries.Inspections;
+using AnimalHealth.Application.Registries.Organizations;
 using AnimalHealth.Application.Registries.Vaccinations;
 using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,6 +15,8 @@ public static class ApplicationDi
     {
         services.AddTransient<IInspectionRegistry, InspectionRegistry>();
         services.AddTransient<IVaccinationRegistry, VaccinationRegistry>();
+        services.AddTransient<IContractRegistry, ContractRegistry>();
+        services.AddTransient<IOrganizationRegistry, OrganizationRegistry>();
         services.AddAutoMapper(profile => 
             profile.AddProfiles(GetAllProfiles(Assembly.GetExecutingAssembly())));
     }
