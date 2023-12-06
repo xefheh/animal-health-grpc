@@ -20,6 +20,7 @@ app.MapGrpcService<InspectionService>();
 app.MapGrpcService<VaccinationService>();
 app.MapGrpcService<OrganizationService>();
 app.MapGrpcService<ContractService>();
+app.MapGrpcService<OtherSourceService>();
 
 if (app.Environment.IsDevelopment()) app.MapGrpcReflectionService();
 

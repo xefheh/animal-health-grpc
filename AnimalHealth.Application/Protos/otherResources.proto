@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option csharp_namespace = "AnimalHealth.Application.Models";
+
+import "Protos/inspection.proto";
+import "Protos/vaccination.proto";
+import "Protos/animal.proto";
+import "Protos/user.proto";
+import "Protos/locality.proto";
+import "google/protobuf/empty.proto";
+
+service OtherResourceProto {
+  rpc GetAnimals(google.protobuf.Empty) returns (AnimalModelList);
+  rpc GetDiseases(google.protobuf.Empty) returns (DiseaseModelList);
+  rpc GetVaccines(google.protobuf.Empty) returns (VaccineModelList);
+  rpc GetUsers(google.protobuf.Empty) returns (UserModelList);
+  rpc GetLocalities(google.protobuf.Empty) returns (LocalityModelList);
+}
+
+message AnimalModelList {
+  repeated AnimalModel animals = 1;
+}
+
+message DiseaseModelList {
+  repeated DiseaseModel diseases = 1;
+}
+
+message VaccineModelList {
+  repeated VaccineModel vaccines = 1;
+}
+
+message UserModelList {
+  repeated UserModel users = 1;
+}
+
+message LocalityModelList {
+  repeated LocalityModel localities = 1;
+}

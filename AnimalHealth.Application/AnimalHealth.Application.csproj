@@ -18,6 +18,7 @@
     </ItemGroup>
     <ItemGroup>
         <Protobuf Include="Protos\*.proto" GrpcServices="Server" />
+        <Protobuf Include="Protos\otherResources.proto" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\AnimalHealth.Persistence\AnimalHealth.Persistence.csproj" />
