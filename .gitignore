@@ -415,8 +415,17 @@ ScaffoldingAssemblies/
 *.userosscache
 *.suo
 *.
+<<<<<<< HEAD
 /.vs/AnimalHealth/FileContentIndex/d43ba107-c1ef-42ef-a151-9741bba36990.vsidx
 /.vs/AnimalHealth/FileContentIndex/bb97cdc0-79cc-472e-9c4d-b91e538645d5.vsidx
 /.vs/AnimalHealth/FileContentIndex/7b0c1ba0-9281-45c8-8115-7f0f7f8d1467.vsidx
 /.vs/AnimalHealth/FileContentIndex/2c031a4c-f4e2-434c-a55a-25ead1612765.vsidx
 /.vs/AnimalHealth/FileContentIndex/12abb784-b21f-4fef-8ab1-699335d5c32a.vsidx
+=======
+/.vs/AnimalHealth/FileContentIndex/55241133-3b51-4b26-b86a-6eaf4f0c2ba7.vsidx
+/.vs/AnimalHealth/FileContentIndex/bb97cdc0-79cc-472e-9c4d-b91e538645d5.vsidx
+/.vs/AnimalHealth/FileContentIndex/594a240c-bd47-433e-9e05-7196445c8f5b.vsidx
+>>>>>>> Мой личный рефакторинг
+/.vs/AnimalHealth/FileContentIndex/cafe1f3b-5e28-44b5-9c83-eb51ca4fb989.vsidx
+/.vs/AnimalHealth/FileContentIndex/d132255d-2f7d-4522-b7a3-5ae54a35dd87.vsidx
+/.vs/AnimalHealth/FileContentIndex/eb501260-048a-41a3-81af-37b68c0a4ae2.vsidx
