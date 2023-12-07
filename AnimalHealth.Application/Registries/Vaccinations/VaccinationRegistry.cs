@@ -3,6 +3,7 @@ using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
 using AnimalHealth.Application.Extensions.VaccinationExt;
 using AnimalHealth.Application.Interfaces.Registries;
 using AnimalHealth.Application.Models;
+using AnimalHealth.Application.Reports.LocalityVaccinationReport;
 using AnimalHealth.Domain.Entities;
 using AnimalHealth.Persistence;
 using AutoMapper;
@@ -62,5 +63,17 @@ internal class VaccinationRegistry : IVaccinationRegistry
         _context.Vaccinations.Remove(vaccinationMock);
         var saveCode = await _context.SaveChangesAsync(cancellationToken);
         return new DbSaveCondition { Code = saveCode };
+    }
+
+    public async Task<ReportModel> GetVaccinationReportAsync(ReportDates dates, CancellationToken cancellationToken)
+    {
+        var vaccinations = await _context.Vaccinations
+            .LoadIncludes()
+            .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
+            .ToListAsync(cancellationToken);
+
+        var report = new VaccinationReport();
+        report.GetReport(vaccinations);
+        return _mapper.Map<ReportModel>(report);
     }
 }

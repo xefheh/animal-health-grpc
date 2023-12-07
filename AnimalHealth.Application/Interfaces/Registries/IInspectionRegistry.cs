@@ -42,4 +42,20 @@ public interface IInspectionRegistry
     /// <param name="cancellationToken">Токен отмены.</param>
     /// <returns>Состояние сохранение БД.</returns>
     public Task<DbSaveCondition> DeleteInspectionAsync(InspectionLookup lookup, CancellationToken cancellationToken);
+
+    /// <summary>
+    /// Получить отчёт с группировкой по населённому пункту и типу животному, и количеством.
+    /// </summary>
+    /// <param name="dates">период отчёта.</param>
+    /// <param name="cancellationToken">Токен отмены.</param>
+    /// <returns>gRPC модель отчёта</returns>
+    public Task<ReportModel> GetAnimalTypeReportAsync(ReportDates dates, CancellationToken cancellationToken);
+
+    /// <summary>
+    /// Получить отчёт с группировкой по населённому пункту и болезням, и количеством.
+    /// </summary>
+    /// <param name="dates">период отчёта</param>
+    /// <param name="cancellationToken">Токен отмены.</param>
+    /// <returns>gRPC модель отчёта</returns>
+    public Task<ReportModel> GetDiseaseReportAsync(ReportDates dates, CancellationToken cancellationToken);
 }

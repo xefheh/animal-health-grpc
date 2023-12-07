@@ -7,4 +7,5 @@ obj\Debug\net7.0\Protos/InspectionGrpc.cs: C:/Users/Nikit/.nuget/packages/grpc.t
  Protos/contract.proto\
  Protos/user.proto\
  Protos/animal.proto\
+ Protos/report.proto\
  Protos/inspection.proto

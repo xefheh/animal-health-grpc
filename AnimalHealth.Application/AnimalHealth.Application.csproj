@@ -18,6 +18,7 @@
     </ItemGroup>
     <ItemGroup>
         <Protobuf Include="Protos\*.proto" GrpcServices="Server" />
+        <None Remove="protos\report.proto" />
         <Protobuf Include="Protos\otherResources.proto" />
     </ItemGroup>
     <ItemGroup>

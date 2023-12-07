@@ -3,11 +3,13 @@ using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
 using AnimalHealth.Application.Extensions.InspectionExt;
 using AnimalHealth.Application.Interfaces.Registries;
 using AnimalHealth.Application.Models;
+using AnimalHealth.Application.Reports.LocalityAnimalTypeReport;
+using AnimalHealth.Application.Reports.LocalityDiseaseReport;
+using AnimalHealth.Domain.BasicReportEntities;
 using AnimalHealth.Domain.Entities;
 using AnimalHealth.Persistence;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query;
 
 namespace AnimalHealth.Application.Registries.Inspections;
 
@@ -64,5 +66,31 @@ public class InspectionRegistry : IInspectionRegistry
         _context.Inspections.Remove(inspectionMock);
         var saveCode = await _context.SaveChangesAsync(cancellationToken);
         return new DbSaveCondition { Code = saveCode };
+    }
+
+    public async Task<ReportModel> GetAnimalTypeReportAsync(ReportDates dates, CancellationToken cancellationToken)
+    {
+        var inspections = await _context.Inspections
+            .LoadIncludes()
+            .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
+            .ToListAsync(cancellationToken);      
+        var report = new AnimalTypeReport();
+        report.GetReport(inspections);
+        await _context.Reports.AddAsync(_mapper.Map<Report>(report));
+        var saveCode = await _context.SaveChangesAsync(cancellationToken);
+        return _mapper.Map<ReportModel>(report);
+    }
+
+    public async Task<ReportModel> GetDiseaseReportAsync(ReportDates dates, CancellationToken cancellationToken)
+    {
+        var inspections = await _context.Inspections
+            .LoadIncludes()
+            .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
+            .ToListAsync(cancellationToken);
+        var report = new DiseaseReport();
+        report.GetReport(inspections);
+        await _context.Reports.AddAsync(_mapper.Map<Report>(report));
+        var saveCode = await _context.SaveChangesAsync(cancellationToken);
+        return _mapper.Map<ReportModel>(report);
     }
 }

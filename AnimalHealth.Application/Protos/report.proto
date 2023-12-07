@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option csharp_namespace = "AnimalHealth.Application.Models";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "Protos/infrastructure.proto";
+
+service ReportProto {
+  rpc DeleteReport(ReportLookup) returns (DbSaveCondition);
+  rpc GetReports(ReportUserName) returns (ReportModelList);
+}
+
+message ReportValueModel{
+  int32 id = 1;
+  string firstFeature = 2;
+  string secondFeature = 3;
+  int32 count = 4;
+}
+
+message ReportModel {
+  int32 id = 1;
+  google.protobuf.Timestamp createDate = 2;
+  string type = 3;
+  string userCreator = 4;
+  string state = 5;
+  repeated ReportValueModel values = 6;
+}
+
+message ReportModelList {
+   repeated ReportModel reports = 1;
+}
+
+message ReportLookup {
+   int32 id = 1;
+}
+
+message ReportDates{
+   google.protobuf.Timestamp dateStart = 1;
+   google.protobuf.Timestamp DateEnd = 2;
+}
+
+message ReportUserName{
+	string user = 1;
+}

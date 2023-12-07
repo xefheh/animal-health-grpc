@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using AnimalHealth.Domain.BasicReportEntities;
 using AnimalHealth.Domain.Entities;
 using AnimalHealth.Domain.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +8,7 @@ namespace AnimalHealth.Persistence;
 
 public class AnimalHealthContext : DbContext
 {
-    public AnimalHealthContext(DbContextOptions opt) : base(opt) { }
+    public AnimalHealthContext(DbContextOptions opt) : base(opt) { } 
     
     public DbSet<Animal> Animals { get; set; }
     public DbSet<Organization> Organizations { get; set; }
@@ -20,6 +21,9 @@ public class AnimalHealthContext : DbContext
     public DbSet<Disease> Diseases { get; set; }
     public DbSet<Inspection> Inspections { get; set; }
     public DbSet<Contract> Contracts { get; set; }
+    public DbSet<Report> Reports { get; set; }
+
+    public DbSet<ReportValue> ReportValues { get; set; }    
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) =>
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

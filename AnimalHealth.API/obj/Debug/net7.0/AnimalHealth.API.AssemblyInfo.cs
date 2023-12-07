@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("e4edec63-b23e-4879-ad11-b58b9d5f95cb")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnimalHealth.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cd957909866beb02094d88a71c00d1e37250e06")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnimalHealth.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnimalHealth.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

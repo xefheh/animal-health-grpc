@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ecIEWZh54Onypdh8XPaQt9okDsTAiXA1LkThQhUYsj20XIxKx9Etxb9NAwLq+4UzLBb1vY1VFcmgxZrTASYYLQ==",
+  "dgSpecHash": "ibEhS/Cb9UrnC1f8JhJ6FU8go9+ua6PXNKEXll2KXKk6V3x2I+bmr/NyUbT55akyq/bpWcmWab92W7BusmWwgQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.API\\AnimalHealth.API.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "C:\\Users\\Nikit\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Nikit\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512"
   ],

@@ -20,7 +20,7 @@ namespace AnimalHealth.Application.Models {
       get { return descriptor; }
     }
     private static pbr::FileDescriptor descriptor;
-    //2
+
     static AnimalReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(

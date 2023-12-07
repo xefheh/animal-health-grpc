@@ -8,4 +8,7 @@ public class Contract
     public DateTime EndDate { get; set; }
     public Organization Executor { get; set; } = null!;
     public virtual Organization Customer { get; set; } = null!;
+
+    public string GetExecutorLocality()
+        => Executor.Locality.Name;
 }

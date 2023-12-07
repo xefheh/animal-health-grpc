@@ -392,6 +392,45 @@ CREATE INDEX IF NOT EXISTS "IX_PricePairs_LocalityId"
     ("LocalityId" ASC NULLS LAST)
     TABLESPACE pg_default;
 
+CREATE TABLE IF NOT EXISTS public.reports
+(
+    id integer NOT NULL,
+    state text COLLATE pg_catalog."default" NOT NULL,
+    username text COLLATE pg_catalog."default" NOT NULL,
+    createdate date NOT NULL,
+    type text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT reports_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.reports
+    OWNER to postgres;
+
+    -- Table: public.reportvalues
+
+-- DROP TABLE IF EXISTS public.reportvalues;
+
+CREATE TABLE IF NOT EXISTS public.reportvalues
+(
+    id integer NOT NULL,
+    firstfeature text COLLATE pg_catalog."default" NOT NULL,
+    secondfeature text COLLATE pg_catalog."default" NOT NULL,
+    count integer NOT NULL,
+    reportid integer,
+    CONSTRAINT reportvalues_pkey PRIMARY KEY (id),
+    CONSTRAINT reportvalues_reportid_fkey FOREIGN KEY (reportid)
+        REFERENCES public.reports (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.reportvalues
+    OWNER to postgres;
+
+
 INSERT INTO "Animals" ("RegNumber", "Name", "OwnerFeatures", "BirthDate", "BehaviourFeatures", "Sex", "Type", "ChipNumber") VALUES
                                                                                                                                 (1, 'Кошка 1', 'sdsdsds', '01-02-2002', 'sdf', 'М', 'Собака', 123),
                                                                                                                                 (2, 'Собака 1', 'sdsdsds', '01-02-2002', 'sdf', 'Ж', 'Енот', 1234),

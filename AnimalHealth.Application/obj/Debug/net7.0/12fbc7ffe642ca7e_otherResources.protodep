@@ -7,6 +7,7 @@ obj\Debug\net7.0\Protos/OtherResourcesGrpc.cs: C:/Users/Nikit/.nuget/packages/gr
  Protos/contract.proto\
  Protos/user.proto\
  Protos/animal.proto\
+ Protos/report.proto\
  Protos/inspection.proto\
  Protos/vaccination.proto\
  Protos/otherResources.proto
