@@ -27,4 +27,20 @@ public class AnimalHealthContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) =>
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    
+    /// <summary>
+    /// Отслеживать изменение вложенных сущностей.
+    /// </summary>
+    /// <param name="context">Контекст БД.</param>
+    /// <param name="entity">Сущность, у которой необходимо отслеживать вложенные сущности.</param>
+    /// <typeparam name="TEntity">Тип сущности.</typeparam>
+    /// <exception cref="ArgumentNullException">Сущности в БД нет.</exception>
+    public void AttachNestedEntities<TEntity>(TEntity? entity)
+    {
+        var navigations = Model.FindEntityType(typeof(TEntity))?.GetNavigations();
+        var getters = (navigations ?? throw new ArgumentNullException(nameof(navigations))).Select(navigation => navigation.GetGetter());
+        var nestedEntities = getters.Select(getter => getter.GetClrValue(entity ?? throw new ArgumentNullException(nameof(entity))));
+        foreach (var nestedEntity in nestedEntities)
+            Attach(nestedEntity ?? throw new ArgumentNullException(nameof(nestedEntity)));
+    }
 }

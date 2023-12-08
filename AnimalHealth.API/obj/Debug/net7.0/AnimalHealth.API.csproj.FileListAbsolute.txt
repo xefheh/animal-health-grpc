@@ -11,8 +11,6 @@ C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.API\bin\Debug\net7.0\Ani
 C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.API\bin\Debug\net7.0\AnimalHealth.API.runtimeconfig.json
 C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.API\bin\Debug\net7.0\AnimalHealth.API.dll
 C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.API\bin\Debug\net7.0\AnimalHealth.API.pdb
-C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.API\bin\Debug\net7.0\AutoMapper.dll
-C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.API\bin\Debug\net7.0\Google.Protobuf.dll
 C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.API\bin\Debug\net7.0\Grpc.AspNetCore.Server.dll
 C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.API\bin\Debug\net7.0\Grpc.AspNetCore.Server.ClientFactory.dll

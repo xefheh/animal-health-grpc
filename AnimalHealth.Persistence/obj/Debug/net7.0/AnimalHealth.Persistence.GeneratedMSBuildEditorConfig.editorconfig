@@ -8,6 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AnimalHealth.Persistence
-build_property.ProjectDir = C:\Users\Nikit\source\repos\animal-health-grpc\AnimalHealth.Persistence\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Persistence\
