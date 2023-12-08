@@ -1,39 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.API\\AnimalHealth.API.csproj": {}
+    "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.API\\AnimalHealth.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.API\\AnimalHealth.API.csproj": {
+    "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.API\\AnimalHealth.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.API\\AnimalHealth.API.csproj",
+        "projectUniqueName": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.API\\AnimalHealth.API.csproj",
         "projectName": "AnimalHealth.API",
-        "projectPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.API\\AnimalHealth.API.csproj",
-        "packagesPath": "C:\\Users\\Nikit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.API\\obj\\",
+        "projectPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.API\\AnimalHealth.API.csproj",
+        "packagesPath": "C:\\Users\\xefheh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Nikit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\xefheh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\xefheh\\.dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Application\\AnimalHealth.Application.csproj": {
-                "projectPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Application\\AnimalHealth.Application.csproj"
+              "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Application\\AnimalHealth.Application.csproj": {
+                "projectPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Application\\AnimalHealth.Application.csproj"
               }
             }
           }
@@ -64,6 +59,10 @@
               "target": "Package",
               "version": "[7.0.14, )"
             },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.19.5, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.11, )"
@@ -88,40 +87,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\xefheh\\.dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Application\\AnimalHealth.Application.csproj": {
+    "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Application\\AnimalHealth.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Application\\AnimalHealth.Application.csproj",
+        "projectUniqueName": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Application\\AnimalHealth.Application.csproj",
         "projectName": "AnimalHealth.Application",
-        "projectPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Application\\AnimalHealth.Application.csproj",
-        "packagesPath": "C:\\Users\\Nikit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Application\\obj\\",
+        "projectPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Application\\AnimalHealth.Application.csproj",
+        "packagesPath": "C:\\Users\\xefheh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Nikit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\xefheh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj"
+              "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj": {
+                "projectPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj"
               }
             }
           }
@@ -136,14 +129,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
             "Google.Protobuf": {
               "target": "Package",
               "version": "[3.25.1, )"
@@ -175,32 +160,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\xefheh\\.dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj": {
+    "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj",
         "projectName": "AnimalHealth.Domain",
-        "projectPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj",
-        "packagesPath": "C:\\Users\\Nikit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Domain\\obj\\",
+        "projectPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj",
+        "packagesPath": "C:\\Users\\xefheh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Nikit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\xefheh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -234,40 +213,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\xefheh\\.dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj": {
+    "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj",
         "projectName": "AnimalHealth.Persistence",
-        "projectPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj",
-        "packagesPath": "C:\\Users\\Nikit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj",
+        "packagesPath": "C:\\Users\\xefheh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Persistence\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Nikit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\xefheh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj": {
-                "projectPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj"
+              "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj": {
+                "projectPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj"
               }
             }
           }
@@ -303,7 +276,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\xefheh\\.dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

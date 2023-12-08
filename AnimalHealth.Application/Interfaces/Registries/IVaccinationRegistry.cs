@@ -42,4 +42,12 @@ public interface IVaccinationRegistry
     /// <param name="cancellationToken">Токен отмены.</param>
     /// <returns>Состояние сохранение БД.</returns>
     public Task<DbSaveCondition> DeleteVaccinationAsync(VaccinationLookup lookup, CancellationToken cancellationToken);
+
+    /// <summary>
+    /// Получить отчёт с группировкой по населённому пункту и вакцине, и количеством.
+    /// </summary>
+    /// <param name="dates">период отчёта.</param>
+    /// <param name="cancellationToken">Токен отмены.</param>
+    /// <returns>gRPC модель отчёта.</returns>
+    public Task<ReportModel> GetVaccinationReportAsync(ReportDates dates, CancellationToken cancellationToken);
 }

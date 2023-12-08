@@ -24,12 +24,11 @@ namespace AnimalHealth.Application.Models {
     static LocalityReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVQcm90b3MvbG9jYWxpdHkucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
-            "c3RhbXAucHJvdG8iKQoNTG9jYWxpdHlNb2RlbBIKCgJpZBgBIAEoBRIMCgRu",
-            "YW1lGAIgASgJQiKqAh9BbmltYWxIZWFsdGguQXBwbGljYXRpb24uTW9kZWxz",
-            "YgZwcm90bzM="));
+            "ChVQcm90b3MvbG9jYWxpdHkucHJvdG8iKQoNTG9jYWxpdHlNb2RlbBIKCgJp",
+            "ZBgBIAEoBRIMCgRuYW1lGAIgASgJQiKqAh9BbmltYWxIZWFsdGguQXBwbGlj",
+            "YXRpb24uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.LocalityModel), global::AnimalHealth.Application.Models.LocalityModel.Parser, new[]{ "Id", "Name" }, null, null, null, null)
           }));

@@ -21,6 +21,7 @@ app.MapGrpcService<VaccinationService>();
 app.MapGrpcService<OrganizationService>();
 app.MapGrpcService<ContractService>();
 app.MapGrpcService<OtherSourceService>();
+app.MapGrpcService<ReportService>();
 
 if (app.Environment.IsDevelopment()) app.MapGrpcReflectionService();
 

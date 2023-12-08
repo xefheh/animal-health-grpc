@@ -1,0 +1,81 @@
+name: dockercompose11683813368487392357
+services:
+  animalhealth.api:
+    build:
+      context: C:\Users\Nikit\source\repos\animal-health-grpc
+      dockerfile: AnimalHealth.API/Dockerfile
+    depends_on:
+      postgres.db:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      ConnectionStrings__DefaultConnection: Host=postgres.db;Database=animalHealth;Username=postgres;Password=123
+    image: animalhealth.api
+    networks:
+      network: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 80
+        published: "8080"
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\Nikit\AppData\Roaming/Microsoft/UserSecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Nikit\AppData\Roaming/ASP.NET/Https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  pgadmin:
+    depends_on:
+      postgres.db:
+        condition: service_started
+        required: true
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: "123"
+    image: dpage/pgadmin4:latest
+    networks:
+      network: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "5050"
+        protocol: tcp
+    restart: always
+  postgres.db:
+    environment:
+      POSTGRES_DB: animalHealth
+      POSTGRES_PASSWORD: "123"
+      POSTGRES_USER: postgres
+    image: postgres:latest
+    networks:
+      network: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    restart: always
+    volumes:
+      - type: bind
+        source: C:\Users\Nikit\source\repos\animal-health-grpc\AnimalHealth.API\SqlInitialize\sql_initialize.sql
+        target: /docker-entrypoint-initdb.d/init.sql
+        bind:
+          create_host_path: true
+networks:
+  network:
+    name: dockercompose11683813368487392357_network

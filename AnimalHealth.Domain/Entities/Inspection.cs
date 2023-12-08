@@ -19,4 +19,18 @@ public class Inspection
     public Animal InspectedAnimal { get; set; } = null!;
     public Contract Contract { get; set; } = null!;
     public Disease? Disease { get; set; }
+
+    public (string, string) GetLocalityDisease()
+    {
+        var locality = Contract.GetExecutorLocality();
+        var disease = Disease.Name;
+        return (locality, disease);
+    }
+
+    public (string, string) GetLocalityAnimalType()
+    {
+        var locality = Contract.GetExecutorLocality();
+        var animalType = InspectedAnimal.Type;
+        return (locality, animalType);
+    }
 }

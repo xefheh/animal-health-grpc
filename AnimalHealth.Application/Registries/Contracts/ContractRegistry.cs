@@ -1,12 +1,11 @@
-﻿using System.ComponentModel;
-using AnimalHealth.Application.Exceptions;
+﻿using AnimalHealth.Application.Exceptions;
 using AnimalHealth.Application.Extensions.ContractExt;
 using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
+using AnimalHealth.Application.Interfaces;
 using AnimalHealth.Application.Interfaces.Registries;
 using AnimalHealth.Application.Models;
 using AnimalHealth.Domain.Entities;
 using AnimalHealth.Persistence;
-using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
 namespace AnimalHealth.Application.Registries.Contracts;
@@ -14,9 +13,10 @@ namespace AnimalHealth.Application.Registries.Contracts;
 public class ContractRegistry : IContractRegistry
 {
     private readonly AnimalHealthContext _context;
-    private readonly IMapper _mapper;
+    private readonly IEntityMapper<Contract, ContractAddModel, ContractModel> _mapper;
 
-    public ContractRegistry(AnimalHealthContext context, IMapper mapper) => (_context, _mapper) = (context, mapper);
+    public ContractRegistry(AnimalHealthContext context, IEntityMapper<Contract, ContractAddModel, ContractModel> mapper) =>
+        (_context, _mapper) = (context, mapper);
     
     public async Task<ContractModel> GetContractAsync(ContractLookup lookup, CancellationToken cancellationToken)
     {
@@ -24,13 +24,13 @@ public class ContractRegistry : IContractRegistry
         var contract = await _context.Contracts.LoadIncludes()
             .FirstOrDefaultAsync(contract => contract.Id == contractId, cancellationToken);
         if (contract == default(Contract)) throw new NotFoundException(typeof(Contract), contractId);
-        return _mapper.Map<ContractModel>(contract);
+        return _mapper.Map(contract);
     }
 
     public async Task<ContractModelList> GetContractsAsync(CancellationToken cancellationToken)
     {
         var contracts = await _context.Contracts.LoadIncludes().ToListAsync(cancellationToken);
-        var contractModels = contracts.Select(contract => _mapper.Map<ContractModel>(contract));
+        var contractModels = contracts.Select(contract => _mapper.Map(contract));
         var contractModelList = new ContractModelList();
         contractModelList.Contracts.AddRange(contractModels);
         return contractModelList;
@@ -38,15 +38,15 @@ public class ContractRegistry : IContractRegistry
 
     public async Task<ContractLookup> AddContractAsync(ContractAddModel addedContract, CancellationToken cancellationToken)
     {
-        var contract = _mapper.Map<Contract>(addedContract);
-        await _context.AddAsync(contract, cancellationToken);
+        var contract = _mapper.Map(addedContract);
+        await _context.Contracts.AddAsync(contract, cancellationToken);
         await _context.SaveChangesAsync(cancellationToken);
         return new ContractLookup() { Id = contract.Id };
     }
 
     public async Task<DbSaveCondition> UpdateContractAsync(ContractModel updatedContract, CancellationToken cancellationToken)
     {
-        var updatedDomainContract = _mapper.Map<Contract>(updatedContract);
+        var updatedDomainContract = _mapper.Map(updatedContract);
         var contract = await _context.Contracts.LoadIncludes()
             .FirstOrDefaultAsync(contract => contract.Id == updatedContract.Id, cancellationToken);
         if (contract == default(Contract)) throw new NotFoundException(typeof(Contract), updatedContract.Id);

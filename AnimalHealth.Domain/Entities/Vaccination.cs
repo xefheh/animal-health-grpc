@@ -11,4 +11,11 @@ public class Vaccination
     public User User { get; set; } = null!;
     public Vaccine Vaccine { get; set; } = null!;
     public Contract Contract { get; set; } = null!;
+
+    public (string, string) GetLocalityVaccine()
+    {
+        var locality = Contract.GetExecutorLocality();
+        var vaccine = Vaccine.Name;
+        return (locality, vaccine);
+    }
 }

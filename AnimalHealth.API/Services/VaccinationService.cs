@@ -25,4 +25,7 @@ public class VaccinationService : VaccinationProto.VaccinationProtoBase
 
     public override async Task<DbSaveCondition> DeleteVaccination(VaccinationLookup request, ServerCallContext context) =>
         await _registry.DeleteVaccinationAsync(request, context.CancellationToken);
+
+    public override async Task<ReportModel> GetVaccinationReport(ReportDates request, ServerCallContext context) =>
+        await _registry.GetVaccinationReportAsync(request, context.CancellationToken);
 }
