@@ -35,9 +35,10 @@ message ReportLookup {
    int32 id = 1;
 }
 
-message ReportDates{
+message GetReport{
    google.protobuf.Timestamp dateStart = 1;
-   google.protobuf.Timestamp DateEnd = 2;
+   google.protobuf.Timestamp dateEnd = 2;
+   string userCreator = 3;
 }
 
 message ReportUserName{

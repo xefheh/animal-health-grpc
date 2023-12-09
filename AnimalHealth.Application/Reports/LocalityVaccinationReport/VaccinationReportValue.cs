@@ -10,5 +10,7 @@ namespace AnimalHealth.Application.Reports.LocalityVaccinationReport
         public int Count { get; set; }
         public VaccinationReportValue(string firstFeature, string secondFeature) =>
             (Locality, Vaccine, Count) = (firstFeature, secondFeature, 1);
+
+        public VaccinationReportValue() { }
     }
 }

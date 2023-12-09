@@ -58,7 +58,7 @@ namespace AnimalHealth.Application.Models {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.VaccinationModelList> __Marshaller_VaccinationModelList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.VaccinationModelList.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ReportDates> __Marshaller_ReportDates = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ReportDates.Parser));
+    static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.GetReport> __Marshaller_GetReport = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.GetReport.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ReportModel> __Marshaller_ReportModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ReportModel.Parser));
 
@@ -103,11 +103,11 @@ namespace AnimalHealth.Application.Models {
         __Marshaller_VaccinationModelList);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::AnimalHealth.Application.Models.ReportDates, global::AnimalHealth.Application.Models.ReportModel> __Method_GetVaccinationReport = new grpc::Method<global::AnimalHealth.Application.Models.ReportDates, global::AnimalHealth.Application.Models.ReportModel>(
+    static readonly grpc::Method<global::AnimalHealth.Application.Models.GetReport, global::AnimalHealth.Application.Models.ReportModel> __Method_GetVaccinationReport = new grpc::Method<global::AnimalHealth.Application.Models.GetReport, global::AnimalHealth.Application.Models.ReportModel>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetVaccinationReport",
-        __Marshaller_ReportDates,
+        __Marshaller_GetReport,
         __Marshaller_ReportModel);
 
     /// <summary>Service descriptor</summary>
@@ -151,7 +151,7 @@ namespace AnimalHealth.Application.Models {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportModel> GetVaccinationReport(global::AnimalHealth.Application.Models.ReportDates request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportModel> GetVaccinationReport(global::AnimalHealth.Application.Models.GetReport request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -184,7 +184,7 @@ namespace AnimalHealth.Application.Models {
       serviceBinder.AddMethod(__Method_DeleteVaccination, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.VaccinationLookup, global::AnimalHealth.Application.Models.DbSaveCondition>(serviceImpl.DeleteVaccination));
       serviceBinder.AddMethod(__Method_GetVaccination, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.VaccinationLookup, global::AnimalHealth.Application.Models.VaccinationModel>(serviceImpl.GetVaccination));
       serviceBinder.AddMethod(__Method_GetVaccinations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::AnimalHealth.Application.Models.VaccinationModelList>(serviceImpl.GetVaccinations));
-      serviceBinder.AddMethod(__Method_GetVaccinationReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.ReportDates, global::AnimalHealth.Application.Models.ReportModel>(serviceImpl.GetVaccinationReport));
+      serviceBinder.AddMethod(__Method_GetVaccinationReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.GetReport, global::AnimalHealth.Application.Models.ReportModel>(serviceImpl.GetVaccinationReport));
     }
 
   }

@@ -49,5 +49,5 @@ public interface IVaccinationRegistry
     /// <param name="dates">период отчёта.</param>
     /// <param name="cancellationToken">Токен отмены.</param>
     /// <returns>gRPC модель отчёта.</returns>
-    public Task<ReportModel> GetVaccinationReportAsync(ReportDates dates, CancellationToken cancellationToken);
+    public Task<ReportModel> GetVaccinationReportAsync(GetReport dates, CancellationToken cancellationToken);
 }

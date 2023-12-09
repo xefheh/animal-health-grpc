@@ -9,5 +9,7 @@
 
         public AnimalTypeReportValue(string locality, string animalType) =>
             (Locality, AnimalType, Count) = (locality, animalType, 1);
+
+        public AnimalTypeReportValue() { } 
     }
 }

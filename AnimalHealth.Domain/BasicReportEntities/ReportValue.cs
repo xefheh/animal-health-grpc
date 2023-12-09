@@ -8,5 +8,7 @@
         public int Count { get; set; }
         public ReportValue(string firstFeature, string secondFeature) =>
             (FirstFeature, SecondFeature, Count) = (firstFeature, secondFeature, 1);
+
+        public ReportValue() { }    
     }
 }

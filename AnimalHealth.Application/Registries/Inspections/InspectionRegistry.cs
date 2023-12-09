@@ -17,10 +17,25 @@ public class InspectionRegistry : IInspectionRegistry
 {
     private readonly AnimalHealthContext _context;
     private readonly IEntityMapper<Inspection, InspectionAddModel, InspectionModel> _mapper;
+    private readonly IEntityMapper<DiseaseReport, ReportModel> _diseaseReportGrpcMapper;
+    private readonly IEntityMapper<AnimalTypeReport, ReportModel> _animalTypeReportGrpcMapper;
+    private readonly IMapper<DiseaseReport, Report> _diseaseReportEFMapper;
+    private readonly IMapper<AnimalTypeReport, Report> _animalTypeReportEFMapper;
 
-    public InspectionRegistry(AnimalHealthContext context, IEntityMapper<Inspection, InspectionAddModel, InspectionModel>  mapper) =>
-        (_context, _mapper) = (context, mapper);
-    
+    public InspectionRegistry(AnimalHealthContext context, IEntityMapper<Inspection, InspectionAddModel, InspectionModel> mapper,
+        IEntityMapper<DiseaseReport, ReportModel> diseaseReportGrpcMapper,
+        IEntityMapper<AnimalTypeReport, ReportModel> animalTypeReportGrpcMapper, 
+        IMapper<DiseaseReport, Report> diseaseReportEFMapper, 
+        IMapper<AnimalTypeReport, Report> animalTypeReportEFMapper)
+    {
+        _context = context;
+        _mapper = mapper;
+        _diseaseReportGrpcMapper = diseaseReportGrpcMapper;
+        _animalTypeReportGrpcMapper = animalTypeReportGrpcMapper;
+        _diseaseReportEFMapper = diseaseReportEFMapper;
+        _animalTypeReportEFMapper = animalTypeReportEFMapper;
+    }
+
     public async Task<InspectionModel> GetInspectionAsync(InspectionLookup lookup, CancellationToken cancellationToken)
     {
         var inspectionId = lookup.Id;
@@ -70,31 +85,33 @@ public class InspectionRegistry : IInspectionRegistry
         return new DbSaveCondition { Code = saveCode };
     }
 
-    public async Task<ReportModel> GetAnimalTypeReportAsync(ReportDates dates, CancellationToken cancellationToken)
+    public async Task<ReportModel> GetAnimalTypeReportAsync(GetReport dates, CancellationToken cancellationToken)
     {
-        return null;
-        /*var inspections = await _context.Inspections
+        var inspections = await _context.Inspections
             .LoadIncludes()
             .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
             .ToListAsync(cancellationToken);
+
         var report = new AnimalTypeReport();
         report.GetReport(inspections);
-        await _context.Reports.AddAsync(_mapper.Map<Report>(report));
+        report.User = dates.UserCreator;
+        await _context.Reports.AddAsync(_animalTypeReportEFMapper.Map(report), cancellationToken);
         var saveCode = await _context.SaveChangesAsync(cancellationToken);
-        return _mapper.Map<ReportModel>(report);*/
+        return _animalTypeReportGrpcMapper.Map(report);
     }
 
-    public async Task<ReportModel> GetDiseaseReportAsync(ReportDates dates, CancellationToken cancellationToken)
+    public async Task<ReportModel> GetDiseaseReportAsync(GetReport dates, CancellationToken cancellationToken)
     {
-        return null;
-        /*var inspections = await _context.Inspections
+        var inspections = await _context.Inspections
             .LoadIncludes()
             .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
             .ToListAsync(cancellationToken);
+
         var report = new DiseaseReport();
+        report.User = dates.UserCreator;
         report.GetReport(inspections);
-        await _context.Reports.AddAsync(_mapper.Map<Report>(report), cancellationToken);
+        await _context.Reports.AddAsync(_diseaseReportEFMapper.Map(report), cancellationToken);
         var saveCode = await _context.SaveChangesAsync(cancellationToken);
-        return _mapper.Map<ReportModel>(report);*/
+        return _diseaseReportGrpcMapper.Map(report);
     }
 }

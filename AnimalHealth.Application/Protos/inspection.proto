@@ -16,8 +16,8 @@ service InspectionProto {
   rpc DeleteInspection(InspectionLookup) returns (DbSaveCondition);
   rpc GetInspection(InspectionLookup) returns (InspectionModel);
   rpc GetInspections(google.protobuf.Empty) returns (InspectionModelList);
-  rpc GetAnimalTypeReport(ReportDates) returns (ReportModel);
-  rpc GetDiseaseReport(ReportDates) returns (ReportModel);
+  rpc GetAnimalTypeReport(GetReport) returns (ReportModel);
+  rpc GetDiseaseReport(GetReport) returns (ReportModel);
 }
 
 message InspectionModelList {
