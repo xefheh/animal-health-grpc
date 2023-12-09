@@ -1,4 +1,5 @@
 ﻿using AnimalHealth.Domain.Entities;
+using AnimalHealth.Domain.BasicReportEntities;
 
 namespace AnimalHealth.Application.Reports.LocalityDiseaseReport
 {
@@ -8,13 +9,14 @@ namespace AnimalHealth.Application.Reports.LocalityDiseaseReport
         public ReportState State { get; set; }
         public string User { get; set; }
         public DateTime CreateDate { get; set; }
-        public string Type { get; set; }    
+        public string Type { get => "Отчёт по болезням"; }    
         public List<DiseaseReportValue> Values { get; set; } 
 
         public DiseaseReport()
         {
             Values = new List<DiseaseReportValue>();
             State = ReportState.Created;
+            CreateDate = DateTime.Now;
         }
         
         public void GetReport(ICollection<Inspection> inspections)

@@ -42,7 +42,7 @@ namespace AnimalHealth.Application.Models {
             "BCABKAsyCi5Vc2VyTW9kZWwSHAoGYW5pbWFsGAUgASgLMgwuQW5pbWFsTW9k",
             "ZWwSIAoIY29udHJhY3QYBiABKAsyDi5Db250cmFjdE1vZGVsEh4KB3ZhY2Np",
             "bmUYByABKAsyDS5WYWNjaW5lTW9kZWwiOwoMVmFjY2luZU1vZGVsEg4KBnNl",
-            "cmlhbBgBIAEoBRIMCgRuYW1lGAIgASgJEg0KBXByaWNlGAMgASgCMvICChBW",
+            "cmlhbBgBIAEoBRIMCgRuYW1lGAIgASgJEg0KBXByaWNlGAMgASgCMvACChBW",
             "YWNjaW5hdGlvblByb3RvEjoKDkFkZFZhY2NpbmF0aW9uEhQuVmFjY2luYXRp",
             "b25BZGRNb2RlbBoSLlZhY2NpbmF0aW9uTG9va3VwEjgKEVVwZGF0ZVZhY2Np",
             "bmF0aW9uEhEuVmFjY2luYXRpb25Nb2RlbBoQLkRiU2F2ZUNvbmRpdGlvbhI5",
@@ -50,9 +50,9 @@ namespace AnimalHealth.Application.Models {
             "YXZlQ29uZGl0aW9uEjcKDkdldFZhY2NpbmF0aW9uEhIuVmFjY2luYXRpb25M",
             "b29rdXAaES5WYWNjaW5hdGlvbk1vZGVsEkAKD0dldFZhY2NpbmF0aW9ucxIW",
             "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eRoVLlZhY2NpbmF0aW9uTW9kZWxMaXN0",
-            "EjIKFEdldFZhY2NpbmF0aW9uUmVwb3J0EgwuUmVwb3J0RGF0ZXMaDC5SZXBv",
-            "cnRNb2RlbEIiqgIfQW5pbWFsSGVhbHRoLkFwcGxpY2F0aW9uLk1vZGVsc2IG",
-            "cHJvdG8z"));
+            "EjAKFEdldFZhY2NpbmF0aW9uUmVwb3J0EgouR2V0UmVwb3J0GgwuUmVwb3J0",
+            "TW9kZWxCIqoCH0FuaW1hbEhlYWx0aC5BcHBsaWNhdGlvbi5Nb2RlbHNiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::AnimalHealth.Application.Models.ContractReflection.Descriptor, global::AnimalHealth.Application.Models.UserReflection.Descriptor, global::AnimalHealth.Application.Models.AnimalReflection.Descriptor, global::AnimalHealth.Application.Models.InfrastructureReflection.Descriptor, global::AnimalHealth.Application.Models.ReportReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

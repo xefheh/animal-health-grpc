@@ -49,7 +49,7 @@ public interface IInspectionRegistry
     /// <param name="dates">период отчёта.</param>
     /// <param name="cancellationToken">Токен отмены.</param>
     /// <returns>gRPC модель отчёта</returns>
-    public Task<ReportModel> GetAnimalTypeReportAsync(ReportDates dates, CancellationToken cancellationToken);
+    public Task<ReportModel> GetAnimalTypeReportAsync(GetReport dates, CancellationToken cancellationToken);
 
     /// <summary>
     /// Получить отчёт с группировкой по населённому пункту и болезням, и количеством.
@@ -57,5 +57,5 @@ public interface IInspectionRegistry
     /// <param name="dates">период отчёта</param>
     /// <param name="cancellationToken">Токен отмены.</param>
     /// <returns>gRPC модель отчёта</returns>
-    public Task<ReportModel> GetDiseaseReportAsync(ReportDates dates, CancellationToken cancellationToken);
+    public Task<ReportModel> GetDiseaseReportAsync(GetReport dates, CancellationToken cancellationToken);
 }

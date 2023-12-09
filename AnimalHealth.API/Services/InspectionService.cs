@@ -26,9 +26,9 @@ public class InspectionService : InspectionProto.InspectionProtoBase
     public override async Task<DbSaveCondition> DeleteInspection(InspectionLookup request, ServerCallContext context) =>
         await _registry.DeleteInspectionAsync(request, context.CancellationToken);
 
-    public override async Task<ReportModel> GetAnimalTypeReport(ReportDates request, ServerCallContext context) =>
+    public override async Task<ReportModel> GetAnimalTypeReport(GetReport request, ServerCallContext context) =>
         await _registry.GetAnimalTypeReportAsync(request, context.CancellationToken);
 
-    public override async Task<ReportModel> GetDiseaseReport(ReportDates request, ServerCallContext context) =>
+    public override async Task<ReportModel> GetDiseaseReport(GetReport request, ServerCallContext context) =>
         await _registry.GetDiseaseReportAsync(request, context.CancellationToken);
 }

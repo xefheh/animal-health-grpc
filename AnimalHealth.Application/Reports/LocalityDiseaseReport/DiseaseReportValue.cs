@@ -11,5 +11,7 @@ namespace AnimalHealth.Application.Reports.LocalityDiseaseReport
 
         public DiseaseReportValue(string locality, string disease) =>
             (Locality, Disease, Count) = (locality, disease, 1);
+
+        public DiseaseReportValue() {  } 
     }
 }
