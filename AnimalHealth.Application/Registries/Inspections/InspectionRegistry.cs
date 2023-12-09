@@ -1,5 +1,6 @@
 ﻿using AnimalHealth.Application.Exceptions;
 using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
+using AnimalHealth.Application.Extensions.InspectionExt;
 using AnimalHealth.Application.Interfaces;
 using AnimalHealth.Application.Interfaces.Registries;
 using AnimalHealth.Application.Models;
@@ -95,8 +96,6 @@ public class InspectionRegistry : IInspectionRegistry
         report.User = dates.UserCreator;
         await _context.Reports.AddAsync(_animalTypeReportEFMapper.Map(report), cancellationToken);
         var saveCode = await _context.SaveChangesAsync(cancellationToken);
-        var efreport = _context.Reports.Where(x => x.CreateDate == report.CreateDate).First();
-        report.Id = efreport.Id;
         return _animalTypeReportGrpcMapper.Map(report);
     }
 
@@ -112,8 +111,6 @@ public class InspectionRegistry : IInspectionRegistry
         report.GetReport(inspections);
         await _context.Reports.AddAsync(_diseaseReportEFMapper.Map(report), cancellationToken);
         var saveCode = await _context.SaveChangesAsync(cancellationToken);
-        var efreport = _context.Reports.Where(x => x.CreateDate == report.CreateDate).First();
-        report.Id = efreport.Id;
         return _diseaseReportGrpcMapper.Map(report);
     }
 }
