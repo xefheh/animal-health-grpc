@@ -1,7 +1,9 @@
+using AnimalHealth.Application.Interfaces;
 using AnimalHealth.Application.Interfaces.OtherSource;
 using AnimalHealth.Application.Models;
+using AnimalHealth.Domain.Entities;
+using AnimalHealth.Domain.Identity;
 using AnimalHealth.Persistence;
-using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
 namespace AnimalHealth.Application.OtherViews;
@@ -9,14 +11,30 @@ namespace AnimalHealth.Application.OtherViews;
 public class OtherSource : IOtherSource
 {
     private readonly AnimalHealthContext _context;
-    private readonly IMapper _mapper;
+    private readonly IEntityMapper<User, UserModel> _userMapper;
+    private readonly IEntityMapper<Animal, AnimalModel> _animalMapper;
+    private readonly IEntityMapper<Disease, DiseaseModel> _diseaseMapper;
+    private readonly IEntityMapper<Vaccine, VaccineModel> _vaccineMapper;
+    private readonly IEntityMapper<Locality, LocalityModel> _localityMapper;
     
-    public OtherSource(AnimalHealthContext context, IMapper mapper) => (_context, _mapper) = (context, mapper);
+    public OtherSource(AnimalHealthContext context, IEntityMapper<User, UserModel> userMapper,
+        IEntityMapper<Animal, AnimalModel> animalMapper,
+        IEntityMapper<Disease, DiseaseModel> diseaseMapper,
+        IEntityMapper<Vaccine, VaccineModel> vaccineMapper,
+        IEntityMapper<Locality, LocalityModel> localityMapper)
+    {
+        _context = context;
+        _userMapper = userMapper;
+        _animalMapper = animalMapper;
+        _diseaseMapper = diseaseMapper;
+        _vaccineMapper = vaccineMapper;
+        _localityMapper = localityMapper;
+    }
 
     public async Task<AnimalModelList> GetAnimalsAsync(CancellationToken cancellationToken)
     {
         var animals = await _context.Animals.ToListAsync(cancellationToken);
-        var animalModels = animals.Select(animal => _mapper.Map<AnimalModel>(animal));
+        var animalModels = animals.Select(animal => _animalMapper.Map(animal));
         var animalModelList = new AnimalModelList();
         animalModelList.Animals.AddRange(animalModels);
         return animalModelList;
@@ -25,7 +43,7 @@ public class OtherSource : IOtherSource
     public async Task<DiseaseModelList> GetDiseasesAsync(CancellationToken cancellationToken)
     {
         var diseases = await _context.Diseases.ToListAsync(cancellationToken);
-        var diseaseModels = diseases.Select(disease => _mapper.Map<DiseaseModel>(disease));
+        var diseaseModels = diseases.Select(disease => _diseaseMapper.Map(disease));
         var diseaseModelList = new DiseaseModelList();
         diseaseModelList.Diseases.AddRange(diseaseModels);
         return diseaseModelList;
@@ -34,7 +52,7 @@ public class OtherSource : IOtherSource
     public async Task<VaccineModelList> GetVaccinesAsync(CancellationToken cancellationToken)
     {
         var vaccines = await _context.Vaccines.ToListAsync(cancellationToken);
-        var vaccineModels = vaccines.Select(vaccine => _mapper.Map<VaccineModel>(vaccine));
+        var vaccineModels = vaccines.Select(vaccine => _vaccineMapper.Map(vaccine));
         var vaccineModelList = new VaccineModelList();
         vaccineModelList.Vaccines.AddRange(vaccineModels);
         return vaccineModelList;
@@ -43,7 +61,7 @@ public class OtherSource : IOtherSource
     public async Task<LocalityModelList> GetLocalitiesAsync(CancellationToken cancellationToken)
     {
         var localities = await _context.Localities.ToListAsync(cancellationToken);
-        var localityModels = localities.Select(locality => _mapper.Map<LocalityModel>(locality));
+        var localityModels = localities.Select(locality => _localityMapper.Map(locality));
         var localityModelList = new LocalityModelList();
         localityModelList.Localities.AddRange(localityModels);
         return localityModelList;
@@ -52,7 +70,7 @@ public class OtherSource : IOtherSource
     public async Task<UserModelList> GetUsersAsync(CancellationToken cancellationToken)
     {
         var users = await _context.Users.ToListAsync(cancellationToken);
-        var userModels = users.Select(user => _mapper.Map<UserModel>(user));
+        var userModels = users.Select(user => _userMapper.Map(user));
         var userModelList = new UserModelList();
         userModelList.Users.AddRange(userModels);
         return userModelList;

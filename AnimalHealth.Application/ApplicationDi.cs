@@ -1,13 +1,16 @@
-﻿using System.Reflection;
+﻿using AnimalHealth.Application.Interfaces;
 using AnimalHealth.Application.Interfaces.OtherSource;
 using AnimalHealth.Application.Interfaces.Registries;
+using AnimalHealth.Application.Mapping.EntityMappings;
+using AnimalHealth.Application.Models;
 using AnimalHealth.Application.OtherViews;
 using AnimalHealth.Application.Registries.Contracts;
 using AnimalHealth.Application.Registries.Inspections;
 using AnimalHealth.Application.Registries.Organizations;
 using AnimalHealth.Application.Registries.Reports;
 using AnimalHealth.Application.Registries.Vaccinations;
-using AutoMapper;
+using AnimalHealth.Domain.Entities;
+using AnimalHealth.Domain.Identity;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AnimalHealth.Application;
@@ -22,13 +25,14 @@ public static class ApplicationDi
         services.AddTransient<IOrganizationRegistry, OrganizationRegistry>();
         services.AddTransient<IReportRegistry, ReportRegistry>();
         services.AddTransient<IOtherSource, OtherSource>();
-        services.AddAutoMapper(profile => 
-            profile.AddProfiles(GetAllProfiles(Assembly.GetExecutingAssembly())));
-    }
-
-    private static IEnumerable<Profile> GetAllProfiles(Assembly assembly)
-    {
-        var profiles = assembly.GetTypes().Where(type => type.BaseType == typeof(Profile));
-        return profiles.Select(profile => Activator.CreateInstance(profile) as Profile);
+        services.AddTransient<IEntityMapper<Locality, LocalityModel>, LocalityMapper>();
+        services.AddTransient<IEntityMapper<User, UserModel>, UserMapper>();
+        services.AddTransient<IEntityMapper<Disease, DiseaseModel>, DiseaseMapper>();
+        services.AddTransient<IEntityMapper<Animal, AnimalModel>, AnimalMapper>();
+        services.AddTransient<IEntityMapper<Vaccine, VaccineModel>, VaccineMapper>();
+        services.AddTransient<IEntityMapper<Organization, OrganizationAddModel, OrganizationModel>, OrganizationMapper>();
+        services.AddTransient<IEntityMapper<Contract, ContractAddModel, ContractModel>, ContractMapper>();
+        services.AddTransient<IEntityMapper<Inspection, InspectionAddModel, InspectionModel>, InspectionMapper>();
+        services.AddTransient<IEntityMapper<Vaccination, VaccinationAddModel, VaccinationModel>, VaccinationMapper>();
     }
 }

@@ -1,16 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ClYGzC7dp4EgywN4PzrwYGFi6DZK4j5Q0/kaLJ8O31PznYcqpTurmA9re8p1jcu296S59ZuAVpxMJRAkE6omUw==",
+  "dgSpecHash": "sB8hxLk3YYtAimtWwtO9cW2UyE1Qbq4c/OQ+4Lw61zB1D+IXQWOcMuaHMvthvktl5YO2dgHHUU5fovuwMO4Wyw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Application\\AnimalHealth.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Nikit\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\Nikit\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\grpc.core.api\\2.59.0\\grpc.core.api.2.59.0.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\grpc.net.common\\2.59.0\\grpc.net.common.2.59.0.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\grpc.tools\\2.60.0-pre1\\grpc.tools.2.60.0-pre1.nupkg.sha512",
-    "C:\\Users\\Nikit\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.14\\microsoft.entityframeworkcore.7.0.14.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.14\\microsoft.entityframeworkcore.abstractions.7.0.14.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.14\\microsoft.entityframeworkcore.analyzers.7.0.14.nupkg.sha512",

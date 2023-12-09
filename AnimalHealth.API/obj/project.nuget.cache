@@ -1,11 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "ibEhS/Cb9UrnC1f8JhJ6FU8go9+ua6PXNKEXll2KXKk6V3x2I+bmr/NyUbT55akyq/bpWcmWab92W7BusmWwgQ==",
+  "dgSpecHash": "UBAezp7v6Pssn/+alat214ply42pMZPLOgmq3azW/HLxzx9VWmdz357O2TCBVHahmrLh3LUW0jpxIk4i+7jz+A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.API\\AnimalHealth.API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Nikit\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\Nikit\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\grpc.aspnetcore\\2.49.0\\grpc.aspnetcore.2.49.0.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\grpc.aspnetcore.server\\2.59.0\\grpc.aspnetcore.server.2.59.0.nupkg.sha512",
@@ -17,7 +15,6 @@
     "C:\\Users\\Nikit\\.nuget\\packages\\grpc.net.common\\2.59.0\\grpc.net.common.2.59.0.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\grpc.reflection\\2.59.0\\grpc.reflection.2.59.0.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\grpc.tools\\2.49.0\\grpc.tools.2.49.0.nupkg.sha512",
-    "C:\\Users\\Nikit\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.14\\microsoft.entityframeworkcore.7.0.14.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.14\\microsoft.entityframeworkcore.abstractions.7.0.14.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.14\\microsoft.entityframeworkcore.analyzers.7.0.14.nupkg.sha512",
