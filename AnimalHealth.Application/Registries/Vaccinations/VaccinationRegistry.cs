@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AnimalHealth.Application.Registries.Vaccinations;
 
-internal class VaccinationRegistry : IVaccinationRegistry
+public class VaccinationRegistry : IVaccinationRegistry
 {
     private readonly AnimalHealthContext _context;
     private readonly IEntityMapper<Vaccination, VaccinationAddModel, VaccinationModel> _mapper;
@@ -87,7 +87,8 @@ internal class VaccinationRegistry : IVaccinationRegistry
         var report = new VaccinationReport();
         report.GetReport(vaccinations);
         report.User = dates.UserCreator;
-        await _context.Reports.AddAsync(_vaccinationReportEFMapper.Map(report), cancellationToken);
+        //await _context.Reports.AddAsync(_vaccinationReportEFMapper.Map(report), cancellationToken);
+        //var saveCode = await _context.SaveChangesAsync(cancellationToken);
         return _vaccinationReportGrpcMapper.Map(report);
     }
 }

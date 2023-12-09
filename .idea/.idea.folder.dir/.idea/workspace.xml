@@ -5,73 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09957ae8-5348-4fea-9997-2e7f5afb404c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.folder.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.folder.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/AnimalHealth/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/AnimalHealth/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/AnimalHealth/FileContentIndex/4258a3ed-b899-4d97-9b5a-9c836583bd8a.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/AnimalHealth/FileContentIndex/78bcc330-1606-4d06-af43-3a4bd6e84ba4.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/AnimalHealth/FileContentIndex/968df3c0-2596-42ae-a382-6ac36225c43c.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/AnimalHealth/FileContentIndex/ae879a31-3d66-4d2b-87b6-a3f6c0e42211.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/AnimalHealth/FileContentIndex/bff33010-4817-4b74-b1e6-436e6e118891.vsidx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/AnimalHealth/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/AnimalHealth/v17/.futdcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/AnimalHealth/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/AnimalHealth/v17/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/animalhealth.metadata.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/animalhealth.metadata.v7.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/animalhealth.projects.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/animalhealth.projects.v7.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.API/obj/AnimalHealth.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.API/obj/AnimalHealth.API.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.API/obj/AnimalHealth.API.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.API/obj/AnimalHealth.API.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.API/obj/Debug/net7.0/AnimalHealth.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.API/obj/Debug/net7.0/AnimalHealth.API.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.API/obj/Debug/net7.0/AnimalHealth.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.API/obj/Debug/net7.0/AnimalHealth.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.API/obj/Debug/net7.0/AnimalHealth.API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.API/obj/Debug/net7.0/AnimalHealth.API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.API/obj/Debug/net7.0/AnimalHealth.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.API/obj/Debug/net7.0/AnimalHealth.API.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnimalHealth.API/obj/Debug/net7.0/AnimalHealth.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.API/obj/Debug/net7.0/AnimalHealth.API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.API/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.API/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/AnimalHealth.Application.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/AnimalHealth.Application.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/AnimalHealth.Application.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/AnimalHealth.Application.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_animal.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_animal.protodep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_contract.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_contract.protodep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_inspection.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_inspection.protodep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_organization.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_organization.protodep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_otherResources.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_otherResources.protodep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_pricePair.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_pricePair.protodep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_report.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_report.protodep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_role.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_role.protodep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_vaccination.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_vaccination.protodep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/AnimalHealth.Application.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/AnimalHealth.Application.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/AnimalHealth.Application.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/AnimalHealth.Application.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/AnimalHealth.Application.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/AnimalHealth.Application.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/AnimalHealth.Application.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/AnimalHealth.Application.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/Registries/Inspections/InspectionRegistry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/Registries/Inspections/InspectionRegistry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/Registries/Vaccinations/VaccinationRegistry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/Registries/Vaccinations/VaccinationRegistry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityAnimalTypeReport/AnimalTypeReport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityAnimalTypeReport/AnimalTypeReport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityAnimalTypeReport/AnimalTypeReportValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityAnimalTypeReport/AnimalTypeReportValue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityDiseaseReport/DiseaseReport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityDiseaseReport/DiseaseReport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityDiseaseReport/DiseaseReportValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityDiseaseReport/DiseaseReportValue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityVaccinationReport/VaccinationReport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityVaccinationReport/VaccinationReport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityVaccinationReport/VaccinationReportValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityVaccinationReport/VaccinationReportValue.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/AnimalHealth.Application.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/AnimalHealth.Application.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Animal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Animal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Contract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Contract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/ContractGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/ContractGrpc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Infrastructure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Infrastructure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Inspection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Inspection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/InspectionGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/InspectionGrpc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Locality.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Locality.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Organization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Organization.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/OrganizationGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/OrganizationGrpc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/OtherResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/OtherResources.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/OtherResourcesGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/OtherResourcesGrpc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/PricePair.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/PricePair.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Report.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Report.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/ReportGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/ReportGrpc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Role.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Role.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Vaccination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/Vaccination.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/VaccinationGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/Debug/net7.0/Protos/VaccinationGrpc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Application/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Application/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Domain/obj/AnimalHealth.Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Domain/obj/AnimalHealth.Domain.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Domain/obj/AnimalHealth.Domain.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Domain/obj/AnimalHealth.Domain.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnimalHealth.Domain/BasicReportEntities/Report.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Domain/BasicReportEntities/Report.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnimalHealth.Domain/obj/Debug/net7.0/AnimalHealth.Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Domain/obj/Debug/net7.0/AnimalHealth.Domain.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnimalHealth.Domain/obj/Debug/net7.0/AnimalHealth.Domain.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Domain/obj/Debug/net7.0/AnimalHealth.Domain.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Domain/obj/Debug/net7.0/AnimalHealth.Domain.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Domain/obj/Debug/net7.0/AnimalHealth.Domain.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Domain/obj/Debug/net7.0/AnimalHealth.Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Domain/obj/Debug/net7.0/AnimalHealth.Domain.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Domain/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Domain/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/AnimalHealth.Persistence.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/AnimalHealth.Persistence.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/AnimalHealth.Persistence.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/AnimalHealth.Persistence.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/Debug/net7.0/AnimalHealth.Persistence.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/Debug/net7.0/AnimalHealth.Persistence.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/Debug/net7.0/AnimalHealth.Persistence.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/Debug/net7.0/AnimalHealth.Persistence.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/Debug/net7.0/AnimalHealth.Persistence.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/Debug/net7.0/AnimalHealth.Persistence.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/Debug/net7.0/AnimalHealth.Persistence.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/Debug/net7.0/AnimalHealth.Persistence.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/Debug/net7.0/AnimalHealth.Persistence.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/Debug/net7.0/AnimalHealth.Persistence.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalHealth.Persistence/obj/project.nuget.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +43,18 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/AnimalHealth.API/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnimalHealth.API/Services/InspectionService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnimalHealth.Application/Mapping/ReportMappings/VaccinationReportMappings/VaccinationReportEFMapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnimalHealth.Application/Mapping/ReportMappings/VaccinationReportMappings/VaccinationReportGrpcMapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnimalHealth.Application/Mapping/ReportMappings/VaccinationReportMappings/VaccinationReportValueEFMapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnimalHealth.Application/Registries/Inspections/InspectionRegistry.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnimalHealth.Application/Registries/Reports/ReportRegistry.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnimalHealth.Application/Registries/Vaccinations/VaccinationRegistry.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityAnimalTypeReport/AnimalTypeReport.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityAnimalTypeReport/AnimalTypeReportValue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityVaccinationReport/VaccinationReport.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnimalHealth.Domain/BasicReportEntities/Report.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnimalHealth.Domain/BasicReportEntities/ReportValue.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -96,27 +68,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "develop-nikita",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Nikit\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Nikit\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Nikit\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Nikit\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Nikit\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\Nikit\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Unnamed" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
@@ -140,6 +112,7 @@
       <workItem from="1702047837653" duration="503000" />
       <workItem from="1702101843999" duration="172000" />
       <workItem from="1702105577614" duration="2717000" />
+      <workItem from="1702133232501" duration="1706000" />
     </task>
     <servers />
   </component>
@@ -148,5 +121,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AnimalHealth.Application/Registries/Vaccinations/VaccinationRegistry.cs</url>
+          <line>81</line>
+          <properties documentPath="C:\Users\Nikit\source\repos\animal-health-grpc\AnimalHealth.Application\Registries\Vaccinations\VaccinationRegistry.cs" initialLine="81" containingFunctionPresentation="Method 'GetVaccinationReportAsync'">
+            <startOffsets>
+              <option value="4257" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4486" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AnimalHealth.Application/Reports/LocalityAnimalTypeReport/AnimalTypeReport.cs</url>
+          <line>31</line>
+          <properties documentPath="C:\Users\Nikit\source\repos\animal-health-grpc\AnimalHealth.Application\Reports\LocalityAnimalTypeReport\AnimalTypeReport.cs" initialLine="31" containingFunctionPresentation="Method 'GetReport'">
+            <startOffsets>
+              <option value="1040" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1112" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

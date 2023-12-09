@@ -1,4 +1,5 @@
-﻿using AnimalHealth.Domain.BasicReportEntities;
+﻿using AnimalHealth.Application.Reports.LocalityAnimalTypeReport;
+using AnimalHealth.Domain.BasicReportEntities;
 
 namespace AnimalHealth.Application.Reports.LocalityDiseaseReport
 {
@@ -12,6 +13,14 @@ namespace AnimalHealth.Application.Reports.LocalityDiseaseReport
         public DiseaseReportValue(string locality, string disease) =>
             (Locality, Disease, Count) = (locality, disease, 1);
 
-        public DiseaseReportValue() {  } 
+        public DiseaseReportValue() {  }
+
+        public override bool Equals(object? obj)
+        {
+            return obj != null &&
+                obj is DiseaseReportValue objR &&
+                objR.Locality == Locality &&
+                objR.Disease == Disease;
+        }
     }
 }

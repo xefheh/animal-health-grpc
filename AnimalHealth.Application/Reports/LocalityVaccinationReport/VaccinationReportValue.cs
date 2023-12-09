@@ -1,4 +1,6 @@
-﻿using AnimalHealth.Domain.BasicReportEntities;
+﻿using AnimalHealth.Application.Reports.LocalityDiseaseReport;
+using AnimalHealth.Domain.BasicReportEntities;
+using AnimalHealth.Domain.Entities;
 
 namespace AnimalHealth.Application.Reports.LocalityVaccinationReport
 {
@@ -12,5 +14,13 @@ namespace AnimalHealth.Application.Reports.LocalityVaccinationReport
             (Locality, Vaccine, Count) = (firstFeature, secondFeature, 1);
 
         public VaccinationReportValue() { }
+
+        public override bool Equals(object? obj)
+        {
+            return obj != null &&
+                obj is VaccinationReportValue objR &&
+                objR.Locality == Locality &&
+                objR.Vaccine == Vaccine;
+        }
     }
 }
