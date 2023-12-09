@@ -8,7 +8,12 @@ namespace AnimalHealth.Application.Reports.LocalityAnimalTypeReport
         public int Id { get; set; }
         public ReportState State { get; set; }
         public string User { get; set; }
-        public DateTime CreateDate { get; set; }
+        DateTime createDate;
+        public DateTime CreateDate
+        {
+            get => createDate.ToUniversalTime();
+            set => createDate = value;
+        }
         public string Type { get => "Отчёт по типам животным"; }
         public List<AnimalTypeReportValue> Values { get; set; }
 

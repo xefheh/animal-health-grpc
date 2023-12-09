@@ -10,6 +10,14 @@
         public AnimalTypeReportValue(string locality, string animalType) =>
             (Locality, AnimalType, Count) = (locality, animalType, 1);
 
-        public AnimalTypeReportValue() { } 
+        public AnimalTypeReportValue() { }
+
+        public override bool Equals(object? obj)
+        {
+            return obj != null &&
+                obj is AnimalTypeReportValue objR &&
+                objR.Locality == Locality &&
+                objR.AnimalType == AnimalType;
+        }
     }
 }
