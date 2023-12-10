@@ -53,6 +53,12 @@ namespace AnimalHealth.Application.Models {
     static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ReportUserName> __Marshaller_ReportUserName = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ReportUserName.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ReportModelList> __Marshaller_ReportModelList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ReportModelList.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ReportStateModel> __Marshaller_ReportStateModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ReportStateModel.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ReportMetaData> __Marshaller_ReportMetaData = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ReportMetaData.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::AnimalHealth.Application.Models.ReportLookup, global::AnimalHealth.Application.Models.DbSaveCondition> __Method_DeleteReport = new grpc::Method<global::AnimalHealth.Application.Models.ReportLookup, global::AnimalHealth.Application.Models.DbSaveCondition>(
@@ -69,6 +75,22 @@ namespace AnimalHealth.Application.Models {
         "GetReports",
         __Marshaller_ReportUserName,
         __Marshaller_ReportModelList);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::AnimalHealth.Application.Models.ReportStateModel, global::AnimalHealth.Application.Models.ReportLookup> __Method_ChangeReportState = new grpc::Method<global::AnimalHealth.Application.Models.ReportStateModel, global::AnimalHealth.Application.Models.ReportLookup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ChangeReportState",
+        __Marshaller_ReportStateModel,
+        __Marshaller_ReportLookup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::AnimalHealth.Application.Models.ReportMetaData> __Method_GetReportMetaData = new grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::AnimalHealth.Application.Models.ReportMetaData>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetReportMetaData",
+        __Marshaller_google_protobuf_Empty,
+        __Marshaller_ReportMetaData);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -92,6 +114,18 @@ namespace AnimalHealth.Application.Models {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportLookup> ChangeReportState(global::AnimalHealth.Application.Models.ReportStateModel request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportMetaData> GetReportMetaData(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -101,7 +135,9 @@ namespace AnimalHealth.Application.Models {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_DeleteReport, serviceImpl.DeleteReport)
-          .AddMethod(__Method_GetReports, serviceImpl.GetReports).Build();
+          .AddMethod(__Method_GetReports, serviceImpl.GetReports)
+          .AddMethod(__Method_ChangeReportState, serviceImpl.ChangeReportState)
+          .AddMethod(__Method_GetReportMetaData, serviceImpl.GetReportMetaData).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -113,6 +149,8 @@ namespace AnimalHealth.Application.Models {
     {
       serviceBinder.AddMethod(__Method_DeleteReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.ReportLookup, global::AnimalHealth.Application.Models.DbSaveCondition>(serviceImpl.DeleteReport));
       serviceBinder.AddMethod(__Method_GetReports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.ReportUserName, global::AnimalHealth.Application.Models.ReportModelList>(serviceImpl.GetReports));
+      serviceBinder.AddMethod(__Method_ChangeReportState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.ReportStateModel, global::AnimalHealth.Application.Models.ReportLookup>(serviceImpl.ChangeReportState));
+      serviceBinder.AddMethod(__Method_GetReportMetaData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::AnimalHealth.Application.Models.ReportMetaData>(serviceImpl.GetReportMetaData));
     }
 
   }

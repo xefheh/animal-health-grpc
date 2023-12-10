@@ -14,7 +14,7 @@ namespace AnimalHealth.Application.Reports.LocalityVaccinationReport
             get => createDate.ToUniversalTime();
             set => createDate = value;
         }
-        public string Type { get => "Отчёт по вакцинациям"; }
+        public string Type { get => "По нас.пункту и вакцинам"; }
         public List<VaccinationReportValue> Values { get; set; }
 
         public VaccinationReport()
