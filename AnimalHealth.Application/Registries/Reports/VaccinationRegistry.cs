@@ -3,22 +3,33 @@ using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
 using AnimalHealth.Application.Extensions.VaccinationExt;
 using AnimalHealth.Application.Interfaces;
 using AnimalHealth.Application.Interfaces.Registries;
+using AnimalHealth.Application.Mapping.ReportMappings.AnimalTypeReportMappings;
 using AnimalHealth.Application.Models;
 using AnimalHealth.Application.Reports.LocalityVaccinationReport;
+using AnimalHealth.Domain.BasicReportEntities;
 using AnimalHealth.Domain.Entities;
 using AnimalHealth.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 namespace AnimalHealth.Application.Registries.Vaccinations;
 
-internal class VaccinationRegistry : IVaccinationRegistry
+public class VaccinationRegistry : IVaccinationRegistry
 {
     private readonly AnimalHealthContext _context;
     private readonly IEntityMapper<Vaccination, VaccinationAddModel, VaccinationModel> _mapper;
+    private readonly IEntityMapper<VaccinationReport, ReportModel> _vaccinationReportGrpcMapper;
+    private readonly IMapper<VaccinationReport, Report> _vaccinationReportEFMapper;
 
-    public VaccinationRegistry(AnimalHealthContext context, IEntityMapper<Vaccination, VaccinationAddModel, VaccinationModel> mapper) =>
-        (_context, _mapper) = (context, mapper);
-    
+    public VaccinationRegistry(AnimalHealthContext context, IEntityMapper<Vaccination, VaccinationAddModel, VaccinationModel> mapper,
+        IEntityMapper<VaccinationReport, ReportModel> vaccinationReportGrpcMapper, 
+        IMapper<VaccinationReport, Report> vaccinationReportEFMapper)
+    {
+        _context = context;
+        _mapper = mapper;
+        _vaccinationReportGrpcMapper = vaccinationReportGrpcMapper;
+        _vaccinationReportEFMapper = vaccinationReportEFMapper;
+    }
+
     public async Task<VaccinationModel> GetVaccinationAsync(VaccinationLookup lookup, CancellationToken cancellationToken)
     {
         var vaccinationId = lookup.Id;
@@ -66,16 +77,20 @@ internal class VaccinationRegistry : IVaccinationRegistry
         return new DbSaveCondition { Code = saveCode };
     }
 
-    public async Task<ReportModel> GetVaccinationReportAsync(ReportDates dates, CancellationToken cancellationToken)
-    {
-        return null;
-        /*var vaccinations = await _context.Vaccinations
+    public async Task<ReportModel> GetVaccinationReportAsync(GetReport dates, CancellationToken cancellationToken)
+    { 
+        var vaccinations = await _context.Vaccinations
             .LoadIncludes()
             .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
             .ToListAsync(cancellationToken);
 
         var report = new VaccinationReport();
         report.GetReport(vaccinations);
-        return _mapper.Map<ReportModel>(report);*/
+        report.User = dates.UserCreator;
+        await _context.Reports.AddAsync(_vaccinationReportEFMapper.Map(report), cancellationToken);
+        var saveCode = await _context.SaveChangesAsync(cancellationToken);
+        var efreport = _context.Reports.Where(x => x.CreateDate == report.CreateDate).First();
+        report.Id = efreport.Id;
+        return _vaccinationReportGrpcMapper.Map(report);
     }
 }

@@ -48,17 +48,17 @@ namespace AnimalHealth.Application.Models {
             "ASgLMgouVXNlck1vZGVsEhwKBmFuaW1hbBgMIAEoCzIMLkFuaW1hbE1vZGVs",
             "EiAKCGNvbnRyYWN0GA0gASgLMg4uQ29udHJhY3RNb2RlbBIeCgdkaXNlYXNl",
             "GA4gASgLMg0uRGlzZWFzZU1vZGVsEg8KB2luanVyZXMYDyABKAkiKAoMRGlz",
-            "ZWFzZU1vZGVsEgoKAmlkGAEgASgFEgwKBG5hbWUYAiABKAkylAMKD0luc3Bl",
+            "ZWFzZU1vZGVsEgoKAmlkGAEgASgFEgwKBG5hbWUYAiABKAkykAMKD0luc3Bl",
             "Y3Rpb25Qcm90bxI3Cg1BZGRJbnNwZWN0aW9uEhMuSW5zcGVjdGlvbkFkZE1v",
             "ZGVsGhEuSW5zcGVjdGlvbkxvb2t1cBI2ChBVcGRhdGVJbnNwZWN0aW9uEhAu",
             "SW5zcGVjdGlvbk1vZGVsGhAuRGJTYXZlQ29uZGl0aW9uEjcKEERlbGV0ZUlu",
             "c3BlY3Rpb24SES5JbnNwZWN0aW9uTG9va3VwGhAuRGJTYXZlQ29uZGl0aW9u",
             "EjQKDUdldEluc3BlY3Rpb24SES5JbnNwZWN0aW9uTG9va3VwGhAuSW5zcGVj",
             "dGlvbk1vZGVsEj4KDkdldEluc3BlY3Rpb25zEhYuZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5GhQuSW5zcGVjdGlvbk1vZGVsTGlzdBIxChNHZXRBbmltYWxUeXBl",
-            "UmVwb3J0EgwuUmVwb3J0RGF0ZXMaDC5SZXBvcnRNb2RlbBIuChBHZXREaXNl",
-            "YXNlUmVwb3J0EgwuUmVwb3J0RGF0ZXMaDC5SZXBvcnRNb2RlbEIiqgIfQW5p",
-            "bWFsSGVhbHRoLkFwcGxpY2F0aW9uLk1vZGVsc2IGcHJvdG8z"));
+            "LkVtcHR5GhQuSW5zcGVjdGlvbk1vZGVsTGlzdBIvChNHZXRBbmltYWxUeXBl",
+            "UmVwb3J0EgouR2V0UmVwb3J0GgwuUmVwb3J0TW9kZWwSLAoQR2V0RGlzZWFz",
+            "ZVJlcG9ydBIKLkdldFJlcG9ydBoMLlJlcG9ydE1vZGVsQiKqAh9BbmltYWxI",
+            "ZWFsdGguQXBwbGljYXRpb24uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::AnimalHealth.Application.Models.ContractReflection.Descriptor, global::AnimalHealth.Application.Models.UserReflection.Descriptor, global::AnimalHealth.Application.Models.AnimalReflection.Descriptor, global::AnimalHealth.Application.Models.InfrastructureReflection.Descriptor, global::AnimalHealth.Application.Models.ReportReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

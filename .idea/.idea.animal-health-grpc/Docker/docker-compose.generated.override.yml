@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  animalhealth.api:
+    entrypoint:
+    - "/riderDebugger/linux-x64/dotnet/dotnet"
+    - "/riderDebugger/JetBrains.Debugger.Worker.exe"
+    - "--mode=server"
+    - "--frontend-port=57100"
+    - "--backend-port=57300"
+    environment:
+      RIDER_DEBUGGER_LOG_DIR: "/riderLogs"
+      RESHARPER_LOG_CONF: "/riderLogsConf/backend-log.xml"
+    ports:
+    - "127.0.0.1:57001:57100"
+    - "127.0.0.1:57201:57300"
+    volumes:
+    - "C:\\Users\\Nikit\\AppData\\Local\\JetBrains\\RiderRemoteDebugger\\2023.2.3\\\
+      Linux64:/riderDebugger"
+    - "E:\\programs\\JetBrains Rider 2023.2.3/bin:/riderLogsConf"
+    - "C:\\Users\\Nikit\\AppData\\Local\\JetBrains\\Rider2023.2\\log\\DebuggerWorker\\\
+      JetBrains.Debugger.Worker.2023_12_10_23_42_39:/riderLogs:rw"

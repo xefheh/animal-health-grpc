@@ -16,7 +16,7 @@ service VaccinationProto {
   rpc DeleteVaccination(VaccinationLookup) returns (DbSaveCondition);
   rpc GetVaccination(VaccinationLookup) returns (VaccinationModel);
   rpc GetVaccinations(google.protobuf.Empty) returns (VaccinationModelList);
-  rpc GetVaccinationReport(ReportDates) returns (ReportModel);
+  rpc GetVaccinationReport(GetReport) returns (ReportModel);
 }
 
 message VaccinationModelList {
