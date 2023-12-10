@@ -9,6 +9,8 @@ import "Protos/infrastructure.proto";
 service ReportProto {
   rpc DeleteReport(ReportLookup) returns (DbSaveCondition);
   rpc GetReports(ReportUserName) returns (ReportModelList);
+  rpc ChangeReportState(ReportStateModel) returns(ReportLookup);
+  rpc GetReportMetaData(google.protobuf.Empty) returns(ReportMetaData);
 }
 
 message ReportValueModel{
@@ -43,4 +45,15 @@ message GetReport{
 
 message ReportUserName{
 	string user = 1;
+}
+
+message ReportStateModel{
+	int32 id = 1;
+	string state = 2;
+}
+
+message ReportMetaData{
+	repeated string engReportNames = 1;
+	repeated string rusReportNames = 2;
+	repeated string rusColumnNames = 3;
 }

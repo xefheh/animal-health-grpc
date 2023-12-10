@@ -14,7 +14,7 @@ namespace AnimalHealth.Application.Reports.LocalityAnimalTypeReport
             get => createDate.ToUniversalTime();
             set => createDate = value;
         }
-        public string Type { get => "Отчёт по типам животным"; }
+        public string Type { get => "По нас.пункту и типам животных"; }
         public List<AnimalTypeReportValue> Values { get; set; }
 
         public AnimalTypeReport()

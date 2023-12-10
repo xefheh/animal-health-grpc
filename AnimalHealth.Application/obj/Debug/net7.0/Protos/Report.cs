@@ -37,10 +37,16 @@ namespace AnimalHealth.Application.Models {
             "UmVwb3J0Ei0KCWRhdGVTdGFydBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
             "aW1lc3RhbXASKwoHZGF0ZUVuZBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
             "aW1lc3RhbXASEwoLdXNlckNyZWF0b3IYAyABKAkiHgoOUmVwb3J0VXNlck5h",
-            "bWUSDAoEdXNlchgBIAEoCTJvCgtSZXBvcnRQcm90bxIvCgxEZWxldGVSZXBv",
-            "cnQSDS5SZXBvcnRMb29rdXAaEC5EYlNhdmVDb25kaXRpb24SLwoKR2V0UmVw",
-            "b3J0cxIPLlJlcG9ydFVzZXJOYW1lGhAuUmVwb3J0TW9kZWxMaXN0QiKqAh9B",
-            "bmltYWxIZWFsdGguQXBwbGljYXRpb24uTW9kZWxzYgZwcm90bzM="));
+            "bWUSDAoEdXNlchgBIAEoCSItChBSZXBvcnRTdGF0ZU1vZGVsEgoKAmlkGAEg",
+            "ASgFEg0KBXN0YXRlGAIgASgJIlgKDlJlcG9ydE1ldGFEYXRhEhYKDmVuZ1Jl",
+            "cG9ydE5hbWVzGAEgAygJEhYKDnJ1c1JlcG9ydE5hbWVzGAIgAygJEhYKDnJ1",
+            "c0NvbHVtbk5hbWVzGAMgAygJMuQBCgtSZXBvcnRQcm90bxIvCgxEZWxldGVS",
+            "ZXBvcnQSDS5SZXBvcnRMb29rdXAaEC5EYlNhdmVDb25kaXRpb24SLwoKR2V0",
+            "UmVwb3J0cxIPLlJlcG9ydFVzZXJOYW1lGhAuUmVwb3J0TW9kZWxMaXN0EjUK",
+            "EUNoYW5nZVJlcG9ydFN0YXRlEhEuUmVwb3J0U3RhdGVNb2RlbBoNLlJlcG9y",
+            "dExvb2t1cBI8ChFHZXRSZXBvcnRNZXRhRGF0YRIWLmdvb2dsZS5wcm90b2J1",
+            "Zi5FbXB0eRoPLlJlcG9ydE1ldGFEYXRhQiKqAh9BbmltYWxIZWFsdGguQXBw",
+            "bGljYXRpb24uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::AnimalHealth.Application.Models.InfrastructureReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -49,7 +55,9 @@ namespace AnimalHealth.Application.Models {
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportModelList), global::AnimalHealth.Application.Models.ReportModelList.Parser, new[]{ "Reports" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportLookup), global::AnimalHealth.Application.Models.ReportLookup.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.GetReport), global::AnimalHealth.Application.Models.GetReport.Parser, new[]{ "DateStart", "DateEnd", "UserCreator" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportUserName), global::AnimalHealth.Application.Models.ReportUserName.Parser, new[]{ "User" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportUserName), global::AnimalHealth.Application.Models.ReportUserName.Parser, new[]{ "User" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportStateModel), global::AnimalHealth.Application.Models.ReportStateModel.Parser, new[]{ "Id", "State" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportMetaData), global::AnimalHealth.Application.Models.ReportMetaData.Parser, new[]{ "EngReportNames", "RusReportNames", "RusColumnNames" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1562,6 +1570,464 @@ namespace AnimalHealth.Application.Models {
             break;
           case 10: {
             User = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ReportStateModel : pb::IMessage<ReportStateModel>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReportStateModel> _parser = new pb::MessageParser<ReportStateModel>(() => new ReportStateModel());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReportStateModel> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportStateModel() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportStateModel(ReportStateModel other) : this() {
+      id_ = other.id_;
+      state_ = other.state_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportStateModel Clone() {
+      return new ReportStateModel(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private int id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 2;
+    private string state_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string State {
+      get { return state_; }
+      set {
+        state_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReportStateModel);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReportStateModel other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (State != other.State) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (State.Length != 0) hash ^= State.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (State.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(State);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (State.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(State);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      }
+      if (State.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(State);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReportStateModel other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
+      if (other.State.Length != 0) {
+        State = other.State;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            State = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            State = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ReportMetaData : pb::IMessage<ReportMetaData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReportMetaData> _parser = new pb::MessageParser<ReportMetaData>(() => new ReportMetaData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReportMetaData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportMetaData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportMetaData(ReportMetaData other) : this() {
+      engReportNames_ = other.engReportNames_.Clone();
+      rusReportNames_ = other.rusReportNames_.Clone();
+      rusColumnNames_ = other.rusColumnNames_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportMetaData Clone() {
+      return new ReportMetaData(this);
+    }
+
+    /// <summary>Field number for the "engReportNames" field.</summary>
+    public const int EngReportNamesFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_engReportNames_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> engReportNames_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> EngReportNames {
+      get { return engReportNames_; }
+    }
+
+    /// <summary>Field number for the "rusReportNames" field.</summary>
+    public const int RusReportNamesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_rusReportNames_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> rusReportNames_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RusReportNames {
+      get { return rusReportNames_; }
+    }
+
+    /// <summary>Field number for the "rusColumnNames" field.</summary>
+    public const int RusColumnNamesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_rusColumnNames_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> rusColumnNames_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RusColumnNames {
+      get { return rusColumnNames_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReportMetaData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReportMetaData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!engReportNames_.Equals(other.engReportNames_)) return false;
+      if(!rusReportNames_.Equals(other.rusReportNames_)) return false;
+      if(!rusColumnNames_.Equals(other.rusColumnNames_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= engReportNames_.GetHashCode();
+      hash ^= rusReportNames_.GetHashCode();
+      hash ^= rusColumnNames_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      engReportNames_.WriteTo(output, _repeated_engReportNames_codec);
+      rusReportNames_.WriteTo(output, _repeated_rusReportNames_codec);
+      rusColumnNames_.WriteTo(output, _repeated_rusColumnNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      engReportNames_.WriteTo(ref output, _repeated_engReportNames_codec);
+      rusReportNames_.WriteTo(ref output, _repeated_rusReportNames_codec);
+      rusColumnNames_.WriteTo(ref output, _repeated_rusColumnNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += engReportNames_.CalculateSize(_repeated_engReportNames_codec);
+      size += rusReportNames_.CalculateSize(_repeated_rusReportNames_codec);
+      size += rusColumnNames_.CalculateSize(_repeated_rusColumnNames_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReportMetaData other) {
+      if (other == null) {
+        return;
+      }
+      engReportNames_.Add(other.engReportNames_);
+      rusReportNames_.Add(other.rusReportNames_);
+      rusColumnNames_.Add(other.rusColumnNames_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            engReportNames_.AddEntriesFrom(input, _repeated_engReportNames_codec);
+            break;
+          }
+          case 18: {
+            rusReportNames_.AddEntriesFrom(input, _repeated_rusReportNames_codec);
+            break;
+          }
+          case 26: {
+            rusColumnNames_.AddEntriesFrom(input, _repeated_rusColumnNames_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            engReportNames_.AddEntriesFrom(ref input, _repeated_engReportNames_codec);
+            break;
+          }
+          case 18: {
+            rusReportNames_.AddEntriesFrom(ref input, _repeated_rusReportNames_codec);
+            break;
+          }
+          case 26: {
+            rusColumnNames_.AddEntriesFrom(ref input, _repeated_rusColumnNames_codec);
             break;
           }
         }

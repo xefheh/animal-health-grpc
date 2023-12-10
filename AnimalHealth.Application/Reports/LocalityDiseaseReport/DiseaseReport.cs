@@ -14,7 +14,7 @@ namespace AnimalHealth.Application.Reports.LocalityDiseaseReport
             get => createDate.ToUniversalTime();
             set => createDate = value;
         }
-        public string Type { get => "Отчёт по болезням"; }    
+        public string Type { get => "По нас.пункту и болезням"; }    
         public List<DiseaseReportValue> Values { get; set; } 
 
         public DiseaseReport()
