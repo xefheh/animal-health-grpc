@@ -94,8 +94,10 @@ public class InspectionRegistry : IInspectionRegistry
         var report = new AnimalTypeReport();
         report.GetReport(inspections);
         report.User = dates.UserCreator;
-        //await _context.Reports.AddAsync(_animalTypeReportEFMapper.Map(report), cancellationToken);
-        //var saveCode = await _context.SaveChangesAsync(cancellationToken);
+        await _context.Reports.AddAsync(_animalTypeReportEFMapper.Map(report), cancellationToken);
+        var saveCode = await _context.SaveChangesAsync(cancellationToken);
+        var efreport = _context.Reports.Where(x => x.CreateDate == report.CreateDate).First();
+        report.Id = efreport.Id;
         return _animalTypeReportGrpcMapper.Map(report);
     }
 
@@ -109,8 +111,10 @@ public class InspectionRegistry : IInspectionRegistry
         var report = new DiseaseReport();
         report.User = dates.UserCreator;
         report.GetReport(inspections);
-        //await _context.Reports.AddAsync(_diseaseReportEFMapper.Map(report), cancellationToken);
-        //var saveCode = await _context.SaveChangesAsync(cancellationToken);
+        await _context.Reports.AddAsync(_diseaseReportEFMapper.Map(report), cancellationToken);
+        var saveCode = await _context.SaveChangesAsync(cancellationToken);
+        var efreport = _context.Reports.Where(x => x.CreateDate == report.CreateDate).First();
+        report.Id = efreport.Id;
         return _diseaseReportGrpcMapper.Map(report);
     }
 }
