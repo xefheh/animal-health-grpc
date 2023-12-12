@@ -24,11 +24,11 @@ namespace AnimalHealth.Application.Reports.LocalityAnimalTypeReport
             CreateDate = DateTime.Now;
         }
 
-        public void GetReport(ICollection<Inspection> vaccinations)
+        public void GetReport(ICollection<Inspection> inspections)
         {
-            foreach (var vaccination in vaccinations)
+            foreach (var inspection in inspections)
             {
-                var locDis = vaccination.GetLocalityAnimalType();
+                var locDis = inspection.GetLocalityAnimalType();
                 var reportValue = new AnimalTypeReportValue(locDis.Item1, locDis.Item2);
                 if (!Values.Contains(reportValue))
                     Values.Add(reportValue);
