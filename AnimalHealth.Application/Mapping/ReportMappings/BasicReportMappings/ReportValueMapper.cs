@@ -1,6 +1,6 @@
 ﻿using AnimalHealth.Application.Interfaces;
 using AnimalHealth.Application.Models;
-using AnimalHealth.Domain.BasicReportEntities;
+using AnimalHealth.Domain.Reports;
 
 namespace AnimalHealth.Application.Mapping.ReportMappings.BasicReportMappings
 {
