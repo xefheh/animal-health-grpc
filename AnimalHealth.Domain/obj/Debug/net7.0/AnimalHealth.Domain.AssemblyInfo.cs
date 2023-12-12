@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnimalHealth.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61cf71190ba1dd8ead0106925cd4481c1beb2bc4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e13c2e80973f87a101107f41eae69aa01004e57a")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnimalHealth.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnimalHealth.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

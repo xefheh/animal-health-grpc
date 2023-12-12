@@ -26,37 +26,50 @@ namespace AnimalHealth.Application.Models {
           string.Concat(
             "ChNQcm90b3MvcmVwb3J0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
             "YW1wLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aG1Byb3Rv",
-            "cy9pbmZyYXN0cnVjdHVyZS5wcm90byJaChBSZXBvcnRWYWx1ZU1vZGVsEgoK",
-            "AmlkGAEgASgFEhQKDGZpcnN0RmVhdHVyZRgCIAEoCRIVCg1zZWNvbmRGZWF0",
-            "dXJlGAMgASgJEg0KBWNvdW50GAQgASgFIp4BCgtSZXBvcnRNb2RlbBIKCgJp",
-            "ZBgBIAEoBRIuCgpjcmVhdGVEYXRlGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBIMCgR0eXBlGAMgASgJEhMKC3VzZXJDcmVhdG9yGAQgASgJ",
-            "Eg0KBXN0YXRlGAUgASgJEiEKBnZhbHVlcxgGIAMoCzIRLlJlcG9ydFZhbHVl",
-            "TW9kZWwiMAoPUmVwb3J0TW9kZWxMaXN0Eh0KB3JlcG9ydHMYASADKAsyDC5S",
-            "ZXBvcnRNb2RlbCIaCgxSZXBvcnRMb29rdXASCgoCaWQYASABKAUifAoJR2V0",
-            "UmVwb3J0Ei0KCWRhdGVTdGFydBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASKwoHZGF0ZUVuZBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASEwoLdXNlckNyZWF0b3IYAyABKAkiHgoOUmVwb3J0VXNlck5h",
-            "bWUSDAoEdXNlchgBIAEoCSItChBSZXBvcnRTdGF0ZU1vZGVsEgoKAmlkGAEg",
-            "ASgFEg0KBXN0YXRlGAIgASgJIlgKDlJlcG9ydE1ldGFEYXRhEhYKDmVuZ1Jl",
-            "cG9ydE5hbWVzGAEgAygJEhYKDnJ1c1JlcG9ydE5hbWVzGAIgAygJEhYKDnJ1",
-            "c0NvbHVtbk5hbWVzGAMgAygJMuQBCgtSZXBvcnRQcm90bxIvCgxEZWxldGVS",
-            "ZXBvcnQSDS5SZXBvcnRMb29rdXAaEC5EYlNhdmVDb25kaXRpb24SLwoKR2V0",
-            "UmVwb3J0cxIPLlJlcG9ydFVzZXJOYW1lGhAuUmVwb3J0TW9kZWxMaXN0EjUK",
-            "EUNoYW5nZVJlcG9ydFN0YXRlEhEuUmVwb3J0U3RhdGVNb2RlbBoNLlJlcG9y",
+            "cy9pbmZyYXN0cnVjdHVyZS5wcm90bxoRUHJvdG9zL3VzZXIucHJvdG8iWgoQ",
+            "UmVwb3J0VmFsdWVNb2RlbBIKCgJpZBgBIAEoBRIUCgxmaXJzdEZlYXR1cmUY",
+            "AiABKAkSFQoNc2Vjb25kRmVhdHVyZRgDIAEoCRINCgVjb3VudBgEIAEoBSK9",
+            "AQoLUmVwb3J0TW9kZWwSCgoCaWQYASABKAUSLgoKY3JlYXRlRGF0ZRgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDAoEdHlwZRgDIAEoCRIf",
+            "Cgt1c2VyQ3JlYXRvchgEIAEoCzIKLlVzZXJNb2RlbBIgCgVzdGF0ZRgFIAEo",
+            "CzIRLlJlcG9ydFN0YXRlTW9kZWwSIQoGdmFsdWVzGAYgAygLMhEuUmVwb3J0",
+            "VmFsdWVNb2RlbCJtChBSZXBvcnRTdGF0ZU1vZGVsEi4KCmNoYW5nZURhdGUY",
+            "ASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhsKB2NoYW5nZXIY",
+            "AiABKAsyCi5Vc2VyTW9kZWwSDAoEbmFtZRgDIAEoCSIwCg9SZXBvcnRNb2Rl",
+            "bExpc3QSHQoHcmVwb3J0cxgBIAMoCzIMLlJlcG9ydE1vZGVsIhoKDFJlcG9y",
+            "dExvb2t1cBIKCgJpZBgBIAEoBSKIAQoJR2V0UmVwb3J0Ei0KCWRhdGVTdGFy",
+            "dBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoHZGF0ZUVu",
+            "ZBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASHwoLdXNlckNy",
+            "ZWF0b3IYAyABKAsyCi5Vc2VyTW9kZWwiaQoLRGF0ZXNQZXJpb2QSLQoJZGF0",
+            "ZVN0YXJ0GAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgdk",
+            "YXRlRW5kGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKQAQoR",
+            "Q2hhbmdlUmVwb3J0U3RhdGUSGwoHY2hhbmdlchgBIAEoCzIKLlVzZXJNb2Rl",
+            "bBIcCghyZWNlaXZlchgCIAEoCzIKLlVzZXJNb2RlbBIuCgpkYXRlQ2hhbmdl",
+            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIQCghyZXBvcnRJ",
+            "ZBgEIAEoBSJYCg5SZXBvcnRNZXRhRGF0YRIWCg5lbmdSZXBvcnROYW1lcxgB",
+            "IAMoCRIWCg5ydXNSZXBvcnROYW1lcxgCIAMoCRIWCg5ydXNDb2x1bW5OYW1l",
+            "cxgDIAMoCTKjAwoLUmVwb3J0UHJvdG8SKAoJR2V0UmVwb3J0Eg0uUmVwb3J0",
+            "TG9va3VwGgwuUmVwb3J0TW9kZWwSLAoMRGVsZXRlUmVwb3J0Eg0uUmVwb3J0",
+            "TG9va3VwGg0uUmVwb3J0TG9va3VwEjAKEEdldFJlcG9ydHNCeVVzZXISCi5V",
+            "c2VyTW9kZWwaEC5SZXBvcnRNb2RlbExpc3QSNAoSR2V0UmVwb3J0c0J5UGVy",
+            "aW9kEgwuRGF0ZXNQZXJpb2QaEC5SZXBvcnRNb2RlbExpc3QSMgoNQXBwcm92",
+            "ZVJlcG9ydBISLkNoYW5nZVJlcG9ydFN0YXRlGg0uUmVwb3J0TG9va3VwEi8K",
+            "ClNlbmRSZXBvcnQSEi5DaGFuZ2VSZXBvcnRTdGF0ZRoNLlJlcG9ydExvb2t1",
+            "cBIxCgxDYW5jZWxSZXBvcnQSEi5DaGFuZ2VSZXBvcnRTdGF0ZRoNLlJlcG9y",
             "dExvb2t1cBI8ChFHZXRSZXBvcnRNZXRhRGF0YRIWLmdvb2dsZS5wcm90b2J1",
             "Zi5FbXB0eRoPLlJlcG9ydE1ldGFEYXRhQiKqAh9BbmltYWxIZWFsdGguQXBw",
             "bGljYXRpb24uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::AnimalHealth.Application.Models.InfrastructureReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::AnimalHealth.Application.Models.InfrastructureReflection.Descriptor, global::AnimalHealth.Application.Models.UserReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportValueModel), global::AnimalHealth.Application.Models.ReportValueModel.Parser, new[]{ "Id", "FirstFeature", "SecondFeature", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportModel), global::AnimalHealth.Application.Models.ReportModel.Parser, new[]{ "Id", "CreateDate", "Type", "UserCreator", "State", "Values" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportStateModel), global::AnimalHealth.Application.Models.ReportStateModel.Parser, new[]{ "ChangeDate", "Changer", "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportModelList), global::AnimalHealth.Application.Models.ReportModelList.Parser, new[]{ "Reports" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportLookup), global::AnimalHealth.Application.Models.ReportLookup.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.GetReport), global::AnimalHealth.Application.Models.GetReport.Parser, new[]{ "DateStart", "DateEnd", "UserCreator" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportUserName), global::AnimalHealth.Application.Models.ReportUserName.Parser, new[]{ "User" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportStateModel), global::AnimalHealth.Application.Models.ReportStateModel.Parser, new[]{ "Id", "State" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.DatesPeriod), global::AnimalHealth.Application.Models.DatesPeriod.Parser, new[]{ "DateStart", "DateEnd" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ChangeReportState), global::AnimalHealth.Application.Models.ChangeReportState.Parser, new[]{ "Changer", "Receiver", "DateChange", "ReportId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.ReportMetaData), global::AnimalHealth.Application.Models.ReportMetaData.Parser, new[]{ "EngReportNames", "RusReportNames", "RusColumnNames" }, null, null, null, null)
           }));
     }
@@ -403,8 +416,8 @@ namespace AnimalHealth.Application.Models {
       id_ = other.id_;
       createDate_ = other.createDate_ != null ? other.createDate_.Clone() : null;
       type_ = other.type_;
-      userCreator_ = other.userCreator_;
-      state_ = other.state_;
+      userCreator_ = other.userCreator_ != null ? other.userCreator_.Clone() : null;
+      state_ = other.state_ != null ? other.state_.Clone() : null;
       values_ = other.values_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -453,25 +466,25 @@ namespace AnimalHealth.Application.Models {
 
     /// <summary>Field number for the "userCreator" field.</summary>
     public const int UserCreatorFieldNumber = 4;
-    private string userCreator_ = "";
+    private global::AnimalHealth.Application.Models.UserModel userCreator_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string UserCreator {
+    public global::AnimalHealth.Application.Models.UserModel UserCreator {
       get { return userCreator_; }
       set {
-        userCreator_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        userCreator_ = value;
       }
     }
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 5;
-    private string state_ = "";
+    private global::AnimalHealth.Application.Models.ReportStateModel state_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string State {
+    public global::AnimalHealth.Application.Models.ReportStateModel State {
       get { return state_; }
       set {
-        state_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        state_ = value;
       }
     }
 
@@ -504,8 +517,8 @@ namespace AnimalHealth.Application.Models {
       if (Id != other.Id) return false;
       if (!object.Equals(CreateDate, other.CreateDate)) return false;
       if (Type != other.Type) return false;
-      if (UserCreator != other.UserCreator) return false;
-      if (State != other.State) return false;
+      if (!object.Equals(UserCreator, other.UserCreator)) return false;
+      if (!object.Equals(State, other.State)) return false;
       if(!values_.Equals(other.values_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -517,8 +530,8 @@ namespace AnimalHealth.Application.Models {
       if (Id != 0) hash ^= Id.GetHashCode();
       if (createDate_ != null) hash ^= CreateDate.GetHashCode();
       if (Type.Length != 0) hash ^= Type.GetHashCode();
-      if (UserCreator.Length != 0) hash ^= UserCreator.GetHashCode();
-      if (State.Length != 0) hash ^= State.GetHashCode();
+      if (userCreator_ != null) hash ^= UserCreator.GetHashCode();
+      if (state_ != null) hash ^= State.GetHashCode();
       hash ^= values_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -550,13 +563,13 @@ namespace AnimalHealth.Application.Models {
         output.WriteRawTag(26);
         output.WriteString(Type);
       }
-      if (UserCreator.Length != 0) {
+      if (userCreator_ != null) {
         output.WriteRawTag(34);
-        output.WriteString(UserCreator);
+        output.WriteMessage(UserCreator);
       }
-      if (State.Length != 0) {
+      if (state_ != null) {
         output.WriteRawTag(42);
-        output.WriteString(State);
+        output.WriteMessage(State);
       }
       values_.WriteTo(output, _repeated_values_codec);
       if (_unknownFields != null) {
@@ -581,13 +594,13 @@ namespace AnimalHealth.Application.Models {
         output.WriteRawTag(26);
         output.WriteString(Type);
       }
-      if (UserCreator.Length != 0) {
+      if (userCreator_ != null) {
         output.WriteRawTag(34);
-        output.WriteString(UserCreator);
+        output.WriteMessage(UserCreator);
       }
-      if (State.Length != 0) {
+      if (state_ != null) {
         output.WriteRawTag(42);
-        output.WriteString(State);
+        output.WriteMessage(State);
       }
       values_.WriteTo(ref output, _repeated_values_codec);
       if (_unknownFields != null) {
@@ -609,11 +622,11 @@ namespace AnimalHealth.Application.Models {
       if (Type.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
       }
-      if (UserCreator.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserCreator);
+      if (userCreator_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserCreator);
       }
-      if (State.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(State);
+      if (state_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(State);
       }
       size += values_.CalculateSize(_repeated_values_codec);
       if (_unknownFields != null) {
@@ -640,11 +653,17 @@ namespace AnimalHealth.Application.Models {
       if (other.Type.Length != 0) {
         Type = other.Type;
       }
-      if (other.UserCreator.Length != 0) {
-        UserCreator = other.UserCreator;
+      if (other.userCreator_ != null) {
+        if (userCreator_ == null) {
+          UserCreator = new global::AnimalHealth.Application.Models.UserModel();
+        }
+        UserCreator.MergeFrom(other.UserCreator);
       }
-      if (other.State.Length != 0) {
-        State = other.State;
+      if (other.state_ != null) {
+        if (state_ == null) {
+          State = new global::AnimalHealth.Application.Models.ReportStateModel();
+        }
+        State.MergeFrom(other.State);
       }
       values_.Add(other.values_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -678,11 +697,17 @@ namespace AnimalHealth.Application.Models {
             break;
           }
           case 34: {
-            UserCreator = input.ReadString();
+            if (userCreator_ == null) {
+              UserCreator = new global::AnimalHealth.Application.Models.UserModel();
+            }
+            input.ReadMessage(UserCreator);
             break;
           }
           case 42: {
-            State = input.ReadString();
+            if (state_ == null) {
+              State = new global::AnimalHealth.Application.Models.ReportStateModel();
+            }
+            input.ReadMessage(State);
             break;
           }
           case 50: {
@@ -720,15 +745,303 @@ namespace AnimalHealth.Application.Models {
             break;
           }
           case 34: {
-            UserCreator = input.ReadString();
+            if (userCreator_ == null) {
+              UserCreator = new global::AnimalHealth.Application.Models.UserModel();
+            }
+            input.ReadMessage(UserCreator);
             break;
           }
           case 42: {
-            State = input.ReadString();
+            if (state_ == null) {
+              State = new global::AnimalHealth.Application.Models.ReportStateModel();
+            }
+            input.ReadMessage(State);
             break;
           }
           case 50: {
             values_.AddEntriesFrom(ref input, _repeated_values_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ReportStateModel : pb::IMessage<ReportStateModel>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReportStateModel> _parser = new pb::MessageParser<ReportStateModel>(() => new ReportStateModel());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReportStateModel> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportStateModel() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportStateModel(ReportStateModel other) : this() {
+      changeDate_ = other.changeDate_ != null ? other.changeDate_.Clone() : null;
+      changer_ = other.changer_ != null ? other.changer_.Clone() : null;
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportStateModel Clone() {
+      return new ReportStateModel(this);
+    }
+
+    /// <summary>Field number for the "changeDate" field.</summary>
+    public const int ChangeDateFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp changeDate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ChangeDate {
+      get { return changeDate_; }
+      set {
+        changeDate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "changer" field.</summary>
+    public const int ChangerFieldNumber = 2;
+    private global::AnimalHealth.Application.Models.UserModel changer_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::AnimalHealth.Application.Models.UserModel Changer {
+      get { return changer_; }
+      set {
+        changer_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 3;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReportStateModel);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReportStateModel other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(ChangeDate, other.ChangeDate)) return false;
+      if (!object.Equals(Changer, other.Changer)) return false;
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (changeDate_ != null) hash ^= ChangeDate.GetHashCode();
+      if (changer_ != null) hash ^= Changer.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (changeDate_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ChangeDate);
+      }
+      if (changer_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Changer);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (changeDate_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ChangeDate);
+      }
+      if (changer_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Changer);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (changeDate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChangeDate);
+      }
+      if (changer_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Changer);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReportStateModel other) {
+      if (other == null) {
+        return;
+      }
+      if (other.changeDate_ != null) {
+        if (changeDate_ == null) {
+          ChangeDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ChangeDate.MergeFrom(other.ChangeDate);
+      }
+      if (other.changer_ != null) {
+        if (changer_ == null) {
+          Changer = new global::AnimalHealth.Application.Models.UserModel();
+        }
+        Changer.MergeFrom(other.Changer);
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (changeDate_ == null) {
+              ChangeDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ChangeDate);
+            break;
+          }
+          case 18: {
+            if (changer_ == null) {
+              Changer = new global::AnimalHealth.Application.Models.UserModel();
+            }
+            input.ReadMessage(Changer);
+            break;
+          }
+          case 26: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (changeDate_ == null) {
+              ChangeDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ChangeDate);
+            break;
+          }
+          case 18: {
+            if (changer_ == null) {
+              Changer = new global::AnimalHealth.Application.Models.UserModel();
+            }
+            input.ReadMessage(Changer);
+            break;
+          }
+          case 26: {
+            Name = input.ReadString();
             break;
           }
         }
@@ -753,7 +1066,7 @@ namespace AnimalHealth.Application.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[2]; }
+      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -932,7 +1245,7 @@ namespace AnimalHealth.Application.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[3]; }
+      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1122,7 +1435,7 @@ namespace AnimalHealth.Application.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[4]; }
+      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1144,7 +1457,7 @@ namespace AnimalHealth.Application.Models {
     public GetReport(GetReport other) : this() {
       dateStart_ = other.dateStart_ != null ? other.dateStart_.Clone() : null;
       dateEnd_ = other.dateEnd_ != null ? other.dateEnd_.Clone() : null;
-      userCreator_ = other.userCreator_;
+      userCreator_ = other.userCreator_ != null ? other.userCreator_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1180,13 +1493,13 @@ namespace AnimalHealth.Application.Models {
 
     /// <summary>Field number for the "userCreator" field.</summary>
     public const int UserCreatorFieldNumber = 3;
-    private string userCreator_ = "";
+    private global::AnimalHealth.Application.Models.UserModel userCreator_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string UserCreator {
+    public global::AnimalHealth.Application.Models.UserModel UserCreator {
       get { return userCreator_; }
       set {
-        userCreator_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        userCreator_ = value;
       }
     }
 
@@ -1207,7 +1520,7 @@ namespace AnimalHealth.Application.Models {
       }
       if (!object.Equals(DateStart, other.DateStart)) return false;
       if (!object.Equals(DateEnd, other.DateEnd)) return false;
-      if (UserCreator != other.UserCreator) return false;
+      if (!object.Equals(UserCreator, other.UserCreator)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1217,7 +1530,7 @@ namespace AnimalHealth.Application.Models {
       int hash = 1;
       if (dateStart_ != null) hash ^= DateStart.GetHashCode();
       if (dateEnd_ != null) hash ^= DateEnd.GetHashCode();
-      if (UserCreator.Length != 0) hash ^= UserCreator.GetHashCode();
+      if (userCreator_ != null) hash ^= UserCreator.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1244,9 +1557,9 @@ namespace AnimalHealth.Application.Models {
         output.WriteRawTag(18);
         output.WriteMessage(DateEnd);
       }
-      if (UserCreator.Length != 0) {
+      if (userCreator_ != null) {
         output.WriteRawTag(26);
-        output.WriteString(UserCreator);
+        output.WriteMessage(UserCreator);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1266,9 +1579,9 @@ namespace AnimalHealth.Application.Models {
         output.WriteRawTag(18);
         output.WriteMessage(DateEnd);
       }
-      if (UserCreator.Length != 0) {
+      if (userCreator_ != null) {
         output.WriteRawTag(26);
-        output.WriteString(UserCreator);
+        output.WriteMessage(UserCreator);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1286,8 +1599,8 @@ namespace AnimalHealth.Application.Models {
       if (dateEnd_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DateEnd);
       }
-      if (UserCreator.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserCreator);
+      if (userCreator_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserCreator);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1313,8 +1626,11 @@ namespace AnimalHealth.Application.Models {
         }
         DateEnd.MergeFrom(other.DateEnd);
       }
-      if (other.UserCreator.Length != 0) {
-        UserCreator = other.UserCreator;
+      if (other.userCreator_ != null) {
+        if (userCreator_ == null) {
+          UserCreator = new global::AnimalHealth.Application.Models.UserModel();
+        }
+        UserCreator.MergeFrom(other.UserCreator);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1346,7 +1662,10 @@ namespace AnimalHealth.Application.Models {
             break;
           }
           case 26: {
-            UserCreator = input.ReadString();
+            if (userCreator_ == null) {
+              UserCreator = new global::AnimalHealth.Application.Models.UserModel();
+            }
+            input.ReadMessage(UserCreator);
             break;
           }
         }
@@ -1379,7 +1698,10 @@ namespace AnimalHealth.Application.Models {
             break;
           }
           case 26: {
-            UserCreator = input.ReadString();
+            if (userCreator_ == null) {
+              UserCreator = new global::AnimalHealth.Application.Models.UserModel();
+            }
+            input.ReadMessage(UserCreator);
             break;
           }
         }
@@ -1390,206 +1712,16 @@ namespace AnimalHealth.Application.Models {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class ReportUserName : pb::IMessage<ReportUserName>
+  public sealed partial class DatesPeriod : pb::IMessage<DatesPeriod>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ReportUserName> _parser = new pb::MessageParser<ReportUserName>(() => new ReportUserName());
+    private static readonly pb::MessageParser<DatesPeriod> _parser = new pb::MessageParser<DatesPeriod>(() => new DatesPeriod());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ReportUserName> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[5]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReportUserName() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReportUserName(ReportUserName other) : this() {
-      user_ = other.user_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReportUserName Clone() {
-      return new ReportUserName(this);
-    }
-
-    /// <summary>Field number for the "user" field.</summary>
-    public const int UserFieldNumber = 1;
-    private string user_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string User {
-      get { return user_; }
-      set {
-        user_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as ReportUserName);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ReportUserName other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (User != other.User) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (User.Length != 0) hash ^= User.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (User.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(User);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (User.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(User);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (User.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(User);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ReportUserName other) {
-      if (other == null) {
-        return;
-      }
-      if (other.User.Length != 0) {
-        User = other.User;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            User = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            User = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class ReportStateModel : pb::IMessage<ReportStateModel>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ReportStateModel> _parser = new pb::MessageParser<ReportStateModel>(() => new ReportStateModel());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ReportStateModel> Parser { get { return _parser; } }
+    public static pb::MessageParser<DatesPeriod> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1605,7 +1737,7 @@ namespace AnimalHealth.Application.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReportStateModel() {
+    public DatesPeriod() {
       OnConstruction();
     }
 
@@ -1613,59 +1745,59 @@ namespace AnimalHealth.Application.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReportStateModel(ReportStateModel other) : this() {
-      id_ = other.id_;
-      state_ = other.state_;
+    public DatesPeriod(DatesPeriod other) : this() {
+      dateStart_ = other.dateStart_ != null ? other.dateStart_.Clone() : null;
+      dateEnd_ = other.dateEnd_ != null ? other.dateEnd_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReportStateModel Clone() {
-      return new ReportStateModel(this);
+    public DatesPeriod Clone() {
+      return new DatesPeriod(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private int id_;
+    /// <summary>Field number for the "dateStart" field.</summary>
+    public const int DateStartFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp dateStart_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Id {
-      get { return id_; }
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DateStart {
+      get { return dateStart_; }
       set {
-        id_ = value;
+        dateStart_ = value;
       }
     }
 
-    /// <summary>Field number for the "state" field.</summary>
-    public const int StateFieldNumber = 2;
-    private string state_ = "";
+    /// <summary>Field number for the "dateEnd" field.</summary>
+    public const int DateEndFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp dateEnd_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string State {
-      get { return state_; }
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DateEnd {
+      get { return dateEnd_; }
       set {
-        state_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        dateEnd_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as ReportStateModel);
+      return Equals(other as DatesPeriod);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ReportStateModel other) {
+    public bool Equals(DatesPeriod other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
-      if (State != other.State) return false;
+      if (!object.Equals(DateStart, other.DateStart)) return false;
+      if (!object.Equals(DateEnd, other.DateEnd)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1673,8 +1805,8 @@ namespace AnimalHealth.Application.Models {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
-      if (State.Length != 0) hash ^= State.GetHashCode();
+      if (dateStart_ != null) hash ^= DateStart.GetHashCode();
+      if (dateEnd_ != null) hash ^= DateEnd.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1693,13 +1825,13 @@ namespace AnimalHealth.Application.Models {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
+      if (dateStart_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DateStart);
       }
-      if (State.Length != 0) {
+      if (dateEnd_ != null) {
         output.WriteRawTag(18);
-        output.WriteString(State);
+        output.WriteMessage(DateEnd);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1711,13 +1843,13 @@ namespace AnimalHealth.Application.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
+      if (dateStart_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DateStart);
       }
-      if (State.Length != 0) {
+      if (dateEnd_ != null) {
         output.WriteRawTag(18);
-        output.WriteString(State);
+        output.WriteMessage(DateEnd);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1729,11 +1861,11 @@ namespace AnimalHealth.Application.Models {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      if (dateStart_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DateStart);
       }
-      if (State.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(State);
+      if (dateEnd_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DateEnd);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1743,15 +1875,21 @@ namespace AnimalHealth.Application.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ReportStateModel other) {
+    public void MergeFrom(DatesPeriod other) {
       if (other == null) {
         return;
       }
-      if (other.Id != 0) {
-        Id = other.Id;
+      if (other.dateStart_ != null) {
+        if (dateStart_ == null) {
+          DateStart = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DateStart.MergeFrom(other.DateStart);
       }
-      if (other.State.Length != 0) {
-        State = other.State;
+      if (other.dateEnd_ != null) {
+        if (dateEnd_ == null) {
+          DateEnd = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DateEnd.MergeFrom(other.DateEnd);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1768,12 +1906,18 @@ namespace AnimalHealth.Application.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadInt32();
+          case 10: {
+            if (dateStart_ == null) {
+              DateStart = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DateStart);
             break;
           }
           case 18: {
-            State = input.ReadString();
+            if (dateEnd_ == null) {
+              DateEnd = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DateEnd);
             break;
           }
         }
@@ -1791,12 +1935,346 @@ namespace AnimalHealth.Application.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadInt32();
+          case 10: {
+            if (dateStart_ == null) {
+              DateStart = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DateStart);
             break;
           }
           case 18: {
-            State = input.ReadString();
+            if (dateEnd_ == null) {
+              DateEnd = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DateEnd);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ChangeReportState : pb::IMessage<ChangeReportState>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ChangeReportState> _parser = new pb::MessageParser<ChangeReportState>(() => new ChangeReportState());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ChangeReportState> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChangeReportState() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChangeReportState(ChangeReportState other) : this() {
+      changer_ = other.changer_ != null ? other.changer_.Clone() : null;
+      receiver_ = other.receiver_ != null ? other.receiver_.Clone() : null;
+      dateChange_ = other.dateChange_ != null ? other.dateChange_.Clone() : null;
+      reportId_ = other.reportId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChangeReportState Clone() {
+      return new ChangeReportState(this);
+    }
+
+    /// <summary>Field number for the "changer" field.</summary>
+    public const int ChangerFieldNumber = 1;
+    private global::AnimalHealth.Application.Models.UserModel changer_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::AnimalHealth.Application.Models.UserModel Changer {
+      get { return changer_; }
+      set {
+        changer_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "receiver" field.</summary>
+    public const int ReceiverFieldNumber = 2;
+    private global::AnimalHealth.Application.Models.UserModel receiver_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::AnimalHealth.Application.Models.UserModel Receiver {
+      get { return receiver_; }
+      set {
+        receiver_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dateChange" field.</summary>
+    public const int DateChangeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp dateChange_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DateChange {
+      get { return dateChange_; }
+      set {
+        dateChange_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reportId" field.</summary>
+    public const int ReportIdFieldNumber = 4;
+    private int reportId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ReportId {
+      get { return reportId_; }
+      set {
+        reportId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ChangeReportState);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ChangeReportState other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Changer, other.Changer)) return false;
+      if (!object.Equals(Receiver, other.Receiver)) return false;
+      if (!object.Equals(DateChange, other.DateChange)) return false;
+      if (ReportId != other.ReportId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (changer_ != null) hash ^= Changer.GetHashCode();
+      if (receiver_ != null) hash ^= Receiver.GetHashCode();
+      if (dateChange_ != null) hash ^= DateChange.GetHashCode();
+      if (ReportId != 0) hash ^= ReportId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (changer_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Changer);
+      }
+      if (receiver_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Receiver);
+      }
+      if (dateChange_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DateChange);
+      }
+      if (ReportId != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(ReportId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (changer_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Changer);
+      }
+      if (receiver_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Receiver);
+      }
+      if (dateChange_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DateChange);
+      }
+      if (ReportId != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(ReportId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (changer_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Changer);
+      }
+      if (receiver_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Receiver);
+      }
+      if (dateChange_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DateChange);
+      }
+      if (ReportId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ReportId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ChangeReportState other) {
+      if (other == null) {
+        return;
+      }
+      if (other.changer_ != null) {
+        if (changer_ == null) {
+          Changer = new global::AnimalHealth.Application.Models.UserModel();
+        }
+        Changer.MergeFrom(other.Changer);
+      }
+      if (other.receiver_ != null) {
+        if (receiver_ == null) {
+          Receiver = new global::AnimalHealth.Application.Models.UserModel();
+        }
+        Receiver.MergeFrom(other.Receiver);
+      }
+      if (other.dateChange_ != null) {
+        if (dateChange_ == null) {
+          DateChange = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DateChange.MergeFrom(other.DateChange);
+      }
+      if (other.ReportId != 0) {
+        ReportId = other.ReportId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (changer_ == null) {
+              Changer = new global::AnimalHealth.Application.Models.UserModel();
+            }
+            input.ReadMessage(Changer);
+            break;
+          }
+          case 18: {
+            if (receiver_ == null) {
+              Receiver = new global::AnimalHealth.Application.Models.UserModel();
+            }
+            input.ReadMessage(Receiver);
+            break;
+          }
+          case 26: {
+            if (dateChange_ == null) {
+              DateChange = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DateChange);
+            break;
+          }
+          case 32: {
+            ReportId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (changer_ == null) {
+              Changer = new global::AnimalHealth.Application.Models.UserModel();
+            }
+            input.ReadMessage(Changer);
+            break;
+          }
+          case 18: {
+            if (receiver_ == null) {
+              Receiver = new global::AnimalHealth.Application.Models.UserModel();
+            }
+            input.ReadMessage(Receiver);
+            break;
+          }
+          case 26: {
+            if (dateChange_ == null) {
+              DateChange = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DateChange);
+            break;
+          }
+          case 32: {
+            ReportId = input.ReadInt32();
             break;
           }
         }
@@ -1821,7 +2299,7 @@ namespace AnimalHealth.Application.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[7]; }
+      get { return global::AnimalHealth.Application.Models.ReportReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

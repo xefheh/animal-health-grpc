@@ -1,4 +1,4 @@
-﻿using AnimalHealth.Domain.BasicReportEntities;
+﻿using AnimalHealth.Domain.Reports;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

@@ -48,40 +48,74 @@ namespace AnimalHealth.Application.Models {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ReportLookup> __Marshaller_ReportLookup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ReportLookup.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.DbSaveCondition> __Marshaller_DbSaveCondition = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.DbSaveCondition.Parser));
+    static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ReportModel> __Marshaller_ReportModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ReportModel.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ReportUserName> __Marshaller_ReportUserName = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ReportUserName.Parser));
+    static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.UserModel> __Marshaller_UserModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.UserModel.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ReportModelList> __Marshaller_ReportModelList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ReportModelList.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ReportStateModel> __Marshaller_ReportStateModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ReportStateModel.Parser));
+    static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.DatesPeriod> __Marshaller_DatesPeriod = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.DatesPeriod.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ChangeReportState> __Marshaller_ChangeReportState = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ChangeReportState.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::AnimalHealth.Application.Models.ReportMetaData> __Marshaller_ReportMetaData = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AnimalHealth.Application.Models.ReportMetaData.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::AnimalHealth.Application.Models.ReportLookup, global::AnimalHealth.Application.Models.DbSaveCondition> __Method_DeleteReport = new grpc::Method<global::AnimalHealth.Application.Models.ReportLookup, global::AnimalHealth.Application.Models.DbSaveCondition>(
+    static readonly grpc::Method<global::AnimalHealth.Application.Models.ReportLookup, global::AnimalHealth.Application.Models.ReportModel> __Method_GetReport = new grpc::Method<global::AnimalHealth.Application.Models.ReportLookup, global::AnimalHealth.Application.Models.ReportModel>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetReport",
+        __Marshaller_ReportLookup,
+        __Marshaller_ReportModel);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::AnimalHealth.Application.Models.ReportLookup, global::AnimalHealth.Application.Models.ReportLookup> __Method_DeleteReport = new grpc::Method<global::AnimalHealth.Application.Models.ReportLookup, global::AnimalHealth.Application.Models.ReportLookup>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteReport",
         __Marshaller_ReportLookup,
-        __Marshaller_DbSaveCondition);
+        __Marshaller_ReportLookup);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::AnimalHealth.Application.Models.ReportUserName, global::AnimalHealth.Application.Models.ReportModelList> __Method_GetReports = new grpc::Method<global::AnimalHealth.Application.Models.ReportUserName, global::AnimalHealth.Application.Models.ReportModelList>(
+    static readonly grpc::Method<global::AnimalHealth.Application.Models.UserModel, global::AnimalHealth.Application.Models.ReportModelList> __Method_GetReportsByUser = new grpc::Method<global::AnimalHealth.Application.Models.UserModel, global::AnimalHealth.Application.Models.ReportModelList>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetReports",
-        __Marshaller_ReportUserName,
+        "GetReportsByUser",
+        __Marshaller_UserModel,
         __Marshaller_ReportModelList);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::AnimalHealth.Application.Models.ReportStateModel, global::AnimalHealth.Application.Models.ReportLookup> __Method_ChangeReportState = new grpc::Method<global::AnimalHealth.Application.Models.ReportStateModel, global::AnimalHealth.Application.Models.ReportLookup>(
+    static readonly grpc::Method<global::AnimalHealth.Application.Models.DatesPeriod, global::AnimalHealth.Application.Models.ReportModelList> __Method_GetReportsByPeriod = new grpc::Method<global::AnimalHealth.Application.Models.DatesPeriod, global::AnimalHealth.Application.Models.ReportModelList>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "ChangeReportState",
-        __Marshaller_ReportStateModel,
+        "GetReportsByPeriod",
+        __Marshaller_DatesPeriod,
+        __Marshaller_ReportModelList);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::AnimalHealth.Application.Models.ChangeReportState, global::AnimalHealth.Application.Models.ReportLookup> __Method_ApproveReport = new grpc::Method<global::AnimalHealth.Application.Models.ChangeReportState, global::AnimalHealth.Application.Models.ReportLookup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ApproveReport",
+        __Marshaller_ChangeReportState,
+        __Marshaller_ReportLookup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::AnimalHealth.Application.Models.ChangeReportState, global::AnimalHealth.Application.Models.ReportLookup> __Method_SendReport = new grpc::Method<global::AnimalHealth.Application.Models.ChangeReportState, global::AnimalHealth.Application.Models.ReportLookup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SendReport",
+        __Marshaller_ChangeReportState,
+        __Marshaller_ReportLookup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::AnimalHealth.Application.Models.ChangeReportState, global::AnimalHealth.Application.Models.ReportLookup> __Method_CancelReport = new grpc::Method<global::AnimalHealth.Application.Models.ChangeReportState, global::AnimalHealth.Application.Models.ReportLookup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelReport",
+        __Marshaller_ChangeReportState,
         __Marshaller_ReportLookup);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -103,19 +137,43 @@ namespace AnimalHealth.Application.Models {
     public abstract partial class ReportProtoBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.DbSaveCondition> DeleteReport(global::AnimalHealth.Application.Models.ReportLookup request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportModel> GetReport(global::AnimalHealth.Application.Models.ReportLookup request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportModelList> GetReports(global::AnimalHealth.Application.Models.ReportUserName request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportLookup> DeleteReport(global::AnimalHealth.Application.Models.ReportLookup request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportLookup> ChangeReportState(global::AnimalHealth.Application.Models.ReportStateModel request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportModelList> GetReportsByUser(global::AnimalHealth.Application.Models.UserModel request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportModelList> GetReportsByPeriod(global::AnimalHealth.Application.Models.DatesPeriod request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportLookup> ApproveReport(global::AnimalHealth.Application.Models.ChangeReportState request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportLookup> SendReport(global::AnimalHealth.Application.Models.ChangeReportState request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::AnimalHealth.Application.Models.ReportLookup> CancelReport(global::AnimalHealth.Application.Models.ChangeReportState request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -134,9 +192,13 @@ namespace AnimalHealth.Application.Models {
     public static grpc::ServerServiceDefinition BindService(ReportProtoBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_GetReport, serviceImpl.GetReport)
           .AddMethod(__Method_DeleteReport, serviceImpl.DeleteReport)
-          .AddMethod(__Method_GetReports, serviceImpl.GetReports)
-          .AddMethod(__Method_ChangeReportState, serviceImpl.ChangeReportState)
+          .AddMethod(__Method_GetReportsByUser, serviceImpl.GetReportsByUser)
+          .AddMethod(__Method_GetReportsByPeriod, serviceImpl.GetReportsByPeriod)
+          .AddMethod(__Method_ApproveReport, serviceImpl.ApproveReport)
+          .AddMethod(__Method_SendReport, serviceImpl.SendReport)
+          .AddMethod(__Method_CancelReport, serviceImpl.CancelReport)
           .AddMethod(__Method_GetReportMetaData, serviceImpl.GetReportMetaData).Build();
     }
 
@@ -147,9 +209,13 @@ namespace AnimalHealth.Application.Models {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ReportProtoBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_DeleteReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.ReportLookup, global::AnimalHealth.Application.Models.DbSaveCondition>(serviceImpl.DeleteReport));
-      serviceBinder.AddMethod(__Method_GetReports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.ReportUserName, global::AnimalHealth.Application.Models.ReportModelList>(serviceImpl.GetReports));
-      serviceBinder.AddMethod(__Method_ChangeReportState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.ReportStateModel, global::AnimalHealth.Application.Models.ReportLookup>(serviceImpl.ChangeReportState));
+      serviceBinder.AddMethod(__Method_GetReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.ReportLookup, global::AnimalHealth.Application.Models.ReportModel>(serviceImpl.GetReport));
+      serviceBinder.AddMethod(__Method_DeleteReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.ReportLookup, global::AnimalHealth.Application.Models.ReportLookup>(serviceImpl.DeleteReport));
+      serviceBinder.AddMethod(__Method_GetReportsByUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.UserModel, global::AnimalHealth.Application.Models.ReportModelList>(serviceImpl.GetReportsByUser));
+      serviceBinder.AddMethod(__Method_GetReportsByPeriod, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.DatesPeriod, global::AnimalHealth.Application.Models.ReportModelList>(serviceImpl.GetReportsByPeriod));
+      serviceBinder.AddMethod(__Method_ApproveReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.ChangeReportState, global::AnimalHealth.Application.Models.ReportLookup>(serviceImpl.ApproveReport));
+      serviceBinder.AddMethod(__Method_SendReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.ChangeReportState, global::AnimalHealth.Application.Models.ReportLookup>(serviceImpl.SendReport));
+      serviceBinder.AddMethod(__Method_CancelReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AnimalHealth.Application.Models.ChangeReportState, global::AnimalHealth.Application.Models.ReportLookup>(serviceImpl.CancelReport));
       serviceBinder.AddMethod(__Method_GetReportMetaData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::AnimalHealth.Application.Models.ReportMetaData>(serviceImpl.GetReportMetaData));
     }
 

@@ -2,4 +2,5 @@ obj\Debug\net7.0\Protos/Report.cs \
 obj\Debug\net7.0\Protos/ReportGrpc.cs: C:/Users/Nikit/.nuget/packages/grpc.tools/2.60.0-pre1/build/native/include/google/protobuf/timestamp.proto\
  C:/Users/Nikit/.nuget/packages/grpc.tools/2.60.0-pre1/build/native/include/google/protobuf/empty.proto\
  Protos/infrastructure.proto\
+ Protos/user.proto\
  Protos/report.proto
