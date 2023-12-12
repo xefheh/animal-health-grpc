@@ -1,4 +1,4 @@
-﻿namespace AnimalHealth.Domain.BasicReportEntities
+﻿namespace AnimalHealth.Domain.Reports
 {
     public class ReportValue
     {
@@ -9,6 +9,7 @@
         public ReportValue(string firstFeature, string secondFeature) =>
             (FirstFeature, SecondFeature, Count) = (firstFeature, secondFeature, 1);
 
-        public ReportValue() { }    
+        public ReportValue() { }
     }
+
 }

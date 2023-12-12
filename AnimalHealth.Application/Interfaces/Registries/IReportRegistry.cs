@@ -1,4 +1,5 @@
 ﻿using AnimalHealth.Application.Models;
+using AnimalHealth.Domain.Reports;
 using Google.Protobuf.WellKnownTypes;
 
 namespace AnimalHealth.Application.Interfaces.Registries
@@ -6,28 +7,68 @@ namespace AnimalHealth.Application.Interfaces.Registries
     public interface IReportRegistry
     {
         /// <summary>
+        /// Добавить отчёт в БД;
+        /// </summary>
+        /// <param name="report">сохраняемый отчёт</param>
+        /// <param name="cancellationToken">Токен отмены.</param>
+        /// <returns>состояние сохранение в БД</returns>
+        public Task<DbSaveCondition> AddReportAsync(Report report, CancellationToken cancellationToken);
+
+        /// <summary>
         /// Получение списка отчётов.
         /// </summary>
-        /// <param name="user">пользователь, который создал отчёт.</param>
+        /// <param name="request">Id отчёта</param>
+        /// <param name="cancellationToken">Токен отмены.</param>
+        /// <returns>gRPC модель отчёта</returns>
+        public Task<ReportModel> GetReportAsync(ReportLookup request, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Получение списка отчётов.
+        /// </summary>
+        /// <param name="period">Период дат, за которые нужно получить отчёты.</param>
         /// <param name="cancellationToken">Токен отмены.</param>
         /// <returns>Список gRPC моделей отчётов</returns>
-        public Task<ReportModelList> GetReportsAsync(ReportUserName user, CancellationToken cancellationToken);
+        public Task<ReportModelList> GetReportsByPeriodAsync(DatesPeriod period, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Получение списка отчётов.
+        /// </summary>
+        /// <param name="user">Пользователь, который создал получаемые отчёты.</param>
+        /// <param name="cancellationToken">Токен отмены.</param>
+        /// <returns>Список gRPC моделей отчётов</returns>
+        public Task<ReportModelList> GetReportsByUserAsync(UserModel user, CancellationToken cancellationToken);
 
         /// <summary>
         /// Удалить отчёт по ключевому полю.
         /// </summary>
         /// <param name="lookup">Поисковая модель с ключевым полем.</param>
         /// <param name="cancellationToken">Токен отмены.</param>
-        /// <returns>Состояние сохранение БД.</returns>
-        public Task<DbSaveCondition> DeleteReportAsync(ReportLookup lookup, CancellationToken cancellationToken);
+        /// <returns>Id отчёта.</returns>
+        public Task<ReportLookup> DeleteReportAsync(ReportLookup lookup, CancellationToken cancellationToken);
 
         /// <summary>
-        /// Изменить состояние отчёта по айди.
+        /// Утвердить отчёт.
         /// </summary>
-        /// <param name="message">Состояние отчёта и его Id</param>
+        /// <param name="request">Дата утверждения, пользователь и Id отчёта</param>
         /// <param name="cancellationToken">Токен отмены.</param>
         /// <returns>Id отчёта.</returns>
-        public Task<ReportLookup> ChangeReportStateAsync(ReportStateModel message, CancellationToken cancellationToken);
+        public Task<ReportLookup> ApproveReportAsync(ChangeReportState request, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Отправить отчёт.
+        /// </summary>
+        /// <param name="request">Дата отправления, пользователь, получатель и Id отчёта</param>
+        /// <param name="cancellationToken">Токен отмены.</param>
+        /// <returns>Id отчёта.</returns>
+        public Task<ReportLookup> SendReportAsync(ChangeReportState request, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Отменить утверждение отчёта.
+        /// </summary>
+        /// <param name="request">Дата отправления, пользователь и Id отчёта</param>
+        /// <param name="cancellationToken">Токен отмены.</param>
+        /// <returns>Id отчёта.</returns>
+        public Task<ReportLookup> CancelReportAsync(ChangeReportState request, CancellationToken cancellationToken);
 
         /// <summary>
         /// Получить данные, включащие названия отчётов, и их свойств, об отчётах.

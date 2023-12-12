@@ -4,34 +4,39 @@ using AnimalHealth.Application.Extensions.InspectionExt;
 using AnimalHealth.Application.Interfaces;
 using AnimalHealth.Application.Interfaces.Registries;
 using AnimalHealth.Application.Models;
-using AnimalHealth.Application.Reports.LocalityAnimalTypeReport;
-using AnimalHealth.Application.Reports.LocalityDiseaseReport;
-using AnimalHealth.Domain.BasicReportEntities;
+using AnimalHealth.Domain.Reports;
 using AnimalHealth.Domain.Entities;
 using AnimalHealth.Persistence;
 using Microsoft.EntityFrameworkCore;
+using AnimalHealth.Domain.Identity;
 
 namespace AnimalHealth.Application.Registries.Inspections;
 
 public class InspectionRegistry : IInspectionRegistry
 {
     private readonly AnimalHealthContext _context;
+    private readonly IReportRegistry _reportRegistry;
     private readonly IEntityMapper<Inspection, InspectionAddModel, InspectionModel> _mapper;
     private readonly IEntityMapper<DiseaseReport, ReportModel> _diseaseReportGrpcMapper;
     private readonly IEntityMapper<AnimalTypeReport, ReportModel> _animalTypeReportGrpcMapper;
+    private readonly IEntityMapper<User, UserModel> _userGrpcMapper;
     private readonly IMapper<DiseaseReport, Report> _diseaseReportEFMapper;
     private readonly IMapper<AnimalTypeReport, Report> _animalTypeReportEFMapper;
 
-    public InspectionRegistry(AnimalHealthContext context, IEntityMapper<Inspection, InspectionAddModel, InspectionModel> mapper,
-        IEntityMapper<DiseaseReport, ReportModel> diseaseReportGrpcMapper,
+    public InspectionRegistry(AnimalHealthContext context, IReportRegistry reportRegistry, 
+        IEntityMapper<Inspection, InspectionAddModel, InspectionModel> mapper,
+        IEntityMapper<DiseaseReport, ReportModel> diseaseReportGrpcMapper, 
         IEntityMapper<AnimalTypeReport, ReportModel> animalTypeReportGrpcMapper, 
-        IMapper<DiseaseReport, Report> diseaseReportEFMapper, 
+        IEntityMapper<User, UserModel> userGrpcMapper, 
+        IMapper<DiseaseReport, Report> diseaseReportEFMapper,
         IMapper<AnimalTypeReport, Report> animalTypeReportEFMapper)
     {
         _context = context;
+        this._reportRegistry = reportRegistry;
         _mapper = mapper;
         _diseaseReportGrpcMapper = diseaseReportGrpcMapper;
         _animalTypeReportGrpcMapper = animalTypeReportGrpcMapper;
+        _userGrpcMapper = userGrpcMapper;
         _diseaseReportEFMapper = diseaseReportEFMapper;
         _animalTypeReportEFMapper = animalTypeReportEFMapper;
     }
@@ -92,12 +97,14 @@ public class InspectionRegistry : IInspectionRegistry
             .ToListAsync(cancellationToken);
 
         var report = new AnimalTypeReport();
-        report.GetReport(inspections);
-        report.User = dates.UserCreator;
-        await _context.Reports.AddAsync(_animalTypeReportEFMapper.Map(report), cancellationToken);
-        var saveCode = await _context.SaveChangesAsync(cancellationToken);
-        var efreport = _context.Reports.Where(x => x.CreateDate == report.CreateDate).First();
+        report.GetReport(inspections, (inspection) => inspection.GetLocalityAnimalType());
+        report.User = _userGrpcMapper.Map(dates.UserCreator);
+
+        await _reportRegistry.AddReportAsync(report, cancellationToken);
+
+        var efreport = await _context.Reports.Where(x => x.CreateDate == report.CreateDate).FirstAsync(cancellationToken);
         report.Id = efreport.Id;
+
         return _animalTypeReportGrpcMapper.Map(report);
     }
 
@@ -109,12 +116,14 @@ public class InspectionRegistry : IInspectionRegistry
             .ToListAsync(cancellationToken);
 
         var report = new DiseaseReport();
-        report.User = dates.UserCreator;
-        report.GetReport(inspections);
-        await _context.Reports.AddAsync(_diseaseReportEFMapper.Map(report), cancellationToken);
-        var saveCode = await _context.SaveChangesAsync(cancellationToken);
-        var efreport = _context.Reports.Where(x => x.CreateDate == report.CreateDate).First();
+        report.GetReport(inspections, (inspection) => inspection.GetLocalityDisease());
+        report.User = _userGrpcMapper.Map(dates.UserCreator);
+
+        await _reportRegistry.AddReportAsync(report, cancellationToken);
+
+        var efreport = await _context.Reports.Where(x => x.CreateDate == report.CreateDate).FirstAsync(cancellationToken);
         report.Id = efreport.Id;
+
         return _diseaseReportGrpcMapper.Map(report);
     }
 }
