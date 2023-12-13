@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnimalHealth.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e13c2e80973f87a101107f41eae69aa01004e57a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+242893a1e720e6b4a5348907546fa1f0f1abe5dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnimalHealth.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnimalHealth.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

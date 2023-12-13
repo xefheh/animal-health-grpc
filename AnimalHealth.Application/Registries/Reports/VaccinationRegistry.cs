@@ -87,12 +87,12 @@ public class VaccinationRegistry : IVaccinationRegistry
             .ToListAsync(cancellationToken);
 
         var report = new VaccinationReport();
+        report.Creator = _userGrpcMapper.Map(dates.UserCreator);
         report.GetReport(vaccinations, (vaccination) => vaccination.GetLocalityVaccine());
-        report.User = _userGrpcMapper.Map(dates.UserCreator);
 
-        await _reportRegistry.AddReportAsync(report, cancellationToken);
-        var efreport = await _context.Reports.Where(x => x.CreateDate == report.CreateDate).FirstAsync(cancellationToken);
+        var efreport = await _reportRegistry.AddReportAsync(report, cancellationToken);
         report.Id = efreport.Id;
+
         return _reportGrpcMapper.Map(report);
     }
 }

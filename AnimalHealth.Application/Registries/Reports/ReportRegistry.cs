@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AnimalHealth.Application.Registries.Reports
 {
-    public class ReportRegistry : IReportRegistry
+    /*public class ReportRegistry : IReportRegistry
     {
         readonly AnimalHealthContext _context;
         readonly IEntityMapper<Report, ReportModel> _mapper;
@@ -135,5 +135,5 @@ namespace AnimalHealth.Application.Registries.Reports
                  });
             return data;
         }
-    }
+    }*/
 }

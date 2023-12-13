@@ -21,15 +21,16 @@ namespace AnimalHealth.Application.Mapping.ReportMappings.BasicReportMappings
             _userMapper = userMapper;
         }
 
-        public Report Map(ReportModel model) => new()
+        public Report Map(ReportModel model)
         {
-            Id = model.Id,
-            CreateDate = model.CreateDate.ToDateTime(),
-            State = _stateMapper.Map(model.State),
-            Type = model.Type,
-            User = _userMapper.Map(model.UserCreator),
-            Values = model.Values.Select(x => _mapper.Map(x)).ToList(),
-        };
+            var report = new Report();
+            report.Creator = _userMapper.Map(model.UserCreator);
+            report.Id = model.Id;
+            report.State = _stateMapper.Map(model.State);
+            report.Values = model.Values.Select(x => _mapper.Map(x)).ToList();
+            report.Type = model.Type;
+            return report;
+        }
 
         public ReportModel Map(Report entity)
         {
@@ -39,7 +40,7 @@ namespace AnimalHealth.Application.Mapping.ReportMappings.BasicReportMappings
                 State = _stateMapper.Map(entity.State),
                 CreateDate = entity.CreateDate.ToTimestamp(),
                 Type = entity.Type,
-                UserCreator = _userMapper.Map(entity.User),
+                UserCreator = _userMapper.Map(entity.Creator),
             };
             rm.Values.AddRange(entity.Values.Select(x => _mapper.Map(x)));
             return rm;
