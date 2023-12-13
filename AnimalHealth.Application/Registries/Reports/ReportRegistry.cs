@@ -31,7 +31,7 @@ namespace AnimalHealth.Application.Registries.Reports
         {
             await _context.Reports.AddAsync(report, cancellationToken);
             var saveCode = await _context.SaveChangesAsync(cancellationToken);
-            return new DbSaveCondition { Code = saveCode };*/
+            return new DbSaveCondition { Code = saveCode };
         }
 
         public async Task<ReportModel> GetReportAsync(ReportLookup request, CancellationToken cancellationToken)

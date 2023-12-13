@@ -1,4 +1,6 @@
 ﻿using AnimalHealth.Domain.Identity;
+using AnimalHealth.Domain.Reports;
+
 
 namespace AnimalHealth.Domain.Reports
 {
