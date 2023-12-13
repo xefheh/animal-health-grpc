@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\AnimalHealth.Application",
-    "\\AnimalHealth.Application\\Registries",
-    "\\AnimalHealth.Application\\Registries\\Reports"
+    ""
   ],
-  "SelectedNode": "\\AnimalHealth.Application\\Registries\\Reports\\ReportRegistry.cs",
+  "SelectedNode": "\\C:\\Users\\Nikit\\source\\repos\\animal-health-grpc",
   "PreviewInSolutionExplorer": false
 }
