@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AnimalHealth.Application",
+    "\\AnimalHealth.Application\\Registries",
+    "\\AnimalHealth.Application\\Registries\\Reports"
   ],
-  "SelectedNode": "\\AnimalHealth.sln",
+  "SelectedNode": "\\AnimalHealth.Application\\Registries\\Reports\\ReportRegistry.cs",
   "PreviewInSolutionExplorer": false
 }
