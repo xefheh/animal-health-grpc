@@ -22,7 +22,6 @@ public class AnimalHealthContext : DbContext
     public DbSet<Inspection> Inspections { get; set; }
     public DbSet<Contract> Contracts { get; set; }
     public DbSet<Report> Reports { get; set; }
-
     public DbSet<ReportValue> ReportValues { get; set; }    
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) =>

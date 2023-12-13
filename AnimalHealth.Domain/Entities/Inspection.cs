@@ -1,8 +1,9 @@
-﻿using AnimalHealth.Domain.Identity;
+﻿using AnimalHealth.Domain.Abstract;
+using AnimalHealth.Domain.Identity;
 
 namespace AnimalHealth.Domain.Entities;
 
-public class Inspection
+public class Inspection : UpdatableEntity<Inspection>
 {
     public int Id { get; set; }
     public string? FeatureBehaviour { get; set; }

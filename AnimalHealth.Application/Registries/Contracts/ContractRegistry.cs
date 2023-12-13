@@ -1,5 +1,4 @@
 ﻿using AnimalHealth.Application.Exceptions;
-using AnimalHealth.Application.Extensions.ContractExt;
 using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
 using AnimalHealth.Application.Interfaces;
 using AnimalHealth.Application.Interfaces.Registries;

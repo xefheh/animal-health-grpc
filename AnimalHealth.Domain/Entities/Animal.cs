@@ -1,6 +1,8 @@
-﻿namespace AnimalHealth.Domain.Entities;
+﻿using AnimalHealth.Domain.Abstract;
 
-public class Animal
+namespace AnimalHealth.Domain.Entities;
+
+public class Animal : UpdatableEntity<Animal>
 {
     public int RegNumber { get; set; }
     public string? Name { get; set; }

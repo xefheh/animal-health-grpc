@@ -16,6 +16,7 @@ builder.Services.AddGrpcReflection();
 
 var app = builder.Build();
 
+app.MapGrpcService<AuthService>();
 app.MapGrpcService<InspectionService>();
 app.MapGrpcService<VaccinationService>();
 app.MapGrpcService<OrganizationService>();

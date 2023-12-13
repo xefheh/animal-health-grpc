@@ -1,6 +1,8 @@
-﻿namespace AnimalHealth.Domain.Entities;
+﻿using AnimalHealth.Domain.Abstract;
 
-public class Contract
+namespace AnimalHealth.Domain.Entities;
+
+public class Contract : UpdatableEntity<Contract>
 {
     public int Id { get; set; }
     public int Number { get; set; }
