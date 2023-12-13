@@ -1,6 +1,8 @@
-﻿namespace AnimalHealth.Domain.Entities;
+﻿using AnimalHealth.Domain.Abstract;
 
-public class Organization
+namespace AnimalHealth.Domain.Entities;
+
+public class Organization : UpdatableEntity<Organization>
 {
     public string Tin { get; set; } = null!;
     public string Trc { get; set; } = null!;

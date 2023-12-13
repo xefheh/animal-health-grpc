@@ -13,6 +13,7 @@ C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Persistence\obj\Debug\ne
 C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Persistence\obj\Debug\net7.0\refint\AnimalHealth.Persistence.dll
 C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Persistence\obj\Debug\net7.0\AnimalHealth.Persistence.pdb
 C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Persistence\obj\Debug\net7.0\ref\AnimalHealth.Persistence.dll
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.Persistence\obj\Debug\net7.0\AnimalHealth.Persistence.sourcelink.json
 C:\Users\Nikit\source\repos\animal-health-grpc\AnimalHealth.Persistence\bin\Debug\net7.0\AnimalHealth.Persistence.deps.json
 C:\Users\Nikit\source\repos\animal-health-grpc\AnimalHealth.Persistence\bin\Debug\net7.0\AnimalHealth.Persistence.dll
 C:\Users\Nikit\source\repos\animal-health-grpc\AnimalHealth.Persistence\bin\Debug\net7.0\AnimalHealth.Persistence.pdb

@@ -1,6 +1,5 @@
 ﻿using AnimalHealth.Application.Exceptions;
 using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
-using AnimalHealth.Application.Extensions.InspectionExt;
 using AnimalHealth.Application.Interfaces;
 using AnimalHealth.Application.Interfaces.Registries;
 using AnimalHealth.Application.Models;
@@ -58,7 +57,6 @@ public class InspectionRegistry : IInspectionRegistry
     public async Task<InspectionLookup> AddInspectionAsync(InspectionAddModel addedInspection, CancellationToken cancellationToken)
     {
         var inspection = _mapper.Map(addedInspection);
-        _context.AttachNestedEntities(inspection);
         await _context.Inspections.AddAsync(inspection, cancellationToken);
         await _context.SaveChangesAsync(cancellationToken);
         return new InspectionLookup { Id = inspection.Id };

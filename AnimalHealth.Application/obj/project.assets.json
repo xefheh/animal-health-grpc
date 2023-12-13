@@ -725,39 +725,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nikit\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\xefheh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Application\\AnimalHealth.Application.csproj",
+      "projectUniqueName": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Application\\AnimalHealth.Application.csproj",
       "projectName": "AnimalHealth.Application",
-      "projectPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Application\\AnimalHealth.Application.csproj",
-      "packagesPath": "C:\\Users\\Nikit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Application\\obj\\",
+      "projectPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Application\\AnimalHealth.Application.csproj",
+      "packagesPath": "C:\\Users\\xefheh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Application\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Nikit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\xefheh\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj"
+            "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj": {
+              "projectPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Persistence\\AnimalHealth.Persistence.csproj"
             }
           }
         }
@@ -798,6 +791,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

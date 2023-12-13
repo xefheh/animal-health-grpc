@@ -1,4 +1,6 @@
-﻿using AnimalHealth.Application.Interfaces;
+﻿using AnimalHealth.Application.Identity;
+using AnimalHealth.Application.Interfaces;
+using AnimalHealth.Application.Interfaces.Identity;
 using AnimalHealth.Application.Interfaces.OtherSource;
 using AnimalHealth.Application.Interfaces.Registries;
 using AnimalHealth.Application.Mapping.EntityMappings;
@@ -56,5 +58,6 @@ public static class ApplicationDi
         services.AddTransient<IMapper<VaccinationReportValue, ReportValue>, VaccinationReportValueEFMapper>();
         services.AddTransient<IEntityMapper<Report, ReportModel>, ReportMapper>();
         services.AddTransient<IEntityMapper<ReportValue, ReportValueModel>, ReportValueMapper>();
+        services.AddTransient<IAuthService, AuthService>();
     }
 }

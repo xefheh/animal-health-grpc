@@ -25,14 +25,14 @@ namespace AnimalHealth.Application.Models {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQcm90b3Mvcm9sZS5wcm90bxoZUHJvdG9zL29yZ2FuaXphdGlvbi5wcm90",
-            "bxoRUHJvdG9zL3VzZXIucHJvdG8iWwoJUm9sZU1vZGVsEgoKAmlkGAEgASgF",
-            "EigKDG9yZ2FuaXphdGlvbhgCIAEoCzISLk9yZ2FuaXphdGlvbk1vZGVsEhgK",
-            "BHVzZXIYAyABKAsyCi5Vc2VyTW9kZWxCIqoCH0FuaW1hbEhlYWx0aC5BcHBs",
-            "aWNhdGlvbi5Nb2RlbHNiBnByb3RvMw=="));
+            "bxoRUHJvdG9zL3VzZXIucHJvdG8iMQoJUm9sZU1vZGVsEgoKAmlkGAEgASgF",
+            "EhgKBHVzZXIYAiABKAsyCi5Vc2VyTW9kZWwyNQoJQXV0aFByb3RvEigKCUF1",
+            "dGhvcml6ZRIPLlVzZXJMb2dpbk1vZGVsGgouUm9sZU1vZGVsQiKqAh9Bbmlt",
+            "YWxIZWFsdGguQXBwbGljYXRpb24uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::AnimalHealth.Application.Models.OrganizationReflection.Descriptor, global::AnimalHealth.Application.Models.UserReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.RoleModel), global::AnimalHealth.Application.Models.RoleModel.Parser, new[]{ "Id", "Organization", "User" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::AnimalHealth.Application.Models.RoleModel), global::AnimalHealth.Application.Models.RoleModel.Parser, new[]{ "Id", "User" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,6 @@ namespace AnimalHealth.Application.Models {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RoleModel(RoleModel other) : this() {
       id_ = other.id_;
-      organization_ = other.organization_ != null ? other.organization_.Clone() : null;
       user_ = other.user_ != null ? other.user_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -98,20 +97,8 @@ namespace AnimalHealth.Application.Models {
       }
     }
 
-    /// <summary>Field number for the "organization" field.</summary>
-    public const int OrganizationFieldNumber = 2;
-    private global::AnimalHealth.Application.Models.OrganizationModel organization_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::AnimalHealth.Application.Models.OrganizationModel Organization {
-      get { return organization_; }
-      set {
-        organization_ = value;
-      }
-    }
-
     /// <summary>Field number for the "user" field.</summary>
-    public const int UserFieldNumber = 3;
+    public const int UserFieldNumber = 2;
     private global::AnimalHealth.Application.Models.UserModel user_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +125,6 @@ namespace AnimalHealth.Application.Models {
         return true;
       }
       if (Id != other.Id) return false;
-      if (!object.Equals(Organization, other.Organization)) return false;
       if (!object.Equals(User, other.User)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -148,7 +134,6 @@ namespace AnimalHealth.Application.Models {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (organization_ != null) hash ^= Organization.GetHashCode();
       if (user_ != null) hash ^= User.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -172,12 +157,8 @@ namespace AnimalHealth.Application.Models {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (organization_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Organization);
-      }
       if (user_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(User);
       }
       if (_unknownFields != null) {
@@ -194,12 +175,8 @@ namespace AnimalHealth.Application.Models {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (organization_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Organization);
-      }
       if (user_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(User);
       }
       if (_unknownFields != null) {
@@ -214,9 +191,6 @@ namespace AnimalHealth.Application.Models {
       int size = 0;
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
-      }
-      if (organization_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Organization);
       }
       if (user_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(User);
@@ -235,12 +209,6 @@ namespace AnimalHealth.Application.Models {
       }
       if (other.Id != 0) {
         Id = other.Id;
-      }
-      if (other.organization_ != null) {
-        if (organization_ == null) {
-          Organization = new global::AnimalHealth.Application.Models.OrganizationModel();
-        }
-        Organization.MergeFrom(other.Organization);
       }
       if (other.user_ != null) {
         if (user_ == null) {
@@ -268,13 +236,6 @@ namespace AnimalHealth.Application.Models {
             break;
           }
           case 18: {
-            if (organization_ == null) {
-              Organization = new global::AnimalHealth.Application.Models.OrganizationModel();
-            }
-            input.ReadMessage(Organization);
-            break;
-          }
-          case 26: {
             if (user_ == null) {
               User = new global::AnimalHealth.Application.Models.UserModel();
             }
@@ -301,13 +262,6 @@ namespace AnimalHealth.Application.Models {
             break;
           }
           case 18: {
-            if (organization_ == null) {
-              Organization = new global::AnimalHealth.Application.Models.OrganizationModel();
-            }
-            input.ReadMessage(Organization);
-            break;
-          }
-          case 26: {
             if (user_ == null) {
               User = new global::AnimalHealth.Application.Models.UserModel();
             }

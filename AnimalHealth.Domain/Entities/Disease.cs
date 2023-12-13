@@ -1,4 +1,6 @@
-﻿namespace AnimalHealth.Domain.Entities;
+﻿using AnimalHealth.Domain.Abstract;
+
+namespace AnimalHealth.Domain.Entities;
 
 public class Disease
 {

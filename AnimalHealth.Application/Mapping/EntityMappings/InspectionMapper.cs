@@ -13,21 +13,23 @@ public class InspectionMapper : IEntityMapper<Inspection, InspectionAddModel, In
     private readonly AnimalHealthContext _context;
     private readonly IEntityMapper<User, UserModel> _userMapper;
     private readonly IEntityMapper<Animal, AnimalModel> _animalMapper;
-    private readonly IEntityMapper<Contract, ContractAddModel, ContractModel> _contractMapper;
     private readonly IEntityMapper<Disease, DiseaseModel> _diseaseMapper;
+    private readonly IEntityMapper<Contract, ContractAddModel, ContractModel> _contractMapper;
 
     public InspectionMapper(AnimalHealthContext context, IEntityMapper<User, UserModel> userMapper,
         IEntityMapper<Animal, AnimalModel> animalMapper,
-        IEntityMapper<Contract, ContractAddModel, ContractModel> contractMapper,
-        IEntityMapper<Disease, DiseaseModel> diseaseMapper)
+        IEntityMapper<Disease, DiseaseModel> diseaseMapper,
+        IEntityMapper<Contract, ContractAddModel, ContractModel> contractMapper)
     {
         _context = context;
         _userMapper = userMapper;
         _animalMapper = animalMapper;
-        _contractMapper = contractMapper;
         _diseaseMapper = diseaseMapper;
+        _contractMapper = contractMapper;
     }
-
+        
+    
+    
     public Inspection Map(InspectionModel model) => new()
     {
         Id = model.Id,

@@ -1,8 +1,9 @@
-﻿using AnimalHealth.Domain.Identity;
+﻿using AnimalHealth.Domain.Abstract;
+using AnimalHealth.Domain.Identity;
 
 namespace AnimalHealth.Domain.Entities;
 
-public class Vaccination
+public class Vaccination : UpdatableEntity<Vaccination>
 {
     public int Id { get; set; }
     public DateTime Date { get; set; }

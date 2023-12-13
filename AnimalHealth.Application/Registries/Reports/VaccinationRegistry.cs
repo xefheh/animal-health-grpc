@@ -1,9 +1,7 @@
 ﻿using AnimalHealth.Application.Exceptions;
 using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
-using AnimalHealth.Application.Extensions.VaccinationExt;
 using AnimalHealth.Application.Interfaces;
-using AnimalHealth.Application.Interfaces.Registries;
-using AnimalHealth.Application.Mapping.ReportMappings.AnimalTypeReportMappings;
+using AnimalHealth.Application.Interfaces.Registries;                                                       
 using AnimalHealth.Application.Models;
 using AnimalHealth.Application.Reports.LocalityVaccinationReport;
 using AnimalHealth.Domain.BasicReportEntities;

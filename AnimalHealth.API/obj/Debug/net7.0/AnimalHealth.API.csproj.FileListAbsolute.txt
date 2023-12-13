@@ -97,3 +97,4 @@ C:\Users\Nikit\source\repos\animal-health-grpc\AnimalHealth.API\obj\Debug\net7.0
 C:\Users\Nikit\source\repos\animal-health-grpc\AnimalHealth.API\obj\Debug\net7.0\AnimalHealth.API.pdb
 C:\Users\Nikit\source\repos\animal-health-grpc\AnimalHealth.API\obj\Debug\net7.0\AnimalHealth.API.genruntimeconfig.cache
 C:\Users\Nikit\source\repos\animal-health-grpc\AnimalHealth.API\obj\Debug\net7.0\ref\AnimalHealth.API.dll
+C:\Users\xefheh\RiderProjects\AnimalHealth\AnimalHealth.API\obj\Debug\net7.0\AnimalHealth.API.sourcelink.json

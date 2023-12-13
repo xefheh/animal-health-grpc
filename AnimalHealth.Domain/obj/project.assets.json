@@ -8,31 +8,24 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Nikit\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\xefheh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj",
       "projectName": "AnimalHealth.Domain",
-      "projectPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj",
-      "packagesPath": "C:\\Users\\Nikit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nikit\\source\\repos\\animal-health-grpc\\AnimalHealth.Domain\\obj\\",
+      "projectPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Domain\\AnimalHealth.Domain.csproj",
+      "packagesPath": "C:\\Users\\xefheh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\xefheh\\RiderProjects\\AnimalHealth\\AnimalHealth.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Nikit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\xefheh\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,6 +54,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

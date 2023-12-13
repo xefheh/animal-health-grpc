@@ -10,11 +10,11 @@ namespace AnimalHealth.Application.Mapping.EntityMappings;
 public class ContractMapper : IEntityMapper<Contract, ContractAddModel, ContractModel>
 {
     private readonly AnimalHealthContext _context;
-    private readonly IEntityMapper<Organization, OrganizationAddModel, OrganizationModel> _organizationMapper;
-    
-    public ContractMapper(AnimalHealthContext context, IEntityMapper<Organization, OrganizationAddModel, OrganizationModel> organizationMapper) =>
-        (_context, _organizationMapper) = (context, organizationMapper);
+    private readonly IEntityMapper<Organization, OrganizationAddModel, OrganizationModel> _orgMapper;
 
+    public ContractMapper(AnimalHealthContext context, IEntityMapper<Organization, OrganizationAddModel, OrganizationModel> orgMapper) => 
+        (_context, _orgMapper) = (context, orgMapper);
+    
     public Contract Map(ContractAddModel model) => new()
     {
         Number = model.Number,
@@ -44,7 +44,7 @@ public class ContractMapper : IEntityMapper<Contract, ContractAddModel, Contract
         Number = entity.Number,
         ConclusionDate = entity.ConclusionDate.ToTimestamp(),
         EndDate = entity.EndDate.ToTimestamp(),
-        Customer = _organizationMapper.Map(entity.Customer),
-        Executor = _organizationMapper.Map(entity.Executor)
+        Customer = _orgMapper.Map(entity.Customer),
+        Executor = _orgMapper.Map(entity.Executor)
     };
 }
