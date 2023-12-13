@@ -21,9 +21,11 @@ public class AnimalHealthContext : DbContext
     public DbSet<Disease> Diseases { get; set; }
     public DbSet<Inspection> Inspections { get; set; }
     public DbSet<Contract> Contracts { get; set; }
-    public DbSet<Report> Reports { get; set; }
+/*    public DbSet<Report> Reports { get; set; }
     public DbSet<ReportValue> ReportValues { get; set; }
-    public DbSet<IReportState> States { get; set; }
+    public DbSet<CreatedState> CreatedStates { get; set; }
+    public DbSet<SentState> SentStates { get; set; }
+    public DbSet<ApprovedState> ApprovedStates { get; set; }*/
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) =>
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
