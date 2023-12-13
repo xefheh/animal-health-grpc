@@ -5,11 +5,16 @@ option csharp_namespace = "AnimalHealth.Application.Models";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
 import "Protos/infrastructure.proto";
+import "Protos/user.proto";
 
 service ReportProto {
-  rpc DeleteReport(ReportLookup) returns (DbSaveCondition);
-  rpc GetReports(ReportUserName) returns (ReportModelList);
-  rpc ChangeReportState(ReportStateModel) returns(ReportLookup);
+  rpc GetReport(ReportLookup) returns (ReportModel);
+  rpc DeleteReport(ReportLookup) returns (ReportLookup);
+  rpc GetReportsByUser(UserModel) returns (ReportModelList);
+  rpc GetReportsByPeriod(DatesPeriod) returns (ReportModelList);
+  rpc ApproveReport(ChangeReportState) returns(ReportLookup);
+  rpc SendReport(ChangeReportState) returns(ReportLookup);
+  rpc CancelReport(ChangeReportState) returns(ReportLookup);
   rpc GetReportMetaData(google.protobuf.Empty) returns(ReportMetaData);
 }
 
@@ -24,9 +29,15 @@ message ReportModel {
   int32 id = 1;
   google.protobuf.Timestamp createDate = 2;
   string type = 3;
-  string userCreator = 4;
-  string state = 5;
+  UserModel userCreator = 4;
+  ReportStateModel state = 5;
   repeated ReportValueModel values = 6;
+}
+
+message ReportStateModel{
+	google.protobuf.Timestamp changeDate = 1;
+	UserModel changer = 2;
+	string name = 3;
 }
 
 message ReportModelList {
@@ -40,16 +51,19 @@ message ReportLookup {
 message GetReport{
    google.protobuf.Timestamp dateStart = 1;
    google.protobuf.Timestamp dateEnd = 2;
-   string userCreator = 3;
+   UserModel userCreator = 3;
 }
 
-message ReportUserName{
-	string user = 1;
+message DatesPeriod{
+   google.protobuf.Timestamp dateStart = 1;
+   google.protobuf.Timestamp dateEnd = 2;
 }
 
-message ReportStateModel{
-	int32 id = 1;
-	string state = 2;
+message ChangeReportState{
+	UserModel changer = 1;
+	UserModel receiver = 2;
+	google.protobuf.Timestamp dateChange = 3;
+	int32 reportId = 4;
 }
 
 message ReportMetaData{
