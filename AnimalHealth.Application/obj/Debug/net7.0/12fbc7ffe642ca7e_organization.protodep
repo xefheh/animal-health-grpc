@@ -1,5 +1,5 @@
 obj\Debug\net7.0\Protos/Organization.cs \
 obj\Debug\net7.0\Protos/OrganizationGrpc.cs: Protos/locality.proto\
- C:/Users/xefheh/.nuget/packages/grpc.tools/2.60.0-pre1/build/native/include/google/protobuf/empty.proto\
+ C:/Users/Nikit/.nuget/packages/grpc.tools/2.60.0-pre1/build/native/include/google/protobuf/empty.proto\
  Protos/infrastructure.proto\
  Protos/organization.proto
