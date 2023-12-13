@@ -4,7 +4,7 @@ namespace AnimalHealth.Domain.Reports
 {
     public class VaccinationReport : Report
     {
-        public override string Type { get => "ОТчтёт"; }
+        public override string Type { get => "VaccinationReport"; }
         public VaccinationReport() : base() { }
     }
 }

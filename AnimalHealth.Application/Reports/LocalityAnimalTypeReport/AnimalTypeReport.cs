@@ -4,7 +4,7 @@ namespace AnimalHealth.Domain.Reports
 {
     public class AnimalTypeReport : Report
     {
-        public override string Type { get => "ОТчтёт"; }
+        public override string Type { get => "AnimalTypeReport"; }
         public AnimalTypeReport() : base() { }
     }
 }
