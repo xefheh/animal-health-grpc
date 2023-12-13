@@ -1,29 +1,33 @@
 ﻿using AnimalHealth.Domain.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AnimalHealth.Domain.Reports
 {
+    [NotMapped]
     public class Report
     {
         public int Id { get; set; }
         public IReportState State { get; set; }
-        public User User { get; set; }
+
+        public User Creator { get; set; }
         DateTime createDate;
         public DateTime CreateDate 
         { 
             get => createDate.ToUniversalTime();
             set => createDate = value; 
         }
-        public string Type { get; set; }
+        public virtual string Type { get; set; }
         public List<ReportValue> Values { get; set; }
 
         public Report()
         {
             Values = new List<ReportValue>();
-            State = new CreatedState(CreateDate, User);
+            CreateDate = DateTime.Now;
         }
 
         public void GetReport<T>(ICollection<T> records, Func<T, (string, string)> func)
         {
+            State = new CreatedState(CreateDate, Creator);
             foreach (var record in records)
             {
                 var locDis = func(record);

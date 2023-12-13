@@ -10,6 +10,14 @@
             (FirstFeature, SecondFeature, Count) = (firstFeature, secondFeature, 1);
 
         public ReportValue() { }
+
+        public override bool Equals(object? obj)
+        {
+            return obj != null &&
+                obj is ReportValue objR &&
+                objR.FirstFeature == FirstFeature &&
+                objR.SecondFeature == SecondFeature;
+        }
     }
 
 }

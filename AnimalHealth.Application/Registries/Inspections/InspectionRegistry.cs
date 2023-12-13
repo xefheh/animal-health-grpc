@@ -17,28 +17,20 @@ public class InspectionRegistry : IInspectionRegistry
     private readonly AnimalHealthContext _context;
     private readonly IReportRegistry _reportRegistry;
     private readonly IEntityMapper<Inspection, InspectionAddModel, InspectionModel> _mapper;
-    private readonly IEntityMapper<DiseaseReport, ReportModel> _diseaseReportGrpcMapper;
-    private readonly IEntityMapper<AnimalTypeReport, ReportModel> _animalTypeReportGrpcMapper;
+    private readonly IEntityMapper<Report, ReportModel> _reportGrpcMapper;
     private readonly IEntityMapper<User, UserModel> _userGrpcMapper;
-    private readonly IMapper<DiseaseReport, Report> _diseaseReportEFMapper;
-    private readonly IMapper<AnimalTypeReport, Report> _animalTypeReportEFMapper;
 
-    public InspectionRegistry(AnimalHealthContext context, IReportRegistry reportRegistry, 
-        IEntityMapper<Inspection, InspectionAddModel, InspectionModel> mapper,
-        IEntityMapper<DiseaseReport, ReportModel> diseaseReportGrpcMapper, 
-        IEntityMapper<AnimalTypeReport, ReportModel> animalTypeReportGrpcMapper, 
-        IEntityMapper<User, UserModel> userGrpcMapper, 
-        IMapper<DiseaseReport, Report> diseaseReportEFMapper,
-        IMapper<AnimalTypeReport, Report> animalTypeReportEFMapper)
+    public InspectionRegistry(AnimalHealthContext context,
+        IReportRegistry reportRegistry,
+        IEntityMapper<Inspection, InspectionAddModel, InspectionModel> mapper, 
+        IEntityMapper<Report, ReportModel> reportGrpcMapper,
+        IEntityMapper<User, UserModel> userGrpcMapper)
     {
         _context = context;
-        this._reportRegistry = reportRegistry;
+        _reportRegistry = reportRegistry;
         _mapper = mapper;
-        _diseaseReportGrpcMapper = diseaseReportGrpcMapper;
-        _animalTypeReportGrpcMapper = animalTypeReportGrpcMapper;
+        _reportGrpcMapper = reportGrpcMapper;
         _userGrpcMapper = userGrpcMapper;
-        _diseaseReportEFMapper = diseaseReportEFMapper;
-        _animalTypeReportEFMapper = animalTypeReportEFMapper;
     }
 
     public async Task<InspectionModel> GetInspectionAsync(InspectionLookup lookup, CancellationToken cancellationToken)
@@ -97,15 +89,13 @@ public class InspectionRegistry : IInspectionRegistry
             .ToListAsync(cancellationToken);
 
         var report = new AnimalTypeReport();
+        report.Creator = _userGrpcMapper.Map(dates.UserCreator);
         report.GetReport(inspections, (inspection) => inspection.GetLocalityAnimalType());
-        report.User = _userGrpcMapper.Map(dates.UserCreator);
 
-        await _reportRegistry.AddReportAsync(report, cancellationToken);
-
-        var efreport = await _context.Reports.Where(x => x.CreateDate == report.CreateDate).FirstAsync(cancellationToken);
+        var efreport = await _reportRegistry.AddReportAsync(report, cancellationToken);
         report.Id = efreport.Id;
 
-        return _animalTypeReportGrpcMapper.Map(report);
+        return _reportGrpcMapper.Map(report);
     }
 
     public async Task<ReportModel> GetDiseaseReportAsync(GetReport dates, CancellationToken cancellationToken)
@@ -116,14 +106,12 @@ public class InspectionRegistry : IInspectionRegistry
             .ToListAsync(cancellationToken);
 
         var report = new DiseaseReport();
-        report.GetReport(inspections, (inspection) => inspection.GetLocalityDisease());
-        report.User = _userGrpcMapper.Map(dates.UserCreator);
+        report.Creator = _userGrpcMapper.Map(dates.UserCreator);
+        report.GetReport(inspections, (inspection) => inspection.GetLocalityDisease()); 
 
-        await _reportRegistry.AddReportAsync(report, cancellationToken);
-
-        var efreport = await _context.Reports.Where(x => x.CreateDate == report.CreateDate).FirstAsync(cancellationToken);
+        var efreport = await _reportRegistry.AddReportAsync(report, cancellationToken);
         report.Id = efreport.Id;
 
-        return _diseaseReportGrpcMapper.Map(report);
+        return _reportGrpcMapper.Map(report);
     }
 }

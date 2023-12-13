@@ -12,7 +12,7 @@ namespace AnimalHealth.Application.Interfaces.Registries
         /// <param name="report">сохраняемый отчёт</param>
         /// <param name="cancellationToken">Токен отмены.</param>
         /// <returns>состояние сохранение в БД</returns>
-        public Task<DbSaveCondition> AddReportAsync(Report report, CancellationToken cancellationToken);
+        public Task<ReportLookup> AddReportAsync(Report report, CancellationToken cancellationToken);
 
         /// <summary>
         /// Получение списка отчётов.
