@@ -26,7 +26,7 @@ public static class ApplicationDi
         services.AddTransient<IVaccinationRegistry, VaccinationRegistry>();
         services.AddTransient<IContractRegistry, ContractRegistry>();
         services.AddTransient<IOrganizationRegistry, OrganizationRegistry>();
-        services.AddTransient<IReportRegistry, ReportRegistry>();
+        services.AddTransient<IReportRegistry, ReportRegistryList>();
         services.AddTransient<IOtherSource, OtherSource>();
         services.AddTransient<IEntityMapper<Locality, LocalityModel>, LocalityMapper>();
         services.AddTransient<IEntityMapper<User, UserModel>, UserMapper>();
