@@ -104,6 +104,8 @@ namespace AnimalHealth.Application.Registries.Reports
             var reportModels = reports.Select(report => _mapper.Map(report));
             var reportModelList = new ReportModelList();
             reportModelList.Reports.AddRange(reportModels);
+            foreach (var report in reportModelList.Reports)
+                report.Values.Clear();
             var task = Task.Factory.StartNew(() => reportModelList);
             return task;
         }
@@ -117,6 +119,8 @@ namespace AnimalHealth.Application.Registries.Reports
             var reportModels = reports.Select(report => _mapper.Map(report));
             var reportModelList = new ReportModelList();
             reportModelList.Reports.AddRange(reportModels);
+            foreach (var report in reportModelList.Reports)
+                report.Values.Clear();        
             var task = Task.Factory.StartNew(() => reportModelList);
             return task;
         }
