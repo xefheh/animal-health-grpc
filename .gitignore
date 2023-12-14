@@ -420,3 +420,5 @@ ScaffoldingAssemblies/
 /.vs/AnimalHealth/FileContentIndex/7b0c1ba0-9281-45c8-8115-7f0f7f8d1467.vsidx
 /.vs/AnimalHealth/FileContentIndex/2c031a4c-f4e2-434c-a55a-25ead1612765.vsidx
 /.vs/AnimalHealth/FileContentIndex/12abb784-b21f-4fef-8ab1-699335d5c32a.vsidx
+/.vs/slnx.sqlite
+*.vsidx
