@@ -13,6 +13,8 @@ namespace AnimalHealth.Domain.Reports
 
         public User Changer { get;  set; }
 
+        public User Creator { get; set; }  
+
         public string Name { get => "Одобрен"; }
 
         public ApprovedState(DateTime date, User user) =>
@@ -20,15 +22,9 @@ namespace AnimalHealth.Domain.Reports
 
         public ApprovedState() { }
 
-        public void Approve(Report report, DateTime date, User user)
+        public void Handle(Report report, IReportState state)
         {
-            return;
+            throw new NotImplementedException();
         }
-
-        public void Cancel(Report report, DateTime date, User user) =>
-            report.State = new CreatedState(date, user);
-
-        public void Send(Report report, DateTime date, User user) =>
-            report.State = new SentState(date, user);
     }
 }

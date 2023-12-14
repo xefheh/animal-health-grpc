@@ -1,5 +1,5 @@
-﻿using AnimalHealth.Domain.Identity;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using AnimalHealth.Domain.Identity;
 
 namespace AnimalHealth.Domain.Reports
 {
@@ -19,11 +19,10 @@ namespace AnimalHealth.Domain.Reports
 
         public string Type { get; set; }
 
-        public List<ReportValue> Values { get; set; }
+        public List<ReportValue> Values { get; set; } = new List<ReportValue>();
 
         public Report(string type)
         {
-            Values = new List<ReportValue>();
             CreateDate = DateTime.Now;
             Type = type;
         }
@@ -44,13 +43,22 @@ namespace AnimalHealth.Domain.Reports
         ReportValue findReportValue(ReportValue value) =>
             Values.Find((pr => pr.Equals(value)));
 
-        public void Approve(DateTime date, User user) =>
-            State.Approve(this, date, user);
+        public void Approve(DateTime date, User user)
+        {
+            var state = new ApprovedState();
+            State.Handle(this, state);
+        }
+           
+        public void Send(DateTime date, User user)
+        {
+            var state = new SentState();
+            State.Handle(this, state);
+        }
 
-        public void Send(DateTime date, User user) =>
-            State.Send(this, date, user);
-
-        public void Cancel(DateTime date, User user) =>
-            State.Cancel(this, date, user);
+        public void Cancel(DateTime date, User user) 
+        {   
+            var state = new CreatedState();
+            State.Handle(this, state);
+        }
     }
 }
