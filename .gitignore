@@ -501,6 +501,7 @@ ScaffoldingAssemblies/
 /.vs/AnimalHealth/v17/.suo
 /AnimalHealth.Application/bin/Debug/net7.0/AnimalHealth.Domain.pdb
 /AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_contract.protodep
+/.vs/AnimalHealth/DesignTimeBuild/.dtbcache.v2
 /.vs/ProjectEvaluation/animalhealth.projects.v7.bin
 /.vs/VSWorkspaceState.json
 /.vs/ProjectEvaluation/animalhealth.metadata.v7.bin
