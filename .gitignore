@@ -415,10 +415,82 @@ ScaffoldingAssemblies/
 *.userosscache
 *.suo
 *.
+<<<<<<< HEAD
 /.vs/AnimalHealth/FileContentIndex/d43ba107-c1ef-42ef-a151-9741bba36990.vsidx
 /.vs/AnimalHealth/FileContentIndex/bb97cdc0-79cc-472e-9c4d-b91e538645d5.vsidx
 /.vs/AnimalHealth/FileContentIndex/7b0c1ba0-9281-45c8-8115-7f0f7f8d1467.vsidx
 /.vs/AnimalHealth/FileContentIndex/2c031a4c-f4e2-434c-a55a-25ead1612765.vsidx
 /.vs/AnimalHealth/FileContentIndex/12abb784-b21f-4fef-8ab1-699335d5c32a.vsidx
+=======
+/.vs/AnimalHealth/FileContentIndex/55241133-3b51-4b26-b86a-6eaf4f0c2ba7.vsidx
+/.vs/AnimalHealth/FileContentIndex/bb97cdc0-79cc-472e-9c4d-b91e538645d5.vsidx
+/.vs/AnimalHealth/FileContentIndex/594a240c-bd47-433e-9e05-7196445c8f5b.vsidx
+<<<<<<< HEAD
+>>>>>>> ��� ������ �����������
+/.vs/AnimalHealth/FileContentIndex/cafe1f3b-5e28-44b5-9c83-eb51ca4fb989.vsidx
+/.vs/AnimalHealth/FileContentIndex/d132255d-2f7d-4522-b7a3-5ae54a35dd87.vsidx
+/.vs/AnimalHealth/FileContentIndex/eb501260-048a-41a3-81af-37b68c0a4ae2.vsidx
+=======
+/.vs/AnimalHealth/FileContentIndex/6e36f030-7e5f-4c89-9214-dc5248a322f8.vsidx
+/.vs/AnimalHealth/FileContentIndex/e840e71d-dcbd-4837-9dc7-f7ae737adf83.vsidx
+<<<<<<< HEAD
+>>>>>>> ��� ������ �����������:
+/.vs/AnimalHealth/FileContentIndex/5a59fd79-1155-4981-8722-85f5ce074ada.vsidx
+/.vs/AnimalHealth/FileContentIndex/b530ae7a-b95d-4772-ae5e-00b1a7e31fdb.vsidx
+=======
+/.vs/AnimalHealth/FileContentIndex/08da45ba-752b-4cc3-ba2e-66debc64723f.vsidx
+<<<<<<< HEAD
+>>>>>>> ��� ������ �����������
+/.vs/AnimalHealth/FileContentIndex/e8309517-9d83-4a29-ae30-118d4a158f41.vsidx
+=======
+/.vs/AnimalHealth/FileContentIndex/1af65a85-a83d-4e11-a57b-c9d7a9539db7.vsidx
+<<<<<<< HEAD
+>>>>>>> догружаю изменения
+/.vs/AnimalHealth/FileContentIndex/6b43a4d7-e65c-40db-a81c-53a69f48fe97.vsidx
+/.vs/AnimalHealth/FileContentIndex/64d594d8-3d1d-4ba9-9bef-df0a2896607e.vsidx
+=======
+/.vs/AnimalHealth/FileContentIndex/9027dbcd-27fb-44e6-9a43-4c9f361e439b.vsidx
+/.vs/AnimalHealth/FileContentIndex/38432e1f-703b-46df-bd78-4e5ec7a357f4.vsidx
+/.vs/AnimalHealth/FileContentIndex/7b0c1ba0-9281-45c8-8115-7f0f7f8d1467.vsidx
+/.vs/AnimalHealth/FileContentIndex/e17be448-f7e8-4d1c-9c0b-71d4b27571a7.vsidx
+<<<<<<< HEAD
+>>>>>>> Мой личный рефакторинг:
+/.vs/AnimalHealth/FileContentIndex/1c5581e9-4503-4418-9cf9-60dbe636bd8d.vsidx
+/.vs/AnimalHealth/FileContentIndex/6b96807b-5d29-42cc-929b-7a9afaf18dd3.vsidx
+/.vs/AnimalHealth/FileContentIndex/fafec747-e819-409d-b1f9-d41968e0919f.vsidx
+=======
+/.vs/AnimalHealth/FileContentIndex/af09bbf4-03b6-4a02-9513-5e57fd9f6ac3.vsidx
+/.vs/AnimalHealth/FileContentIndex/d7a83298-b2c2-4f88-a270-1607304bed99.vsidx
+/.vs/AnimalHealth/FileContentIndex/e791250e-7370-4f33-8da6-ccc3f6a1f958.vsidx
+<<<<<<< HEAD
+>>>>>>> Мой личный рефакторинг:
+/.vs/AnimalHealth/FileContentIndex/51d58f06-279d-4005-a0af-8a0e7f4d89c2.vsidx
+/.vs/AnimalHealth/FileContentIndex/677afac6-8131-4edc-856b-8706e453da7d.vsidx
+/.vs/AnimalHealth/FileContentIndex/9ce6ed4f-a3cf-4c9c-830b-8a0579f61736.vsidx
+/.vs/AnimalHealth/FileContentIndex/ab932aa2-2f9f-47e3-95da-19d8d3b0c649.vsidx
+=======
+/.vs/AnimalHealth/FileContentIndex/b6e4d47c-fd0d-42ff-a3d4-6da5894eae32.vsidx
+/.vs/AnimalHealth/FileContentIndex/e6c376c3-3d9a-4930-9bb6-7cc01da482db.vsidx
+/.vs/AnimalHealth/FileContentIndex/eb0fb0fb-05ef-415a-89b3-ecdad1e13b74.vsidx
+<<<<<<< HEAD
+>>>>>>> Мой личный рефакторинг
+/.vs/AnimalHealth/FileContentIndex/18e8c035-eebb-4baa-880d-cc7451ac5a49.vsidx
+/.vs/AnimalHealth/FileContentIndex/434a0695-4f11-4c21-9a3b-5e0819446e85.vsidx
+/.vs/AnimalHealth/FileContentIndex/b6adc356-e091-4bc0-a65f-0a23a97e63ff.vsidx
+=======
+/.vs/AnimalHealth/FileContentIndex/25c86a62-18af-4bb6-b782-ee8a9292b0f6.vsidx
+>>>>>>> Мой личный рефакторинг?
+/.vs/AnimalHealth/FileContentIndex/da026ff0-c7ab-426d-9a4f-d6150dbb3396.vsidx
+/.vs/AnimalHealth/FileContentIndex/47fd4d28-5f7e-4268-880c-f1f52cddd13d.vsidx
+/.vs/AnimalHealth/FileContentIndex/f5ed78b3-5c18-4381-9e72-a3398574545a.vsidx
+/.vs/AnimalHealth/FileContentIndex/35336979-968c-48fb-b7ad-2a1b75f36df4.vsidx
+/.vs/AnimalHealth/FileContentIndex/334bb713-883f-437f-be12-6ee9ef1b5e01.vsidx
+/.vs/AnimalHealth/FileContentIndex/0a37ea12-4301-4ee9-b51a-30c5d4c7abc4.vsidx
+/.vs/AnimalHealth/FileContentIndex/70f85a8f-fe5f-495b-9209-8b898b0bbb3a.vsidx
+/.vs/AnimalHealth/FileContentIndex/f03b7a99-13b1-40a3-bba7-181cb3a0deb4.vsidx
+/.vs/AnimalHealth/FileContentIndex/5a82a24f-d0f3-46a8-b791-48b28dea6df9.vsidx
+/.vs/AnimalHealth/FileContentIndex/0163f10b-ee3d-49e0-b002-e0aa24e47f9e.vsidx
+/.vs/AnimalHealth/FileContentIndex/5c8d64f3-ee24-4ff0-9e94-684ef46a7cca.vsidx
+/.vs/AnimalHealth/FileContentIndex
 /.vs/slnx.sqlite
 *.vsidx

@@ -1,6 +1,7 @@
 ﻿using AnimalHealth.Application.Interfaces;
 using AnimalHealth.Application.Models;
-using AnimalHealth.Domain.BasicReportEntities;
+using AnimalHealth.Domain.Identity;
+using AnimalHealth.Domain.Reports;
 using Google.Protobuf.WellKnownTypes;
 
 namespace AnimalHealth.Application.Mapping.ReportMappings.BasicReportMappings
@@ -8,31 +9,38 @@ namespace AnimalHealth.Application.Mapping.ReportMappings.BasicReportMappings
     public class ReportMapper : IEntityMapper<Report, ReportModel>
     {
         private readonly IEntityMapper<ReportValue, ReportValueModel> _mapper;
+        private readonly IEntityMapper<IReportState, ReportStateModel> _stateMapper;
+        private readonly IEntityMapper<User, UserModel> _userMapper;
 
-        public ReportMapper(IEntityMapper<ReportValue, ReportValueModel> mapper)
+        public ReportMapper(IEntityMapper<ReportValue, ReportValueModel> mapper,
+            IEntityMapper<IReportState, ReportStateModel> stateMapper, 
+            IEntityMapper<User, UserModel> userMapper)
         {
             _mapper = mapper;
+            _stateMapper = stateMapper;
+            _userMapper = userMapper;
         }
 
-        public Report Map(ReportModel model) => new()
+        public Report Map(ReportModel model)
         {
-            Id = model.Id,
-            CreateDate = model.CreateDate.ToDateTime(),
-            State = (ReportState)System.Enum.Parse(typeof(ReportState), model.State),
-            Type = model.Type,
-            User = model.UserCreator,
-            Values = model.Values.Select(x => _mapper.Map(x)).ToList(),
-        };
+            var report = new Report();
+            report.Creator = _userMapper.Map(model.UserCreator);
+            report.Id = model.Id;
+            report.State = _stateMapper.Map(model.State);
+            report.Values = model.Values.Select(x => _mapper.Map(x)).ToList();
+            report.Type = model.Type;
+            return report;
+        }
 
         public ReportModel Map(Report entity)
         {
             var rm = new ReportModel
             {
                 Id = entity.Id,
-                State = entity.State.ToString(),
+                State = _stateMapper.Map(entity.State),
                 CreateDate = entity.CreateDate.ToTimestamp(),
                 Type = entity.Type,
-                UserCreator = entity.User,
+                UserCreator = _userMapper.Map(entity.Creator),
             };
             rm.Values.AddRange(entity.Values.Select(x => _mapper.Map(x)));
             return rm;
