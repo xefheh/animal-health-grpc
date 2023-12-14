@@ -87,7 +87,7 @@ public class InspectionRegistry : IInspectionRegistry
             .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
             .ToListAsync(cancellationToken);
 
-        var report = new AnimalTypeReport();
+        var report = new Report("По нас.пункту и типам животных");
         report.Creator = _userGrpcMapper.Map(dates.UserCreator);
         report.GetReport(inspections, (inspection) => inspection.GetLocalityAnimalType());
 
@@ -104,7 +104,7 @@ public class InspectionRegistry : IInspectionRegistry
             .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
             .ToListAsync(cancellationToken);
 
-        var report = new DiseaseReport();
+        var report = new Report("По нас.пункту и болезням");
         report.Creator = _userGrpcMapper.Map(dates.UserCreator);
         report.GetReport(inspections, (inspection) => inspection.GetLocalityDisease()); 
 

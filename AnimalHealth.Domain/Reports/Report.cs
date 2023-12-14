@@ -3,31 +3,29 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AnimalHealth.Domain.Reports
 {
-    [NotMapped]
     public class Report
     {
-        [NotMapped]
         public int Id { get; set; }
         [NotMapped]
         public IReportState State { get; set; }
-        [NotMapped]
+
         public User Creator { get; set; }
         DateTime createDate;
-        [NotMapped]
         public DateTime CreateDate 
         { 
             get => createDate.ToUniversalTime();
             set => createDate = value; 
         }
-        [NotMapped]
-        public virtual string Type { get; set; }
-        [NotMapped]
+
+        public string Type { get; set; }
+
         public List<ReportValue> Values { get; set; }
 
-        public Report()
+        public Report(string type)
         {
             Values = new List<ReportValue>();
             CreateDate = DateTime.Now;
+            Type = type;
         }
 
         public void GetReport<T>(ICollection<T> records, Func<T, (string, string)> func)

@@ -23,12 +23,11 @@ namespace AnimalHealth.Application.Mapping.ReportMappings.BasicReportMappings
 
         public Report Map(ReportModel model)
         {
-            var report = new Report();
+            var report = new Report(model.Type);
             report.Creator = _userMapper.Map(model.UserCreator);
             report.Id = model.Id;
             report.State = _stateMapper.Map(model.State);
             report.Values = model.Values.Select(x => _mapper.Map(x)).ToList();
-            report.Type = model.Type;
             return report;
         }
 

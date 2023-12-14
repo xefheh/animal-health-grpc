@@ -494,3 +494,10 @@ ScaffoldingAssemblies/
 /.vs/AnimalHealth/FileContentIndex
 /.vs/slnx.sqlite
 *.vsidx
+/.vs/AnimalHealth/FileContentIndex/5903973b-8bbf-4f22-b8fe-2b1f81b8a834.vsidx
+/.vs/AnimalHealth/FileContentIndex/c064e857-9b52-4e21-a202-9d624b324358.vsidx
+/.vs/AnimalHealth/FileContentIndex/efab6f8f-6162-4a1d-a18f-63f3d05a40e3.vsidx
+/.vs/animal-health-grpc/v17/.wsuo
+/.vs/AnimalHealth/v17/.suo
+/AnimalHealth.Application/bin/Debug/net7.0/AnimalHealth.Domain.pdb
+/AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_contract.protodep

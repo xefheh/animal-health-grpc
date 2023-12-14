@@ -19,5 +19,4 @@
                 objR.SecondFeature == SecondFeature;
         }
     }
-
 }

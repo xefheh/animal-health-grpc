@@ -85,7 +85,7 @@ public class VaccinationRegistry : IVaccinationRegistry
             .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
             .ToListAsync(cancellationToken);
 
-        var report = new VaccinationReport();
+        var report = new Report("По нас.пункту и вакцинам");
         report.Creator = _userGrpcMapper.Map(dates.UserCreator);
         report.GetReport(vaccinations, (vaccination) => vaccination.GetLocalityVaccine());
 
