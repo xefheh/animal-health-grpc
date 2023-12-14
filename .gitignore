@@ -501,3 +501,4 @@ ScaffoldingAssemblies/
 /.vs/AnimalHealth/v17/.suo
 /AnimalHealth.Application/bin/Debug/net7.0/AnimalHealth.Domain.pdb
 /AnimalHealth.Application/obj/Debug/net7.0/12fbc7ffe642ca7e_contract.protodep
+/.vs/AnimalHealth/DesignTimeBuild/.dtbcache.v2
