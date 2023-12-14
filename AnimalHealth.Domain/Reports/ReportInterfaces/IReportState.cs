@@ -17,24 +17,13 @@ namespace AnimalHealth.Domain.Reports
         /// <summary>
         /// Название состояния.
         /// </summary>
-        string Name { get; }   
+        string Name { get; }
 
         /// <summary>
-        /// Утвердить отчёт.
+        /// Обработать изменение состояние отчёта.
         /// </summary>
-        /// <param name="report">Утверждаемый отчёт.</param>
-        void Approve(Report report, DateTime date, User changer, User secondApprover);
-
-        /// <summary>
-        /// Отправить отчёт.
-        /// </summary>
-        /// <param name="report">Отправляемый отчёт</param>
-        void Send(Report report, DateTime date, User changer, User receiver);
-
-        /// <summary>
-        /// Отменить утверждение отчёта.
-        /// </summary>
-        /// <param name="report">Отменяемый отчёт</param>
-        void Cancel(Report report, DateTime date, User changer);
+        /// <param name="report">Изменяемый отчёт.</param>
+        /// <param name="state">Новое состояние отчёта.</param>
+        void Handle(Report report, IReportState state);
     }
 }

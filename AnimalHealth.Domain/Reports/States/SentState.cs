@@ -13,7 +13,7 @@ namespace AnimalHealth.Domain.Reports
 
         public User Changer { get; set; }
 
-        public User Receiver { get; set; }
+        public User Receiver { get; set; } 
 
         public string Name => "Отправлен";
 
@@ -22,15 +22,9 @@ namespace AnimalHealth.Domain.Reports
 
         public SentState() { }
 
-        public void Approve(Report report, DateTime date, User changer, User secondApprover) =>
-            throw new IncorrectChangeReportStateException("This report has been sent already!");
-
-        public void Cancel(Report report, DateTime date, User changer) =>
-            throw new IncorrectChangeReportStateException("This report has been sent already!");
-
-        public void Send(Report report, DateTime date, User changer, User receiver)
+        public void Handle(Report report, IReportState state)
         {
-            return;
+            throw new NotImplementedException();
         }
     }
 }

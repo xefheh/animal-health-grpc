@@ -22,15 +22,9 @@ namespace AnimalHealth.Domain.Reports
 
         public ApprovedState() { }
 
-        public void Approve(Report report, DateTime date, User changer, User secondApprover)
+        public void Handle(Report report, IReportState state)
         {
-            return;
+            throw new NotImplementedException();
         }
-
-        public void Cancel(Report report, DateTime date, User changer) =>
-            report.State = new CreatedState(date, changer);
-
-        public void Send(Report report, DateTime date, User changer, User receiver) =>
-            report.State = new SentState(date, changer, receiver);
     }
 }
