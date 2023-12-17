@@ -34,12 +34,6 @@ message ReportModel {
   repeated ReportValueModel values = 6;
 }
 
-message ReportStateModel{
-	google.protobuf.Timestamp changeDate = 1;
-	UserModel changer = 2;
-	string name = 3;
-}
-
 message ReportModelList {
    repeated ReportModel reports = 1;
 }
@@ -59,11 +53,20 @@ message DatesPeriod{
    google.protobuf.Timestamp dateEnd = 2;
 }
 
+message ReportStateModel{
+	google.protobuf.Timestamp changeDate = 1;
+	UserModel changer = 2;
+	UserModel receiver = 3;
+	UserModel secondApprover = 4;
+	string name = 5;
+}
+
 message ChangeReportState{
 	UserModel changer = 1;
 	UserModel receiver = 2;
-	google.protobuf.Timestamp dateChange = 3;
-	int32 reportId = 4;
+	UserModel secondApprover = 3;
+	google.protobuf.Timestamp dateChange = 4;
+	int32 reportId = 5;
 }
 
 message ReportMetaData{

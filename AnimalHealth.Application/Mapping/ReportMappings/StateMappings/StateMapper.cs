@@ -25,9 +25,11 @@ namespace AnimalHealth.Application.Mapping.ReportMappings
                 case "Черновик":
                     return new CreatedState(date, user);
                 case "Утвержён":
-                    return new ApprovedState(date, user);
+                    var approver = _userMapper.Map(model.SecondApprover);
+                    return new ApprovedState(date, user, approver);
                 case "Отправлен":
-                    return new SentState(date, user);
+                    var receiver = _userMapper.Map(model.Receiver);
+                    return new SentState(date, user, receiver);
                 default:
                     throw new Exception("This state does not exist!");
             }

@@ -44,13 +44,13 @@ namespace AnimalHealth.Domain.Reports
         ReportValue findReportValue(ReportValue value) =>
             Values.Find((pr => pr.Equals(value)));
 
-        public void Approve(DateTime date, User user) =>
-            State.Approve(this, date, user);
+        public void Approve(DateTime date, User changer, User secondApprover) =>
+            State.Approve(this, date, changer, secondApprover);
 
-        public void Send(DateTime date, User user) =>
-            State.Send(this, date, user);
+        public void Send(DateTime date, User changer, User receiver) =>
+            State.Send(this, date, changer, receiver);
 
-        public void Cancel(DateTime date, User user) =>
-            State.Cancel(this, date, user);
+        public void Cancel(DateTime date, User changer) =>
+            State.Cancel(this, date, changer);
     }
 }

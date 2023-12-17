@@ -13,20 +13,22 @@ namespace AnimalHealth.Domain.Reports
 
         public User Changer { get; set; }
 
+        public User Receiver { get; set; }
+
         public string Name => "Отправлен";
 
-        public SentState(DateTime date, User user) =>
-            (Date, Changer) = (date, user);
+        public SentState(DateTime date, User changer, User receiver) =>
+            (Date, Changer, Receiver) = (date, changer, receiver);
 
         public SentState() { }
 
-        public void Approve(Report report, DateTime date, User user) =>
+        public void Approve(Report report, DateTime date, User changer, User secondApprover) =>
             throw new IncorrectChangeReportStateException("This report has been sent already!");
 
-        public void Cancel(Report report, DateTime date, User user) =>
+        public void Cancel(Report report, DateTime date, User changer) =>
             throw new IncorrectChangeReportStateException("This report has been sent already!");
 
-        public void Send(Report report, DateTime date, User user)
+        public void Send(Report report, DateTime date, User changer, User receiver)
         {
             return;
         }

@@ -20,13 +20,14 @@ namespace AnimalHealth.Domain.Reports
 
         public CreatedState() { }
 
-        public void Approve(Report report, DateTime date, User user) =>
-            report.State = new ApprovedState(date, user);
-
-        public void Cancel(Report report, DateTime date, User user) =>
+        public void Cancel(Report report, DateTime date, User changer) =>
             throw new IncorrectChangeReportStateException("You cannot cancel not approved report!");
 
-        public void Send(Report report, DateTime date, User user) =>
+        public void Approve(Report report, DateTime date, User changer, User secondApprover) =>
+            report.State = new ApprovedState(date, changer, secondApprover);
+
+        public void Send(Report report, DateTime date, User changer, User receiver) =>
             throw new IncorrectChangeReportStateException("You cannot send not approved report!");
+
     }
 }
