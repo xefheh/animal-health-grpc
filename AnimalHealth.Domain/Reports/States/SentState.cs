@@ -22,9 +22,9 @@ namespace AnimalHealth.Domain.Reports
 
         public SentState() { }
 
-        public void Handle(Report report, IReportState state)
+        public void Handle(Report report, User user, DateTime date)
         {
-            throw new NotImplementedException();
+            return;
         }
     }
 }

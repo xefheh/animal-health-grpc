@@ -13,18 +13,25 @@ namespace AnimalHealth.Domain.Reports
 
         public User Changer { get; set; }
 
-        public User SecondApprover { get; set; }
+        public User SecondApprover { get; set; }   
 
         public string Name { get => "Одобрен"; }
 
         public ApprovedState(DateTime date, User changer, User secondApprover) =>
-            (Date, Changer, SecondApprover) = (date, changer, secondApprover);
+            (Date, SecondApprover, Changer) = (date, secondApprover, changer);
 
         public ApprovedState() { }
 
-        public void Handle(Report report, IReportState state)
+        public void Handle(Report report, User user, DateTime date)
         {
-            throw new NotImplementedException();
+            report.SentState = new SentState(date, user,  );
+        }
+
+        public void Cancel(Report report, User user, DateTime time)
+        {
+            if (report.ApprovedState is not null && report.SentState is null)
+                throw new IncorrectChangeReportStateException("You cannot cancel this report!");
+            report.ApprovedState = null;
         }
     }
 }
