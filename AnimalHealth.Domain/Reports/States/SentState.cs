@@ -11,24 +11,20 @@ namespace AnimalHealth.Domain.Reports
             set => date = value;
         }
 
-        public User Creator { get; set; }
-
-        public User Approver { get; set; }
-
         public User Changer { get; set; }
 
         public User Receiver { get; set; } 
 
         public string Name => "Отправлен";
 
-        public SentState(DateTime date, User user) =>
-            (Date, Changer) = (date, user);
+        public SentState(DateTime date, User changer, User receiver) =>
+            (Date, Changer, Receiver) = (date, changer, receiver);
 
         public SentState() { }
 
-        public void Handle(Report report, IReportState state)
+        public void Handle(Report report, User user, DateTime date)
         {
-            throw new NotImplementedException();
+            return;
         }
     }
 }
