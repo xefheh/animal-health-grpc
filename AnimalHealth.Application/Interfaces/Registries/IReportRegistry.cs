@@ -63,14 +63,6 @@ namespace AnimalHealth.Application.Interfaces.Registries
         public Task<ReportLookup> SendReportAsync(ChangeReportState request, CancellationToken cancellationToken);
 
         /// <summary>
-        /// Отменить утверждение отчёта.
-        /// </summary>
-        /// <param name="request">Дата отправления, пользователь и Id отчёта</param>
-        /// <param name="cancellationToken">Токен отмены.</param>
-        /// <returns>Id отчёта.</returns>
-        public Task<ReportLookup> CancelReportAsync(ChangeReportState request, CancellationToken cancellationToken);
-
-        /// <summary>
         /// Получить данные, включащие названия отчётов, и их свойств, об отчётах.
         /// </summary>
         /// <param name="request">Пустой запрос</param>

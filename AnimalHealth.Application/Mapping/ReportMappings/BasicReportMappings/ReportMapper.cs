@@ -26,7 +26,7 @@ namespace AnimalHealth.Application.Mapping.ReportMappings.BasicReportMappings
             var report = new Report(model.Type);
             report.Creator = _userMapper.Map(model.UserCreator);
             report.Id = model.Id;
-            report.State = _stateMapper.Map(model.State);
+            report.CurrentState = _stateMapper.Map(model.State);
             report.Values = model.Values.Select(x => _mapper.Map(x)).ToList();
             return report;
         }
@@ -36,7 +36,7 @@ namespace AnimalHealth.Application.Mapping.ReportMappings.BasicReportMappings
             var rm = new ReportModel
             {
                 Id = entity.Id,
-                State = _stateMapper.Map(entity.State),
+                State = _stateMapper.Map(entity.CurrentState),
                 CreateDate = entity.CreateDate.ToTimestamp(),
                 Type = entity.Type,
                 UserCreator = _userMapper.Map(entity.Creator),

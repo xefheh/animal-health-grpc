@@ -22,16 +22,9 @@ namespace AnimalHealth.Domain.Reports
 
         public ApprovedState() { }
 
-        public void Handle(Report report, User user, DateTime date)
+        public void Handle(Report report, DateTime date, List<User> users)
         {
-            report.SentState = new SentState(date, user,  );
-        }
-
-        public void Cancel(Report report, User user, DateTime time)
-        {
-            if (report.ApprovedState is not null && report.SentState is null)
-                throw new IncorrectChangeReportStateException("You cannot cancel this report!");
-            report.ApprovedState = null;
+            report.CurrentState = new SentState(date, users[0], users[1]);
         }
     }
 }

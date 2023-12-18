@@ -24,6 +24,6 @@ namespace AnimalHealth.Domain.Reports
         /// </summary>
         /// <param name="report">Изменяемый отчёт.</param>
         /// <param name="state">Новое состояние отчёта.</param>
-        void Handle(Report report, User user, DateTime date);
+        void Handle(Report report, DateTime date, List<User> users);
     }
 }

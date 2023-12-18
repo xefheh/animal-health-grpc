@@ -22,7 +22,7 @@ namespace AnimalHealth.Domain.Reports
 
         public SentState() { }
 
-        public void Handle(Report report, User user, DateTime date)
+        public void Handle(Report report, DateTime date, List<User> users)
         {
             return;
         }

@@ -20,10 +20,10 @@ namespace AnimalHealth.Domain.Reports
 
         public CreatedState() { }
 
-        public void Handle(Report report, User user, DateTime date)
+        public void Handle(Report report, DateTime date, List<User> users)
         {
-
-            report.ApprovedState = new ApprovedState(date, user, );
+            var state = new ApprovedState(date, users[0], users[1]);
+            report.CurrentState = state;
         }
     }
 }
