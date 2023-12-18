@@ -17,7 +17,6 @@ namespace AnimalHealth.Application.Mapping.ReportMappings
 
         public IReportState Map(ReportStateModel model) 
         {
-
             var date = model.ChangeDate.ToDateTime();
             var user = _userMapper.Map(model.Changer);
             switch (model.Name)
@@ -25,11 +24,11 @@ namespace AnimalHealth.Application.Mapping.ReportMappings
                 case "Черновик":
                     return new CreatedState(date, user);
                 case "Утвержён":
-                    var approver = _userMapper.Map(model.SecondApprover);
-                    return new ApprovedState(date, user, approver);
+                    var sa = _userMapper.Map(model.SecondApprover);
+                    return new ApprovedState(date, user, sa);
                 case "Отправлен":
-                    var receiver = _userMapper.Map(model.Receiver);
-                    return new SentState(date, user, receiver);
+                    var r = _userMapper.Map(model.Receiver);
+                    return new SentState(date, user, r);
                 default:
                     throw new Exception("This state does not exist!");
             }

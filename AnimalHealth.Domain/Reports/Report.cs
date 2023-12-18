@@ -1,47 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Reflection.Metadata.Ecma335;
-using AnimalHealth.Domain.Identity;
+﻿using AnimalHealth.Domain.Identity;
 
 namespace AnimalHealth.Domain.Reports
 {
     public class Report
     {
         public int Id { get; set; }
-
-        CreatedState createdState;
-        public CreatedState CreatedState 
-        {
-            get => createdState;
-            set
-            {
-                CurrentState = value;
-                createdState = value;
-            } 
-        }  
-        ApprovedState approvedState;
-        public ApprovedState ApprovedState
-        {
-            get => approvedState;
-            set
-            {
-                if (value == null) CurrentState = CreatedState;
-                else
-                {
-                    CurrentState = value;
-                    approvedState = value;
-                }
-            }
-        }
-        SentState sentState;
-        public SentState SentState 
-        {
-            get => sentState;
-            set
-            {
-                CurrentState = value; 
-                sentState = value;
-            }
-        }    
 
         public IReportState CurrentState { get; set; }
 
@@ -66,8 +29,8 @@ namespace AnimalHealth.Domain.Reports
 
         public void GetReport<T>(ICollection<T> records, Func<T, (string, string)> func)
         {
-            CreatedState = new CreatedState(CreateDate, Creator);
-            CurrentState = CreatedState;
+            var createdState = new CreatedState(CreateDate, Creator);
+            CurrentState = createdState;
             foreach (var record in records)
             {
                 var locDis = func(record);
@@ -81,15 +44,9 @@ namespace AnimalHealth.Domain.Reports
         ReportValue findReportValue(ReportValue value) =>
             Values.Find((pr => pr.Equals(value)));
 
-        public void GoNextState(DateTime date, User user, User secondApprover = null, User Receiver = null)
+        public void GoNextState(DateTime date, List<User> users)
         {
-            CurrentState.Handle(this, user, date);
-        }
-
-        public void Cancel(DateTime date, User user) 
-        {
-            if (CurrentState is ApprovedState approvedState)
-            approvedState.Cancel(this, user, date);
+            CurrentState.Handle(this, date, users);
         }
     }
 }
