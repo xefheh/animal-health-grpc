@@ -15,8 +15,6 @@ namespace AnimalHealth.Domain.Reports
 
         public User SecondApprover { get; set; }   
 
-        public User SecondApprover { get; set; }   
-
         public string Name { get => "Одобрен"; }
 
         public ApprovedState(DateTime date, User changer, User secondApprover) =>
