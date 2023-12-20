@@ -103,26 +103,18 @@ namespace AnimalHealth.Application.Registries.Reports
             return task;
         }
 
-        public Task<ReportLookup> ApproveReportAsync(ChangeReportState request, CancellationToken cancellationToken)
+        public Task<ReportLookup> GoNextStateAsync(ChangeReportState request, CancellationToken cancellationToken)
         {
             var report = reports[request.ReportId];
             var changer = _userMapper.Map(request.Changer);
-            var secondApprover = _userMapper.Map(request.SecondApprover);
             var date = request.DateChange.ToDateTime();
             if (report == null) throw new NotFoundException(typeof(Report), request.ReportId);
-            report.GoNextState(date, new List<User> { changer, secondApprover });
-            var task = Task.Factory.StartNew(() => new ReportLookup { Id = request.ReportId });
-            return task;
-        }
+            var requestUser = new User();
+            if (request.SecondApprover != null)
+                requestUser = _userMapper.Map(request.SecondApprover);
+            else requestUser = _userMapper.Map(request.Receiver);
 
-        public Task<ReportLookup> SendReportAsync(ChangeReportState request, CancellationToken cancellationToken)
-        {
-            var report = reports[request.ReportId];
-            var changer = _userMapper.Map(request.Changer);
-            var receiver = _userMapper.Map(request.Receiver);
-            var date = request.DateChange.ToDateTime();
-            if (report == null) throw new NotFoundException(typeof(Report), request.ReportId);
-            report.GoNextState(date, new List<User> { changer, receiver });
+            report.GoNextState(date, new List<User> { changer, requestUser });
             var task = Task.Factory.StartNew(() => new ReportLookup { Id = request.ReportId });
             return task;
         }

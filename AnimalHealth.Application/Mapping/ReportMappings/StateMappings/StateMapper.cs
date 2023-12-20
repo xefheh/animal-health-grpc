@@ -40,6 +40,5 @@ namespace AnimalHealth.Application.Mapping.ReportMappings
             ChangeDate = entity.Date.ToTimestamp(),
             Changer = _userMapper.Map(entity.Changer),
         };
-        
     }
 }

@@ -18,11 +18,8 @@ namespace AnimalHealth.API.Services
         public override Task<ReportLookup> DeleteReport(ReportLookup request, ServerCallContext context) =>
             _registry.DeleteReportAsync(request, context.CancellationToken);
 
-        public override Task<ReportLookup> ApproveReport(ChangeReportState request, ServerCallContext context) =>
-            _registry.ApproveReportAsync(request, context.CancellationToken);
-
-        public override Task<ReportLookup> SendReport(ChangeReportState request, ServerCallContext context) =>
-            _registry.SendReportAsync(request, context.CancellationToken);
+        public override Task<ReportLookup> GoNextState(ChangeReportState request, ServerCallContext context) =>
+            _registry.GoNextStateAsync(request, context.CancellationToken);
 
         public override Task<ReportModelList> GetReportsByUser(UserModel request, ServerCallContext context) =>
             _registry.GetReportsByUserAsync(request, context.CancellationToken);
