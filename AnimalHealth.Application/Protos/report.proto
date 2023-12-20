@@ -12,8 +12,7 @@ service ReportProto {
   rpc DeleteReport(ReportLookup) returns (ReportLookup);
   rpc GetReportsByUser(UserModel) returns (ReportModelList);
   rpc GetReportsByPeriod(DatesPeriod) returns (ReportModelList);
-  rpc ApproveReport(ChangeReportState) returns(ReportLookup);
-  rpc SendReport(ChangeReportState) returns(ReportLookup);
+  rpc GoNextState(ChangeReportState) returns(ReportLookup);
   rpc GetReportMetaData(google.protobuf.Empty) returns(ReportMetaData);
 }
 

@@ -52,7 +52,7 @@ namespace AnimalHealth.Application.Interfaces.Registries
         /// <param name="request">Дата утверждения, пользователь и Id отчёта</param>
         /// <param name="cancellationToken">Токен отмены.</param>
         /// <returns>Id отчёта.</returns>
-        public Task<ReportLookup> ApproveReportAsync(ChangeReportState request, CancellationToken cancellationToken);
+        public Task<ReportLookup> GoNextStateAsync(ChangeReportState request, CancellationToken cancellationToken);
 
         /// <summary>
         /// Отправить отчёт.
