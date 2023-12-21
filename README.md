@@ -7,6 +7,7 @@
 | http://localhost:5432 | Контейнер СУБД PostgreSQL |
 | http://localhost:5050 | Контейнер pgAdmin 4 |
 | http://localhost:8080 | Контейнер приложения ASP.NET |
+| http://localhost:8081 | Контейнер Seq (Журнал) |
 ## 2. Запуск:
 
 - В IDE (Visual Studio/Rider) выбрать как исходно-запускаемый файл - docker-compose.yml.
