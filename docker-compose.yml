@@ -8,6 +8,7 @@
       - "8080:80"
     depends_on: 
       - postgres.db
+      - seq
     environment:
       ConnectionStrings__DefaultConnection: "Host=postgres.db;Database=animalHealth;Username=postgres;Password=123"
     networks:
@@ -39,6 +40,15 @@
       - postgres.db
     networks:
       - network
-
+  
+  seq:
+    image: datalust/seq:latest
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - "5341:5341"
+      - "8081:80"
+    networks:
+      - network
 networks:
   network:
