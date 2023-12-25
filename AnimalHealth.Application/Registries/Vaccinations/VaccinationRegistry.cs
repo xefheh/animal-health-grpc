@@ -89,8 +89,7 @@ public class VaccinationRegistry : IVaccinationRegistry
         report.Creator = _userGrpcMapper.Map(dates.UserCreator);
         report.GetReport(vaccinations, (vaccination) => vaccination.GetLocalityVaccine());
 
-        var efreport = await _reportRegistry.AddReportAsync(report, cancellationToken);
-        report.Id = efreport.Id;
+        await _reportRegistry.AddReportAsync(report, cancellationToken);
 
         return _reportGrpcMapper.Map(report);
     }

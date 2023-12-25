@@ -17,6 +17,16 @@ namespace AnimalHealth.Domain.Reports
             set => createDate = value; 
         }
 
+        public DateTime ChangeTime
+        {
+            get => CurrentState.Date;
+        }
+
+        public User Changer
+        {
+            get => CurrentState.Changer;
+        }
+
         public string Type { get; set; }
 
         public List<ReportValue> Values { get; set; } = new List<ReportValue>();
