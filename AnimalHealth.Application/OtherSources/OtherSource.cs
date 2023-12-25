@@ -1,12 +1,12 @@
-using AnimalHealth.Application.Interfaces;
-using AnimalHealth.Application.Interfaces.OtherSource;
+using AnimalHealth.Application.Mapping.Interfaces;
 using AnimalHealth.Application.Models;
+using AnimalHealth.Application.OtherSources.Interfaces;
 using AnimalHealth.Domain.Entities;
 using AnimalHealth.Domain.Identity;
 using AnimalHealth.Persistence;
 using Microsoft.EntityFrameworkCore;
 
-namespace AnimalHealth.Application.OtherViews;
+namespace AnimalHealth.Application.OtherSources;
 
 public class OtherSource : IOtherSource
 {

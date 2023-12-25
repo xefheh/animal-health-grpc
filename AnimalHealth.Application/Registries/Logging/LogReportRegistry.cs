@@ -1,6 +1,6 @@
 ﻿using AnimalHealth.Application.Exceptions;
-using AnimalHealth.Application.Interfaces.Registries;
 using AnimalHealth.Application.Models;
+using AnimalHealth.Application.Registries.Interfaces;
 using AnimalHealth.Domain.Reports;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.Extensions.Logging;

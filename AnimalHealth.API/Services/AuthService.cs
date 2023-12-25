@@ -1,6 +1,7 @@
 using AnimalHealth.Application.Exceptions;
 using AnimalHealth.Application.Factories;
-using AnimalHealth.Application.Interfaces.Identity;
+using AnimalHealth.Application.Identity.Interfaces;
+using AnimalHealth.Application.Identity.Logging;
 using AnimalHealth.Application.Models;
 using AnimalHealth.Application.Registries.Logging;
 using Grpc.Core;

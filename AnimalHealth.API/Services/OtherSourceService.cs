@@ -1,7 +1,7 @@
 using AnimalHealth.Application.Factories;
-using AnimalHealth.Application.Interfaces.OtherSource;
 using AnimalHealth.Application.Models;
-using AnimalHealth.Application.Registries.Logging;
+using AnimalHealth.Application.OtherSources.Interfaces;
+using AnimalHealth.Application.OtherSources.Logging;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 

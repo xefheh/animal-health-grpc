@@ -1,7 +1,6 @@
 ﻿using AnimalHealth.Application.Exceptions;
-using AnimalHealth.Application.Interfaces.Registries;
 using AnimalHealth.Application.Models;
-using Grpc.Core;
+using AnimalHealth.Application.Registries.Interfaces;
 using Microsoft.Extensions.Logging;
 
 namespace AnimalHealth.Application.Registries.Logging;

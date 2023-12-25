@@ -1,7 +1,9 @@
 ﻿using AnimalHealth.Application.Factories;
-using AnimalHealth.Application.Interfaces.Identity;
-using AnimalHealth.Application.Interfaces.OtherSource;
-using AnimalHealth.Application.Interfaces.Registries;
+using AnimalHealth.Application.Identity.Interfaces;
+using AnimalHealth.Application.Identity.Logging;
+using AnimalHealth.Application.OtherSources.Interfaces;
+using AnimalHealth.Application.OtherSources.Logging;
+using AnimalHealth.Application.Registries.Interfaces;
 using AnimalHealth.Application.Registries.Logging;
 using Microsoft.Extensions.DependencyInjection;
 

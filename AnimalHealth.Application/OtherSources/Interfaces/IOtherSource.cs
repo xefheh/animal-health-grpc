@@ -1,6 +1,6 @@
 using AnimalHealth.Application.Models;
 
-namespace AnimalHealth.Application.Interfaces.OtherSource;
+namespace AnimalHealth.Application.OtherSources.Interfaces;
 
 public interface IOtherSource
 {

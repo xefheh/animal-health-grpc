@@ -1,4 +1,4 @@
-namespace AnimalHealth.Application.Interfaces;
+namespace AnimalHealth.Application.Mapping.Interfaces;
 
 /// <summary>
 /// Интерфейс мэппера.
@@ -6,7 +6,7 @@ namespace AnimalHealth.Application.Interfaces;
 /// <typeparam name="TEntity">Сущность.</typeparam>
 /// <typeparam name="TAddModel">Модель добавления gRPC.</typeparam>
 /// <typeparam name="TModel">Модель gRPC.</typeparam>
-public interface IEntityMapper<TEntity, TAddModel, TModel> : IEntityMapper<TEntity, TModel>
+public interface IEntityMapper<TEntity, TAddModel, TModel>
 {
     /// <summary>
     /// Перевести модель добавления gRPC в сущность.
@@ -14,6 +14,20 @@ public interface IEntityMapper<TEntity, TAddModel, TModel> : IEntityMapper<TEnti
     /// <param name="model">Модель добавления gRPC.</param>
     /// <returns>Сущность.</returns>
     TEntity Map(TAddModel model);
+    
+    /// <summary>
+    /// Перевести модель gRPC в сущность.
+    /// </summary>
+    /// <param name="model">Модель gRPC.</param>
+    /// <returns>Сущность.</returns>
+    TEntity Map(TModel model);
+    
+    /// <summary>
+    /// Перевести сущность в модель gRPC.
+    /// </summary>
+    /// <param name="entity">Сущность.</param>
+    /// <returns>Модель gRPC=.</returns>
+    TModel Map(TEntity entity);
 }
 
 /// <summary>
