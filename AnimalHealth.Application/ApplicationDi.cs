@@ -16,7 +16,6 @@ using AnimalHealth.Domain.Reports;
 using AnimalHealth.Domain.Entities;
 using AnimalHealth.Domain.Identity;
 using Microsoft.Extensions.DependencyInjection;
-using AnimalHealth.Application.Mapping.ReportMappings;
 
 namespace AnimalHealth.Application;
 
@@ -35,7 +34,8 @@ public static class ApplicationDi
         services.AddTransient<IEntityMapper<Disease, DiseaseModel>, DiseaseMapper>();
         services.AddTransient<IEntityMapper<Animal, AnimalModel>, AnimalMapper>();
         services.AddTransient<IEntityMapper<Vaccine, VaccineModel>, VaccineMapper>();
-        services.AddTransient<IEntityMapper<Organization, OrganizationAddModel, OrganizationModel>, OrganizationMapper>();
+        services
+            .AddTransient<IEntityMapper<Organization, OrganizationAddModel, OrganizationModel>, OrganizationMapper>();
         services.AddTransient<IEntityMapper<Contract, ContractAddModel, ContractModel>, ContractMapper>();
         services.AddTransient<IEntityMapper<Inspection, InspectionAddModel, InspectionModel>, InspectionMapper>();
         services.AddTransient<IEntityMapper<Vaccination, VaccinationAddModel, VaccinationModel>, VaccinationMapper>();

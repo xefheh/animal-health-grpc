@@ -3,7 +3,6 @@ using AnimalHealth.Application;
 using AnimalHealth.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +14,7 @@ if (connectionString == null) throw new ArgumentNullException(connectionString);
 
 builder.Services.AddPersistenceLayer(opt => opt.UseNpgsql(connectionString));
 builder.Services.AddApplicationLayer();
+builder.Services.AddLogApplicationLayer();
 builder.Services.AddGrpc();
 builder.Services.AddGrpcReflection();
 
