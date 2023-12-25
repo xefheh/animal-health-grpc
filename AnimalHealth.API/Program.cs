@@ -2,15 +2,19 @@ using AnimalHealth.API.Services;
 using AnimalHealth.Application;
 using AnimalHealth.Persistence;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog((context, loggerConfiguration) =>
+    loggerConfiguration.ReadFrom.Configuration(context.Configuration));
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 if (connectionString == null) throw new ArgumentNullException(connectionString);
 
 builder.Services.AddPersistenceLayer(opt => opt.UseNpgsql(connectionString));
 builder.Services.AddApplicationLayer();
-
 builder.Services.AddGrpc();
 builder.Services.AddGrpcReflection();
 
