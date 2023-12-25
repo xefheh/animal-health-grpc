@@ -15,7 +15,7 @@ namespace AnimalHealth.Application.Registries.Reports
         readonly IEntityMapper<Report, ReportModel> _mapper;
         readonly IEntityMapper<User, UserModel> _userMapper;
 
-        public ReportRegistryList(IEntityMapper<Report, ReportModel> mapper, 
+        public ReportRegistryList(IEntityMapper<Report, ReportModel> mapper,
             IEntityMapper<User, UserModel> userMapper)
         {
             _mapper = mapper;
@@ -77,7 +77,7 @@ namespace AnimalHealth.Application.Registries.Reports
         {
             var dateStart = period.DateStart.ToDateTime();
             var dateEnd = period.DateEnd.ToDateTime();
-            var reports = ReportRegistryList.reports.Values.Where(x => x.CreateDate >= dateStart && x.CreateDate <= dateEnd)
+            var reports = ReportRegistryList.reports.Values.Where(x => x.ChangeDate >= dateStart && x.ChangeDate <= dateEnd)
                 .ToList();
             var reportModels = reports.Select(report => _mapper.Map(report));
             var reportModelList = new ReportModelList();
@@ -92,27 +92,25 @@ namespace AnimalHealth.Application.Registries.Reports
         {
             var userid = user.Id;
             var reports = ReportRegistryList.reports.Values
-                .Where(x => x.Creator.Id == userid)
+                .Where(x => x.Changer.Id == userid)
                 .ToList();
             var reportModels = reports.Select(report => _mapper.Map(report));
             var reportModelList = new ReportModelList();
             reportModelList.Reports.AddRange(reportModels);
             foreach (var report in reportModelList.Reports)
-                report.Values.Clear();        
+                report.Values.Clear();
             var task = Task.Factory.StartNew(() => reportModelList);
             return task;
         }
 
         public Task<ReportLookup> GoNextStateAsync(ChangeReportState request, CancellationToken cancellationToken)
         {
+            if (!reports.ContainsKey(request.ReportId))
+                throw new NotFoundException(typeof(Report), request.ReportId);
             var report = reports[request.ReportId];
             var changer = _userMapper.Map(request.Changer);
             var date = request.DateChange.ToDateTime();
-            if (report == null) throw new NotFoundException(typeof(Report), request.ReportId);
-            var requestUser = new User();
-            if (request.SecondApprover != null)
-                requestUser = _userMapper.Map(request.SecondApprover);
-            else requestUser = _userMapper.Map(request.Receiver);
+            var requestUser = _userMapper.Map(request.AdditionalChanger);
 
             report.GoNextState(date, new List<User> { changer, requestUser });
             var task = Task.Factory.StartNew(() => new ReportLookup { Id = request.ReportId });

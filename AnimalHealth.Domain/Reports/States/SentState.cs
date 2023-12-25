@@ -13,12 +13,18 @@ namespace AnimalHealth.Domain.Reports
 
         public User Changer { get; set; }
 
-        public User Receiver { get; set; } 
-
         public string Name => "Отправлен";
 
+        public User AdditionalChanger { get; set; }
+
+        public string DateName => "Дата отправки";
+
+        public string ChangerName => "Отправитель";
+
+        public string AdditionalChangerName => "Получатель";
+
         public SentState(DateTime date, User changer, User receiver) =>
-            (Date, Changer, Receiver) = (date, changer, receiver);
+            (Date, Changer, AdditionalChanger) = (date, changer, receiver);
 
         public SentState() { }
 

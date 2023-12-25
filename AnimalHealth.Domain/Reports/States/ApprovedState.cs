@@ -10,15 +10,17 @@ namespace AnimalHealth.Domain.Reports
             get => date.ToUniversalTime();
             set => date = value;
         }
+        public string DateName => "Дата утверждения";
 
         public User Changer { get; set; }
-
-        public User SecondApprover { get; set; }   
+        public string ChangerName => "Утвердитель";
 
         public string Name { get => "Одобрен"; }
+        public User AdditionalChanger { get; set; }
+        public string AdditionalChangerName => "Второй утвердитель";
 
         public ApprovedState(DateTime date, User changer, User secondApprover) =>
-            (Date, SecondApprover, Changer) = (date, secondApprover, changer);
+            (Date, AdditionalChanger, Changer) = (date, secondApprover, changer);
 
         public ApprovedState() { }
 

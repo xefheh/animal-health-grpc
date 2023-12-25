@@ -42,6 +42,5 @@ public static class ApplicationDi
         services.AddTransient<IEntityMapper<Report, ReportModel>, ReportMapper>();
         services.AddTransient<IEntityMapper<ReportValue, ReportValueModel>, ReportValueMapper>();
         services.AddTransient<IAuthService, AuthService>();
-        services.AddTransient<IEntityMapper<IReportState, ReportStateModel>, StateMapper>();
     }
 }

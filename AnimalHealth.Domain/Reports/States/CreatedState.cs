@@ -11,12 +11,20 @@ namespace AnimalHealth.Domain.Reports
             set => date = value;
         }
 
+        public string DateName => "Дата создания";
+
         public User Changer { get; set; }
+
+        public string ChangerName => "Создатель";
 
         public string Name => "Черновик";
 
-        public CreatedState(DateTime date, User user) =>
-            (Date, Changer) = (date, user);
+        public User AdditionalChanger { get; set; }
+
+        public string AdditionalChangerName => "Руководитель";
+
+        public CreatedState(DateTime date, User user, User user2) =>
+            (Date, Changer, AdditionalChanger) = (date, user, user2);
 
         public CreatedState() { }
 

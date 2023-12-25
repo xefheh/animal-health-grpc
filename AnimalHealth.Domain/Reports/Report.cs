@@ -8,39 +8,30 @@ namespace AnimalHealth.Domain.Reports
 
         public IReportState CurrentState { get; set; }
 
-        public User Creator { get; set; }
+        public DateTime ChangeDate => CurrentState.Date;
+        public string ChangeDateName => CurrentState.DateName;
 
-        DateTime createDate;
-        public DateTime CreateDate 
-        { 
-            get => createDate.ToUniversalTime();
-            set => createDate = value; 
-        }
+        public User Changer => CurrentState.Changer;
+        public string ChangerName => CurrentState.ChangerName;
 
-        public DateTime ChangeTime
-        {
-            get => CurrentState.Date;
-        }
+        public User AdditionalChanger => CurrentState.AdditionalChanger;
+        public string AdditionalChangerName => CurrentState.AdditionalChangerName;
 
-        public User Changer
-        {
-            get => CurrentState.Changer;
-        }
+        public string StateName => CurrentState.Name;
 
         public string Type { get; set; }
 
         public List<ReportValue> Values { get; set; } = new List<ReportValue>();
 
-        public Report(string type)
+        public Report(string type, User user1, User user2)
         {
-            CreateDate = DateTime.Now;
+            var createdState = new CreatedState(DateTime.Now, user1, user2);
+            CurrentState = createdState;
             Type = type;
         }
 
         public void GetReport<T>(ICollection<T> records, Func<T, (string, string)> func)
         {
-            var createdState = new CreatedState(CreateDate, Creator);
-            CurrentState = createdState;
             foreach (var record in records)
             {
                 var locDis = func(record);

@@ -9,10 +9,20 @@ namespace AnimalHealth.Domain.Reports
         /// </summary>
         DateTime Date { get; set; }
 
+        string DateName { get; }
         /// <summary>
         /// Пользователь, изменивший состояние отчёта.
         /// </summary>
         User Changer { get; set; }
+        
+        string ChangerName { get; }
+
+        /// <summary>
+        /// Второй пользователь, изменивший состояние отчёта.
+        /// </summary>
+        User AdditionalChanger { get; set; }
+
+        string AdditionalChangerName { get; }
 
         /// <summary>
         /// Название состояния.
