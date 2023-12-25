@@ -1,10 +1,10 @@
 ﻿using AnimalHealth.Application.Exceptions;
-using AnimalHealth.Application.Interfaces.Identity;
+using AnimalHealth.Application.Identity.Interfaces;
 using AnimalHealth.Application.Models;
 using Grpc.Core;
 using Microsoft.Extensions.Logging;
 
-namespace AnimalHealth.Application.Registries.Logging;
+namespace AnimalHealth.Application.Identity.Logging;
 
 public class LogAuthService : IAuthService
 {

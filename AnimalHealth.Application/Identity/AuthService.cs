@@ -1,6 +1,6 @@
 using AnimalHealth.Application.Exceptions;
-using AnimalHealth.Application.Interfaces;
-using AnimalHealth.Application.Interfaces.Identity;
+using AnimalHealth.Application.Identity.Interfaces;
+using AnimalHealth.Application.Mapping.Interfaces;
 using AnimalHealth.Application.Models;
 using AnimalHealth.Domain.Identity;
 using AnimalHealth.Persistence;

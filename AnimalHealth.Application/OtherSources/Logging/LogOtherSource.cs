@@ -1,8 +1,8 @@
-﻿using AnimalHealth.Application.Interfaces.OtherSource;
-using AnimalHealth.Application.Models;
+﻿using AnimalHealth.Application.Models;
+using AnimalHealth.Application.OtherSources.Interfaces;
 using Microsoft.Extensions.Logging;
 
-namespace AnimalHealth.Application.Registries.Logging;
+namespace AnimalHealth.Application.OtherSources.Logging;
 
 public class LogOtherSource : IOtherSource
 {

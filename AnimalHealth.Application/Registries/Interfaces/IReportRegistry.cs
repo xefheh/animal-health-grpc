@@ -2,7 +2,7 @@
 using AnimalHealth.Domain.Reports;
 using Google.Protobuf.WellKnownTypes;
 
-namespace AnimalHealth.Application.Interfaces.Registries
+namespace AnimalHealth.Application.Registries.Interfaces
 {
     public interface IReportRegistry
     {

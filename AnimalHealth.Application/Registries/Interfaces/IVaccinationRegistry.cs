@@ -1,6 +1,6 @@
 ﻿using AnimalHealth.Application.Models;
 
-namespace AnimalHealth.Application.Interfaces.Registries;
+namespace AnimalHealth.Application.Registries.Interfaces;
 
 public interface IVaccinationRegistry
 {

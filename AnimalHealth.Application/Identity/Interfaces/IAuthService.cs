@@ -1,6 +1,6 @@
 using AnimalHealth.Application.Models;
 
-namespace AnimalHealth.Application.Interfaces.Identity;
+namespace AnimalHealth.Application.Identity.Interfaces;
 
 public interface IAuthService
 {

@@ -1,15 +1,15 @@
 ﻿using AnimalHealth.Application.Exceptions;
 using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
-using AnimalHealth.Application.Interfaces;
-using AnimalHealth.Application.Interfaces.Registries;
+using AnimalHealth.Application.Mapping.Interfaces;
 using AnimalHealth.Application.Models;
-using AnimalHealth.Domain.Reports;
+using AnimalHealth.Application.Registries.Interfaces;
 using AnimalHealth.Domain.Entities;
+using AnimalHealth.Domain.Identity;
+using AnimalHealth.Domain.Reports;
 using AnimalHealth.Persistence;
 using Microsoft.EntityFrameworkCore;
-using AnimalHealth.Domain.Identity;
 
-namespace AnimalHealth.Application.Registries.Vaccinations;
+namespace AnimalHealth.Application.Registries;
 
 public class VaccinationRegistry : IVaccinationRegistry
 {

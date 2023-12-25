@@ -1,4 +1,4 @@
-using AnimalHealth.Application.Interfaces;
+using AnimalHealth.Application.Mapping.Interfaces;
 using AnimalHealth.Application.Models;
 using AnimalHealth.Domain.Entities;
 

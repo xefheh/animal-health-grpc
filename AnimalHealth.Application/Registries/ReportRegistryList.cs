@@ -1,12 +1,12 @@
 ﻿using AnimalHealth.Application.Exceptions;
-using AnimalHealth.Application.Interfaces;
-using AnimalHealth.Application.Interfaces.Registries;
+using AnimalHealth.Application.Mapping.Interfaces;
 using AnimalHealth.Application.Models;
+using AnimalHealth.Application.Registries.Interfaces;
 using AnimalHealth.Domain.Identity;
 using AnimalHealth.Domain.Reports;
 using Google.Protobuf.WellKnownTypes;
 
-namespace AnimalHealth.Application.Registries.Reports
+namespace AnimalHealth.Application.Registries
 {
     public class ReportRegistryList : IReportRegistry
     {
