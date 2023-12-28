@@ -94,7 +94,7 @@ public class LogInspectionRegistry : IInspectionRegistry
         _logger.LogInformation("[INSPECTION SERVICE] User: {User} invoke to get DISEASE report. Period: ({Start} / {End})",
             dates.UserCreator,
             dates.DateStart, dates.DateEnd);
-        var reportModel = await _registry.GetAnimalTypeReportAsync(dates, cancellationToken);
+        var reportModel = await _registry.GetDiseaseReportAsync(dates, cancellationToken);
         _logger.LogInformation("[INSPECTION SERVICE] Successfully. DISEASE Report created by {User}. Report values: {ReportValue} (Count: {Count})",
             dates.UserCreator, reportModel.Values, reportModel.Values.Count);
         return reportModel;
