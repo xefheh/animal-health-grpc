@@ -1,8 +1,6 @@
 ﻿using AnimalHealth.Application.Exceptions;
-using AnimalHealth.Application.Factories;
 using AnimalHealth.Application.Models;
 using AnimalHealth.Application.Registries.Interfaces;
-using AnimalHealth.Application.Registries.Logging;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 
@@ -12,8 +10,7 @@ public class OrganizationService : OrganizationProto.OrganizationProtoBase
 {
     private readonly IOrganizationRegistry _registry;
 
-    public OrganizationService(LogRegistryFactory<IOrganizationRegistry, LogOrganizationRegistry> factory,
-        ILogger<IOrganizationRegistry> logger) => _registry = factory.CreateLogRegistry();
+    public OrganizationService(IOrganizationRegistry registry) => _registry = registry;
 
     public override async Task<OrganizationModel> GetOrganization(OrganizationLookup request, ServerCallContext context)
     {

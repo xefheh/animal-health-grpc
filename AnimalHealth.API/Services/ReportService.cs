@@ -1,8 +1,6 @@
 ﻿using AnimalHealth.Application.Exceptions;
-using AnimalHealth.Application.Factories;
 using AnimalHealth.Application.Models;
 using AnimalHealth.Application.Registries.Interfaces;
-using AnimalHealth.Application.Registries.Logging;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 
@@ -12,8 +10,7 @@ namespace AnimalHealth.API.Services
     {
         private readonly IReportRegistry _registry;
 
-        public ReportService(LogRegistryFactory<IReportRegistry, LogReportRegistry> factory,
-            ILogger<IReportRegistry> logger) => _registry = factory.CreateLogRegistry();
+        public ReportService(IReportRegistry registry) => _registry = registry;
 
         public override async Task<ReportModel> GetReport(ReportLookup request, ServerCallContext context)
         {

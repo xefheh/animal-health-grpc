@@ -1,8 +1,6 @@
 ﻿using AnimalHealth.Application.Exceptions;
-using AnimalHealth.Application.Factories;
 using AnimalHealth.Application.Models;
 using AnimalHealth.Application.Registries.Interfaces;
-using AnimalHealth.Application.Registries.Logging;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 
@@ -12,8 +10,7 @@ public class InspectionService : InspectionProto.InspectionProtoBase
 {
     private readonly IInspectionRegistry _registry;
 
-    public InspectionService(LogRegistryFactory<IInspectionRegistry, LogInspectionRegistry> factory,
-        ILogger<IInspectionRegistry> logger) => _registry = factory.CreateLogRegistry();
+    public InspectionService(IInspectionRegistry registry) => _registry = registry;
 
     public override async Task<InspectionModel> GetInspection(InspectionLookup request, ServerCallContext context)
     {
