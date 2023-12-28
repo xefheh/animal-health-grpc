@@ -19,14 +19,16 @@ namespace AnimalHealth.Domain.Reports
         public User AdditionalChanger { get; set; }
         public string AdditionalChangerName => "Второй утвердитель";
 
-        public ApprovedState(DateTime date, User changer, User secondApprover) =>
-            (Date, AdditionalChanger, Changer) = (date, secondApprover, changer);
-
         public ApprovedState() { }
 
         public void Handle(Report report, DateTime date, List<User> users)
         {
-            report.CurrentState = new SentState(date, users[0], users[1]);
+            report.CurrentState = new SentState
+            {
+                Date = date,
+                Changer = users[0],
+                AdditionalChanger = users[1],
+            };
         }
     }
 }

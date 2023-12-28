@@ -30,7 +30,12 @@ namespace AnimalHealth.Domain.Reports
 
         public void Handle(Report report, DateTime date, List<User> users)
         {
-            var state = new ApprovedState(date, users[0], users[1]);
+            var state = new ApprovedState
+            {
+                Date = date,
+                Changer = users[0],
+                AdditionalChanger = users[1],
+            };
             report.CurrentState = state;
         }
     }

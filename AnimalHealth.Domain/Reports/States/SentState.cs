@@ -23,9 +23,6 @@ namespace AnimalHealth.Domain.Reports
 
         public string AdditionalChangerName => "Получатель";
 
-        public SentState(DateTime date, User changer, User receiver) =>
-            (Date, Changer, AdditionalChanger) = (date, changer, receiver);
-
         public SentState() { }
 
         public void Handle(Report report, DateTime date, List<User> users)
