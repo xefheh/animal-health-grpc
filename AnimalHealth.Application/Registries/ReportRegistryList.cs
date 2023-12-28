@@ -10,10 +10,10 @@ namespace AnimalHealth.Application.Registries
 {
     public class ReportRegistryList : IReportRegistry
     {
-        static int id = 0;
-        static Dictionary<int, Report> reports = new Dictionary<int, Report>();
-        readonly IEntityMapper<Report, ReportModel> _mapper;
-        readonly IEntityMapper<User, UserModel> _userMapper;
+        private static int _id = 0;
+        private static readonly Dictionary<int, Report> Reports = new Dictionary<int, Report>();
+        private readonly IEntityMapper<Report, ReportModel> _mapper;
+        private readonly IEntityMapper<User, UserModel> _userMapper;
 
         public ReportRegistryList(IEntityMapper<Report, ReportModel> mapper,
             IEntityMapper<User, UserModel> userMapper)
@@ -24,26 +24,26 @@ namespace AnimalHealth.Application.Registries
 
         public Task<ReportLookup> AddReportAsync(Report report, CancellationToken cancellationToken)
         {
-            id += 1;
-            reports.Add(id, report);
-            report.Id = id;
-            var task = Task.Factory.StartNew(() => new ReportLookup { Id = id });
+            _id += 1;
+            Reports.Add(_id, report);
+            report.Id = _id;
+            var task = Task.Factory.StartNew(() => new ReportLookup { Id = _id }, cancellationToken);
             return task;
         }
 
         public Task<ReportLookup> DeleteReportAsync(ReportLookup lookup, CancellationToken cancellationToken)
         {
-            var report = reports[lookup.Id];
-            reports.Remove(lookup.Id);
-            var task = Task.Factory.StartNew(() => new ReportLookup { Id = lookup.Id });
+            var report = Reports[lookup.Id];
+            Reports.Remove(lookup.Id);
+            var task = Task.Factory.StartNew(() => new ReportLookup { Id = lookup.Id }, cancellationToken);
             return task;
         }
 
         public Task<ReportModel> GetReportAsync(ReportLookup request, CancellationToken cancellationToken)
         {
-            var report = reports[request.Id];
+            var report = Reports[request.Id];
             if (report == null) throw new NotFoundException(typeof(Report), request.Id);
-            var task = Task.Factory.StartNew(() => _mapper.Map(report));
+            var task = Task.Factory.StartNew(() => _mapper.Map(report), cancellationToken);
             return task;
         }
 
@@ -69,7 +69,7 @@ namespace AnimalHealth.Application.Registries
                     "Тип жив-ого",
                     "Вакцина"
                  });
-            var task = Task.Factory.StartNew(() => data);
+            var task = Task.Factory.StartNew(() => data, cancellationToken);
             return task;
         }
 
@@ -77,21 +77,21 @@ namespace AnimalHealth.Application.Registries
         {
             var dateStart = period.DateStart.ToDateTime();
             var dateEnd = period.DateEnd.ToDateTime();
-            var reports = ReportRegistryList.reports.Values.Where(x => x.ChangeDate >= dateStart && x.ChangeDate <= dateEnd)
+            var reports = Reports.Values.Where(x => x.ChangeDate >= dateStart && x.ChangeDate <= dateEnd)
                 .ToList();
             var reportModels = reports.Select(report => _mapper.Map(report));
             var reportModelList = new ReportModelList();
             reportModelList.Reports.AddRange(reportModels);
             foreach (var report in reportModelList.Reports)
                 report.Values.Clear();
-            var task = Task.Factory.StartNew(() => reportModelList);
+            var task = Task.Factory.StartNew(() => reportModelList, cancellationToken);
             return task;
         }
 
         public Task<ReportModelList> GetReportsByUserAsync(UserModel user, CancellationToken cancellationToken)
         {
             var userid = user.Id;
-            var reports = ReportRegistryList.reports.Values
+            var reports = Reports.Values
                 .Where(x => x.Changer.Id == userid)
                 .ToList();
             var reportModels = reports.Select(report => _mapper.Map(report));
@@ -99,21 +99,20 @@ namespace AnimalHealth.Application.Registries
             reportModelList.Reports.AddRange(reportModels);
             foreach (var report in reportModelList.Reports)
                 report.Values.Clear();
-            var task = Task.Factory.StartNew(() => reportModelList);
+            var task = Task.Factory.StartNew(() => reportModelList, cancellationToken);
             return task;
         }
 
         public Task<ReportLookup> GoNextStateAsync(ChangeReportState request, CancellationToken cancellationToken)
         {
-            if (!reports.ContainsKey(request.ReportId))
+            if (!Reports.TryGetValue(request.ReportId, out var value))
                 throw new NotFoundException(typeof(Report), request.ReportId);
-            var report = reports[request.ReportId];
             var changer = _userMapper.Map(request.Changer);
             var date = request.DateChange.ToDateTime();
             var requestUser = _userMapper.Map(request.AdditionalChanger);
 
-            report.GoNextState(date, new List<User> { changer, requestUser });
-            var task = Task.Factory.StartNew(() => new ReportLookup { Id = request.ReportId });
+            value.GoNextState(date, new List<User> { changer, requestUser });
+            var task = Task.Factory.StartNew(() => new ReportLookup { Id = request.ReportId }, cancellationToken);
             return task;
         }
     }
