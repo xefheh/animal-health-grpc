@@ -1,5 +1,4 @@
-﻿using AnimalHealth.Application.Factories;
-using AnimalHealth.Application.Identity.Interfaces;
+﻿using AnimalHealth.Application.Identity.Interfaces;
 using AnimalHealth.Application.Identity.Logging;
 using AnimalHealth.Application.OtherSources.Interfaces;
 using AnimalHealth.Application.OtherSources.Logging;
@@ -13,12 +12,12 @@ public static class ApplicationLoggingDi
 {
     public static void AddLogApplicationLayer(this IServiceCollection services)
     {
-        services.AddTransient<LogRegistryFactory<IAuthService, LogAuthService>>();
-        services.AddTransient<LogRegistryFactory<IInspectionRegistry, LogInspectionRegistry>>();
-        services.AddTransient<LogRegistryFactory<IReportRegistry, LogReportRegistry>>();
-        services.AddTransient<LogRegistryFactory<IOtherSource, LogOtherSource>>();
-        services.AddTransient<LogRegistryFactory<IOrganizationRegistry, LogOrganizationRegistry>>();
-        services.AddTransient<LogRegistryFactory<IContractRegistry, LogContractRegistry>>();
-        services.AddTransient<LogRegistryFactory<IVaccinationRegistry, LogVaccinationRegistry>>();
+        services.Decorate<IAuthService, LogAuthService>();
+        services.Decorate<IContractRegistry, LogContractRegistry>();
+        services.Decorate<IInspectionRegistry, LogInspectionRegistry>();
+        services.Decorate<IOrganizationRegistry, LogOrganizationRegistry>();
+        services.Decorate<IOtherSource, LogOtherSource>();
+        services.Decorate<IReportRegistry, LogReportRegistry>();
+        services.Decorate<IVaccinationRegistry, LogVaccinationRegistry>();
     }
 }

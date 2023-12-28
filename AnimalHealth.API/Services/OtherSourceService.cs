@@ -1,7 +1,5 @@
-using AnimalHealth.Application.Factories;
 using AnimalHealth.Application.Models;
 using AnimalHealth.Application.OtherSources.Interfaces;
-using AnimalHealth.Application.OtherSources.Logging;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 
@@ -11,8 +9,7 @@ public class OtherSourceService : OtherResourceProto.OtherResourceProtoBase
 {
     private readonly IOtherSource _otherSource;
 
-    public OtherSourceService(LogRegistryFactory<IOtherSource, LogOtherSource> factory,
-        ILogger<IOtherSource> logger) => _otherSource = factory.CreateLogRegistry();
+    public OtherSourceService(IOtherSource otherSource) => _otherSource = otherSource;
 
     public override async Task<AnimalModelList> GetAnimals(Empty request, ServerCallContext context) =>
         await _otherSource.GetAnimalsAsync(context.CancellationToken);

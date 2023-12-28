@@ -1,8 +1,6 @@
 ﻿using AnimalHealth.Application.Exceptions;
-using AnimalHealth.Application.Factories;
 using AnimalHealth.Application.Models;
 using AnimalHealth.Application.Registries.Interfaces;
-using AnimalHealth.Application.Registries.Logging;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 
@@ -12,8 +10,7 @@ public class VaccinationService : VaccinationProto.VaccinationProtoBase
 {
     private readonly IVaccinationRegistry _registry;
 
-    public VaccinationService(LogRegistryFactory<IVaccinationRegistry, LogVaccinationRegistry> factory,
-        ILogger<IVaccinationRegistry> logger) => _registry = factory.CreateLogRegistry();
+    public VaccinationService(IVaccinationRegistry registry) => _registry = registry;
 
     public override async Task<VaccinationModel> GetVaccination(VaccinationLookup request, ServerCallContext context)
     {
