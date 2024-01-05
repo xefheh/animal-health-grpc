@@ -16,19 +16,17 @@ namespace AnimalHealth.Application.Registries;
 public class VaccinationRegistry : IVaccinationRegistry
 {
     private readonly AnimalHealthContext _context;
-    private readonly IMemoryCache _cache;
     private readonly IReportRegistry _reportRegistry;
     private readonly IEntityMapper<Vaccination, VaccinationAddModel, VaccinationModel> _mapper;
     private readonly IEntityMapper<Report, ReportModel> _reportGrpcMapper;
     private readonly IEntityMapper<User, UserModel> _userGrpcMapper;
 
-    public VaccinationRegistry(AnimalHealthContext context, IMemoryCache cache, IReportRegistry reportRegistry,
+    public VaccinationRegistry(AnimalHealthContext context, IReportRegistry reportRegistry,
         IEntityMapper<Vaccination, VaccinationAddModel, VaccinationModel> mapper, 
         IEntityMapper<Report, ReportModel> reportGrpcMapper, 
         IEntityMapper<User, UserModel> userGrpcMapper)
     {
         _context = context;
-        _cache = cache;
         _reportRegistry = reportRegistry;
         _mapper = mapper;
         _reportGrpcMapper = reportGrpcMapper;
@@ -37,18 +35,18 @@ public class VaccinationRegistry : IVaccinationRegistry
 
     public async Task<VaccinationModel> GetVaccinationAsync(VaccinationLookup lookup, CancellationToken cancellationToken)
     {
-        var vaccinations = await _context.Vaccinations.GetOrLoadFromCacheAsync(_cache, cancellationToken);
+        var vaccinations = _context.Vaccinations.Local.ToList();
+        if (!vaccinations.Any()) vaccinations = await _context.Vaccinations.LoadIncludes().ToListAsync(cancellationToken);
         var vaccinationId = lookup.Id;
-        var resultVaccination = vaccinations.FirstOrDefault(vaccination => vaccination.Id == vaccinationId) ??
-                                await _context.Vaccinations.FirstOrDefaultAsync(vaccination => vaccination.Id == vaccinationId,
-                                    cancellationToken);
+        var resultVaccination = vaccinations.FirstOrDefault(vaccination => vaccination.Id == vaccinationId);
         if (resultVaccination == default(Vaccination)) throw new NotFoundException(typeof(Vaccination), vaccinationId);
         return _mapper.Map(resultVaccination);
     }
 
     public async Task<VaccinationModelList> GetVaccinationsAsync(CancellationToken cancellationToken)
     {
-        var vaccinations = await _context.Vaccinations.GetOrLoadFromCacheAsync(_cache, cancellationToken);
+        var vaccinations = _context.Vaccinations.Local.ToList();
+        if (!vaccinations.Any()) vaccinations = await _context.Vaccinations.LoadIncludes().ToListAsync(cancellationToken);
         var vaccinationModels = vaccinations.Select(vaccination => _mapper.Map(vaccination));
         var vaccinationModelList = new VaccinationModelList();
         vaccinationModelList.Vaccinations.AddRange(vaccinationModels);
@@ -60,7 +58,6 @@ public class VaccinationRegistry : IVaccinationRegistry
         var vaccination = _mapper.Map(addedVaccination);
         await _context.Vaccinations.AddAsync(vaccination, cancellationToken);
         await _context.SaveChangesAsync(cancellationToken);
-        _cache.Remove(CacheKeys.VaccinationCacheKey);
         return new VaccinationLookup { Id = vaccination.Id };
     }
 
@@ -72,7 +69,6 @@ public class VaccinationRegistry : IVaccinationRegistry
         if (vaccination == default(Vaccination)) throw new NotFoundException(typeof(Vaccination), updatedVaccination.Id);
         vaccination.UpdateFields(updatedDomainVaccination);
         var saveCode = await _context.SaveChangesAsync(cancellationToken);
-        _cache.Remove(CacheKeys.VaccinationCacheKey);
         return new DbSaveCondition { Code = saveCode };
     }
 
@@ -83,13 +79,13 @@ public class VaccinationRegistry : IVaccinationRegistry
         _context.Vaccinations.Attach(vaccinationMock);
         _context.Vaccinations.Remove(vaccinationMock);
         var saveCode = await _context.SaveChangesAsync(cancellationToken);
-        _cache.Remove(CacheKeys.VaccinationCacheKey);
         return new DbSaveCondition { Code = saveCode };
     }
 
     public async Task<ReportModel> GetVaccinationReportAsync(GetReport dates, CancellationToken cancellationToken)
     {
-        var allVaccinations = await _context.Vaccinations.GetOrLoadFromCacheAsync(_cache, cancellationToken);
+        var allVaccinations = _context.Vaccinations.Local.ToList();
+        if (!allVaccinations.Any()) allVaccinations = await _context.Vaccinations.LoadIncludes().ToListAsync(cancellationToken);
         
         var vaccinations = allVaccinations
             .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())

@@ -18,5 +18,5 @@ public static class ContractIncludeExtension
     public static async Task<IList<Contract>> GetOrLoadFromCacheAsync(this IQueryable<Contract> contracts,
         IMemoryCache memoryCache, CancellationToken cancellationToken) =>
         (await memoryCache.GetOrCreateAsync(CacheKeys.ContractCacheKey, async (entry) =>
-            await contracts.LoadIncludes().ToListAsync(cancellationToken)))!;
+            await contracts.LoadIncludes().AsNoTracking().ToListAsync(cancellationToken)))!;
 }

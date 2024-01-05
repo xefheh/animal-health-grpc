@@ -1,5 +1,4 @@
-﻿using AnimalHealth.Application.Cache;
-using AnimalHealth.Application.Exceptions;
+﻿using AnimalHealth.Application.Exceptions;
 using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
 using AnimalHealth.Application.Mapping.Interfaces;
 using AnimalHealth.Application.Models;
@@ -9,28 +8,24 @@ using AnimalHealth.Domain.Identity;
 using AnimalHealth.Domain.Reports;
 using AnimalHealth.Persistence;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Memory;
 
 namespace AnimalHealth.Application.Registries;
 
 public class InspectionRegistry : IInspectionRegistry
 {
     private readonly AnimalHealthContext _context;
-    private readonly IMemoryCache _cache;
     private readonly IReportRegistry _reportRegistry;
     private readonly IEntityMapper<Inspection, InspectionAddModel, InspectionModel> _mapper;
     private readonly IEntityMapper<Report, ReportModel> _reportGrpcMapper;
     private readonly IEntityMapper<User, UserModel> _userGrpcMapper;
 
     public InspectionRegistry(AnimalHealthContext context,
-        IMemoryCache cache,
         IReportRegistry reportRegistry,
         IEntityMapper<Inspection, InspectionAddModel, InspectionModel> mapper, 
         IEntityMapper<Report, ReportModel> reportGrpcMapper,
         IEntityMapper<User, UserModel> userGrpcMapper)
     {
         _context = context;
-        _cache = cache;
         _reportRegistry = reportRegistry;
         _mapper = mapper;
         _reportGrpcMapper = reportGrpcMapper;
@@ -39,18 +34,18 @@ public class InspectionRegistry : IInspectionRegistry
 
     public async Task<InspectionModel> GetInspectionAsync(InspectionLookup lookup, CancellationToken cancellationToken)
     {
-        var inspections = await _context.Inspections.GetOrLoadFromCacheAsync(_cache, cancellationToken);
+        var inspections = _context.Inspections.Local.ToList();
+        if (!inspections.Any()) inspections = await _context.Inspections.LoadIncludes().ToListAsync(cancellationToken);
         var inspectionId = lookup.Id;
-        var resultInspection = inspections.FirstOrDefault(inspection => inspection.Id == inspectionId) ??
-                               await _context.Inspections.LoadIncludes()
-                                   .FirstOrDefaultAsync(inspection => inspection.Id == inspectionId, cancellationToken);
+        var resultInspection = inspections.FirstOrDefault(inspection => inspection.Id == inspectionId);
         if (resultInspection == default(Inspection)) throw new NotFoundException(typeof(Inspection), inspectionId);
         return _mapper.Map(resultInspection);
     }
 
     public async Task<InspectionModelList> GetInspectionsAsync(CancellationToken cancellationToken)
     {
-        var inspections = await _context.Inspections.GetOrLoadFromCacheAsync(_cache, cancellationToken);
+        var inspections = _context.Inspections.Local.ToList();
+        if (!inspections.Any()) inspections = await _context.Inspections.LoadIncludes().ToListAsync(cancellationToken);
         var inspectionModels = inspections.Select(inspection => _mapper.Map(inspection));
         var inspectionModelList = new InspectionModelList();
         inspectionModelList.Inspections.AddRange(inspectionModels);
@@ -62,7 +57,6 @@ public class InspectionRegistry : IInspectionRegistry
         var inspection = _mapper.Map(addedInspection);
         await _context.Inspections.AddAsync(inspection, cancellationToken);
         await _context.SaveChangesAsync(cancellationToken);
-        _cache.Remove(CacheKeys.InspectionCacheKey);
         return new InspectionLookup { Id = inspection.Id };
     }
 
@@ -74,7 +68,6 @@ public class InspectionRegistry : IInspectionRegistry
         if (inspection == default(Inspection)) throw new NotFoundException(typeof(Vaccination), updatedInspection.Id);
         inspection.UpdateFields(updatedDomainInspection);
         var saveCode = await _context.SaveChangesAsync(cancellationToken);
-        _cache.Remove(CacheKeys.InspectionCacheKey);
         return new DbSaveCondition { Code = saveCode };
     }
 
@@ -85,13 +78,13 @@ public class InspectionRegistry : IInspectionRegistry
         _context.Inspections.Attach(inspectionMock);
         _context.Inspections.Remove(inspectionMock);
         var saveCode = await _context.SaveChangesAsync(cancellationToken);
-        _cache.Remove(CacheKeys.InspectionCacheKey);
         return new DbSaveCondition { Code = saveCode };
     }
 
     public async Task<ReportModel> GetAnimalTypeReportAsync(GetReport dates, CancellationToken cancellationToken)
     {
-        var allInspections = await _context.Inspections.GetOrLoadFromCacheAsync(_cache, cancellationToken);
+        var allInspections = _context.Inspections.Local.ToList();
+        if (!allInspections.Any()) allInspections = await _context.Inspections.LoadIncludes().ToListAsync(cancellationToken);
 
         var inspections = allInspections
             .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
@@ -110,7 +103,8 @@ public class InspectionRegistry : IInspectionRegistry
 
     public async Task<ReportModel> GetDiseaseReportAsync(GetReport dates, CancellationToken cancellationToken)
     {
-        var allInspections = await _context.Inspections.GetOrLoadFromCacheAsync(_cache, cancellationToken);
+        var allInspections = _context.Inspections.Local.ToList();
+        if (!allInspections.Any()) allInspections = await _context.Inspections.LoadIncludes().ToListAsync(cancellationToken);
 
         var inspections = allInspections
             .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())

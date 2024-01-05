@@ -15,5 +15,5 @@ public static class OrganizationIncludeExtension
     public static async Task<IList<Organization>> GetOrLoadFromCacheAsync(this IQueryable<Organization> organizations,
         IMemoryCache memoryCache, CancellationToken cancellationToken) =>
         (await memoryCache.GetOrCreateAsync(CacheKeys.OrganizationCacheKey, async (entry) =>
-            await organizations.LoadIncludes().ToListAsync(cancellationToken)))!;
+            await organizations.LoadIncludes().AsNoTracking().ToListAsync(cancellationToken)))!;
 }

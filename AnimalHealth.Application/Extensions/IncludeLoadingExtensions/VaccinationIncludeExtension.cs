@@ -22,5 +22,5 @@ public static class VaccinationIncludeExtension
     public static async Task<IList<Vaccination>> GetOrLoadFromCacheAsync(this IQueryable<Vaccination> vaccinations,
         IMemoryCache memoryCache, CancellationToken cancellationToken) =>
         (await memoryCache.GetOrCreateAsync(CacheKeys.ReportCacheKey, async (entry) =>
-            await vaccinations.LoadIncludes().ToListAsync(cancellationToken)))!;
+            await vaccinations.LoadIncludes().AsNoTracking().ToListAsync(cancellationToken)))!;
 }

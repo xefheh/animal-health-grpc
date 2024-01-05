@@ -22,5 +22,5 @@ public static class InspectionIncludeExtension
     public static async Task<IList<Inspection>> GetOrLoadFromCacheAsync(this IQueryable<Inspection> inspections,
         IMemoryCache memoryCache, CancellationToken cancellationToken) =>
         (await memoryCache.GetOrCreateAsync(CacheKeys.InspectionCacheKey, async (entry) =>
-            await inspections.LoadIncludes().ToListAsync(cancellationToken)))!;
+            await inspections.LoadIncludes().AsNoTracking().ToListAsync(cancellationToken)))!;
 }

@@ -14,6 +14,6 @@ namespace AnimalHealth.Application.Extensions.IncludeLoadingExtensions
         public static async Task<IList<Report>> GetOrLoadFromCacheAsync(this IQueryable<Report> reports,
             IMemoryCache memoryCache, CancellationToken cancellationToken) =>
             (await memoryCache.GetOrCreateAsync(CacheKeys.ReportCacheKey, async (entry) =>
-                await reports.LoadIncludes().ToListAsync(cancellationToken)))!;
+                await reports.LoadIncludes().AsNoTracking().ToListAsync(cancellationToken)))!;
     }
 }
