@@ -19,6 +19,7 @@ public static class ApplicationDi
 {
     public static void AddApplicationLayer(this IServiceCollection services)
     {
+        services.AddMemoryCache();
         services.AddTransient<IInspectionRegistry, InspectionRegistry>();
         services.AddTransient<IVaccinationRegistry, VaccinationRegistry>();
         services.AddTransient<IContractRegistry, ContractRegistry>();

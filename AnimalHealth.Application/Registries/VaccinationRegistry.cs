@@ -1,4 +1,5 @@
-﻿using AnimalHealth.Application.Exceptions;
+﻿using AnimalHealth.Application.Cache;
+using AnimalHealth.Application.Exceptions;
 using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
 using AnimalHealth.Application.Mapping.Interfaces;
 using AnimalHealth.Application.Models;
@@ -8,6 +9,7 @@ using AnimalHealth.Domain.Identity;
 using AnimalHealth.Domain.Reports;
 using AnimalHealth.Persistence;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace AnimalHealth.Application.Registries;
 
@@ -33,16 +35,18 @@ public class VaccinationRegistry : IVaccinationRegistry
 
     public async Task<VaccinationModel> GetVaccinationAsync(VaccinationLookup lookup, CancellationToken cancellationToken)
     {
+        var vaccinations = _context.Vaccinations.Local.ToList();
+        if (!vaccinations.Any()) vaccinations = await _context.Vaccinations.LoadIncludes().ToListAsync(cancellationToken);
         var vaccinationId = lookup.Id;
-        var vaccination = await _context.Vaccinations.LoadIncludes()
-            .FirstOrDefaultAsync(vaccination => vaccination.Id == vaccinationId, cancellationToken);
-        if (vaccination == default(Vaccination)) throw new NotFoundException(typeof(Vaccination), vaccinationId);
-        return _mapper.Map(vaccination);
+        var resultVaccination = vaccinations.FirstOrDefault(vaccination => vaccination.Id == vaccinationId);
+        if (resultVaccination == default(Vaccination)) throw new NotFoundException(typeof(Vaccination), vaccinationId);
+        return _mapper.Map(resultVaccination);
     }
 
     public async Task<VaccinationModelList> GetVaccinationsAsync(CancellationToken cancellationToken)
     {
-        var vaccinations = await _context.Vaccinations.LoadIncludes().ToListAsync(cancellationToken);
+        var vaccinations = _context.Vaccinations.Local.ToList();
+        if (!vaccinations.Any()) vaccinations = await _context.Vaccinations.LoadIncludes().ToListAsync(cancellationToken);
         var vaccinationModels = vaccinations.Select(vaccination => _mapper.Map(vaccination));
         var vaccinationModelList = new VaccinationModelList();
         vaccinationModelList.Vaccinations.AddRange(vaccinationModels);
@@ -79,11 +83,13 @@ public class VaccinationRegistry : IVaccinationRegistry
     }
 
     public async Task<ReportModel> GetVaccinationReportAsync(GetReport dates, CancellationToken cancellationToken)
-    { 
-        var vaccinations = await _context.Vaccinations
-            .LoadIncludes()
+    {
+        var allVaccinations = _context.Vaccinations.Local.ToList();
+        if (!allVaccinations.Any()) allVaccinations = await _context.Vaccinations.LoadIncludes().ToListAsync(cancellationToken);
+        
+        var vaccinations = allVaccinations
             .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
-            .ToListAsync(cancellationToken);
+            .ToList();
 
         var creator = _userGrpcMapper.Map(dates.UserCreator);
         var creator2 = _userGrpcMapper.Map(dates.SecondUser);

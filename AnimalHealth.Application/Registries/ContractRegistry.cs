@@ -14,21 +14,27 @@ public class ContractRegistry : IContractRegistry
     private readonly AnimalHealthContext _context;
     private readonly IEntityMapper<Contract, ContractAddModel, ContractModel> _mapper;
 
-    public ContractRegistry(AnimalHealthContext context, IEntityMapper<Contract, ContractAddModel, ContractModel> mapper) =>
-        (_context, _mapper) = (context, mapper);
+    public ContractRegistry(AnimalHealthContext context,
+        IEntityMapper<Contract, ContractAddModel, ContractModel> mapper)
+    {
+        _context = context;
+        _mapper = mapper;
+    }
     
     public async Task<ContractModel> GetContractAsync(ContractLookup lookup, CancellationToken cancellationToken)
     {
+        var contracts = _context.Contracts.Local.ToList();
+        if (!contracts.Any()) contracts = await _context.Contracts.LoadIncludes().ToListAsync(cancellationToken);
         var contractId = lookup.Id;
-        var contract = await _context.Contracts.LoadIncludes()
-            .FirstOrDefaultAsync(contract => contract.Id == contractId, cancellationToken);
-        if (contract == default(Contract)) throw new NotFoundException(typeof(Contract), contractId);
-        return _mapper.Map(contract);
+        var resultContract = contracts.FirstOrDefault(contract => contract.Id == contractId);
+        if (resultContract == default(Contract)) throw new NotFoundException(typeof(Contract), contractId);
+        return _mapper.Map(resultContract);
     }
 
     public async Task<ContractModelList> GetContractsAsync(CancellationToken cancellationToken)
     {
-        var contracts = await _context.Contracts.LoadIncludes().ToListAsync(cancellationToken);
+        var contracts = _context.Contracts.Local.ToList();
+        if (!contracts.Any()) contracts = await _context.Contracts.LoadIncludes().ToListAsync(cancellationToken);
         var contractModels = contracts.Select(contract => _mapper.Map(contract));
         var contractModelList = new ContractModelList();
         contractModelList.Contracts.AddRange(contractModels);

@@ -34,17 +34,18 @@ public class InspectionRegistry : IInspectionRegistry
 
     public async Task<InspectionModel> GetInspectionAsync(InspectionLookup lookup, CancellationToken cancellationToken)
     {
+        var inspections = _context.Inspections.Local.ToList();
+        if (!inspections.Any()) inspections = await _context.Inspections.LoadIncludes().ToListAsync(cancellationToken);
         var inspectionId = lookup.Id;
-        var inspection = await _context.Inspections
-            .LoadIncludes().FirstOrDefaultAsync(inspection => inspection.Id == inspectionId, cancellationToken);
-        if (inspection == default(Inspection)) throw new NotFoundException(typeof(Inspection), inspectionId);
-        return _mapper.Map(inspection);
+        var resultInspection = inspections.FirstOrDefault(inspection => inspection.Id == inspectionId);
+        if (resultInspection == default(Inspection)) throw new NotFoundException(typeof(Inspection), inspectionId);
+        return _mapper.Map(resultInspection);
     }
 
     public async Task<InspectionModelList> GetInspectionsAsync(CancellationToken cancellationToken)
     {
-        var inspections = await _context.Inspections
-            .LoadIncludes().ToListAsync(cancellationToken);
+        var inspections = _context.Inspections.Local.ToList();
+        if (!inspections.Any()) inspections = await _context.Inspections.LoadIncludes().ToListAsync(cancellationToken);
         var inspectionModels = inspections.Select(inspection => _mapper.Map(inspection));
         var inspectionModelList = new InspectionModelList();
         inspectionModelList.Inspections.AddRange(inspectionModels);
@@ -82,10 +83,12 @@ public class InspectionRegistry : IInspectionRegistry
 
     public async Task<ReportModel> GetAnimalTypeReportAsync(GetReport dates, CancellationToken cancellationToken)
     {
-        var inspections = await _context.Inspections
-            .LoadIncludes()
+        var allInspections = _context.Inspections.Local.ToList();
+        if (!allInspections.Any()) allInspections = await _context.Inspections.LoadIncludes().ToListAsync(cancellationToken);
+
+        var inspections = allInspections
             .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
-            .ToListAsync(cancellationToken);
+            .ToList();
 
         var creator = _userGrpcMapper.Map(dates.UserCreator);
         var creator2 = _userGrpcMapper.Map(dates.SecondUser);
@@ -100,10 +103,12 @@ public class InspectionRegistry : IInspectionRegistry
 
     public async Task<ReportModel> GetDiseaseReportAsync(GetReport dates, CancellationToken cancellationToken)
     {
-        var inspections = await _context.Inspections
-            .LoadIncludes()
+        var allInspections = _context.Inspections.Local.ToList();
+        if (!allInspections.Any()) allInspections = await _context.Inspections.LoadIncludes().ToListAsync(cancellationToken);
+
+        var inspections = allInspections
             .Where(ins => ins.Date >= dates.DateStart.ToDateTime() && ins.Date <= dates.DateEnd.ToDateTime())
-            .ToListAsync(cancellationToken);
+            .ToList();
 
         var creator = _userGrpcMapper.Map(dates.UserCreator);
         var creator2 = _userGrpcMapper.Map(dates.SecondUser);

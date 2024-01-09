@@ -1,4 +1,5 @@
-﻿using AnimalHealth.Application.Exceptions;
+﻿using AnimalHealth.Application.Cache;
+using AnimalHealth.Application.Exceptions;
 using AnimalHealth.Application.Extensions.IncludeLoadingExtensions;
 using AnimalHealth.Application.Mapping.Interfaces;
 using AnimalHealth.Application.Models;
@@ -6,7 +7,6 @@ using AnimalHealth.Application.Registries.Interfaces;
 using AnimalHealth.Domain.Entities;
 using AnimalHealth.Persistence;
 using Microsoft.EntityFrameworkCore;
-
 namespace AnimalHealth.Application.Registries;
 
 public class OrganizationRegistry : IOrganizationRegistry
@@ -14,22 +14,27 @@ public class OrganizationRegistry : IOrganizationRegistry
     private readonly AnimalHealthContext _context;
     private readonly IEntityMapper<Organization, OrganizationAddModel, OrganizationModel> _mapper;
 
-    public OrganizationRegistry(AnimalHealthContext context, IEntityMapper<Organization, OrganizationAddModel, OrganizationModel> mapper) =>
-        (_context, _mapper) = (context, mapper);
-    
+    public OrganizationRegistry(AnimalHealthContext context,
+        IEntityMapper<Organization, OrganizationAddModel, OrganizationModel> mapper)
+    {
+        _context = context;
+        _mapper = mapper;
+    }
+
     public async Task<OrganizationModel> GetOrganizationAsync(OrganizationLookup lookup, CancellationToken cancellationToken)
     {
+        var organizations = _context.Organizations.Local.ToList();
+        if (!organizations.Any()) organizations = await _context.Organizations.LoadIncludes().ToListAsync(cancellationToken);
         var organizationTin = lookup.Tin;
-        var organization = await
-            _context.Organizations.LoadIncludes()
-                .FirstOrDefaultAsync(organization => organization.Tin == organizationTin, cancellationToken);
-        if (organization == default(Organization)) throw new NotFoundException(typeof(Organization), organizationTin);
-        return _mapper.Map(organization);
+        var resultOrganization = organizations.FirstOrDefault(organization => organization.Tin == organizationTin);
+        if (resultOrganization == default(Organization)) throw new NotFoundException(typeof(Organization), organizationTin);
+        return _mapper.Map(resultOrganization);
     }
 
     public async Task<OrganizationModelList> GetOrganizationsAsync(CancellationToken cancellationToken)
     {
-        var organizations = await _context.Organizations.LoadIncludes().ToListAsync(cancellationToken);
+        var organizations = _context.Organizations.Local.ToList();
+        if (!organizations.Any()) organizations = await _context.Organizations.LoadIncludes().ToListAsync(cancellationToken);
         var organizationModels = organizations.Select(organization => _mapper.Map(organization));
         var organizationModelList = new OrganizationModelList();
         organizationModelList.Organizations.AddRange(organizationModels);
